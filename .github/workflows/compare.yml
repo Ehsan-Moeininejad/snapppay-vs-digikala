@@ -1,0 +1,91 @@
+name: SnappPay vs Digikala price compare
+
+on:
+  # Every 30 minutes at :07 and :37 (off-peak minutes; GitHub's :00/:30 are crowded).
+  # GitHub's own scheduler can be late or skip runs on new repos, so cron-job.org also
+  # calls the workflow_dispatch API (README section 5) - same setup as dk-incredible-crawler.
+  schedule:
+    - cron: "7,37 * * * *"
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Only the first N products (0 = all). Use 30 for a quick test."
+        default: "0"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: snapppay-vs-digikala
+  cancel-in-progress: false
+
+jobs:
+  compare:
+    # Runs entirely on GitHub's servers - no personal computer involved.
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      # Optional fallback (README section 4). Leave the secrets unset to fetch directly.
+      DK_PROXY_URL: ${{ secrets.DK_PROXY_URL }}
+      DK_PROXY_KEY: ${{ secrets.DK_PROXY_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -q -r requirements.txt
+
+      - name: Get the Vazirmatn font (embedded into the report)
+        run: |
+          mkdir -p assets
+          [ -s assets/Vazirmatn.woff2 ] || curl -sfL -o assets/Vazirmatn.woff2 \
+            "https://cdn.jsdelivr.net/npm/vazirmatn@33.0.3/fonts/webfonts/Vazirmatn%5Bwght%5D.woff2" || true
+
+      - name: Can this runner reach SnappPay and Digikala?
+        run: |
+          python3 - <<'PY'
+          import requests
+          s = requests.Session()
+          s.headers.update({"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+                            "Accept": "application/json", "Accept-Language": "fa-IR,fa;q=0.9"})
+          for name, url in [
+              ("SnappPay ", "https://snapppay.ir/blackfriday/data/products.json"),
+              ("Digikala ", "https://api.digikala.com/discovery/api/v2/search?page=1&q=%DA%AF%D9%88%D8%B4%DB%8C"),
+          ]:
+              try:
+                  r = s.get(url, timeout=20)
+                  print(name, r.status_code, len(r.content), "bytes", "| redirects:", [h.status_code for h in r.history])
+              except Exception as e:
+                  print(name, "FAILED", repr(e)[:150])
+          PY
+
+      - name: Run comparison
+        env:
+          LIMIT: ${{ github.event.inputs.limit || '0' }}
+        run: python3 src/crawler.py
+
+      # Committing docs/index.html also republishes the GitHub Pages report link.
+      - name: Commit report
+        if: success()
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/latest.csv data/latest.json data/report.xlsx data/summary_history.csv data/dk_products_cache.json docs/index.html
+          git diff --staged --quiet && exit 0
+          git commit -m "report $(TZ=Asia/Tehran date '+%Y-%m-%d %H:%M') Tehran"
+          git push || (git pull --rebase && git push)
+
+      - name: Keep report as downloadable artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: snapppay-vs-digikala-report
+          path: |
+            docs/index.html
+            data/report.xlsx
+          retention-days: 7
+          if-no-files-found: warn
