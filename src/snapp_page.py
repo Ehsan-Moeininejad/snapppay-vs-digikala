@@ -7,7 +7,9 @@ Most Iranian shops publish schema.org Product JSON-LD (WooCommerce, custom store
 
 Unit trap: many shops label Toman prices as "IRR" (e.g. Technolife 899000 "IRR" for an
 899,000-Toman cable). So the currency field is ignored and the reading (x or x/10) closest
-to the landing price is taken; a reading more than 3x away from it is rejected.
+to the landing price is taken. A reading more than 35% away is rejected ("mismatch"), and a
+page listing several variants at different prices (AggregateOffer lowPrice/highPrice) only
+counts when one variant equals the landing price; otherwise the status is "variants".
 """
 from __future__ import annotations
 
@@ -59,8 +61,9 @@ def _offers(prod: dict):
 
 
 def parse_page(html: str) -> dict:
-    """Raw readings from a product page: candidate prices and stock state."""
+    """Raw readings from a product page: explicit prices, aggregate (variant) range, stock."""
     prices: list[float] = []
+    variants = False
     stock = ""
     for block in _LD.findall(html or ""):
         try:
@@ -69,10 +72,15 @@ def parse_page(html: str) -> dict:
             continue
         for prod in _products(data):
             for off in _offers(prod):
-                for k in ("price", "lowPrice"):
-                    x = _num(off.get(k))
-                    if x:
-                        prices.append(x)
+                x = _num(off.get("price"))
+                if x:
+                    prices.append(x)
+                lo, hi = _num(off.get("lowPrice")), _num(off.get("highPrice"))
+                if lo:
+                    prices.append(lo)
+                count = _num(off.get("offerCount")) or 1
+                if lo and hi and hi / lo > 1.02 and count > 1:
+                    variants = True   # e.g. perfume sold in 10/30/50 ml: lowPrice is the smallest one
                 av = str(off.get("availability") or "")
                 if "OutOfStock" in av or "SoldOut" in av:
                     stock = stock or "out"
@@ -83,33 +91,41 @@ def parse_page(html: str) -> dict:
             x = _num(a or b)
             if x:
                 prices.append(x)
-    return {"prices": prices, "stock": stock}
+    distinct = sorted(set(prices))
+    if len(distinct) > 1 and distinct[-1] / distinct[0] > 1.02 and not variants:
+        # several different explicit offers on one page (colours/sizes) unless they are just Toman/Rial twins
+        variants = not all(abs(math.log(distinct[-1] / d) - math.log(10)) < 0.01 or d == distinct[-1] for d in distinct)
+    return {"prices": prices, "stock": stock, "variants": variants}
 
 
-def pick_price(prices: list[float], ref: float | None) -> int | None:
-    """Toman price closest to the landing price, reading each value as Toman or Rial."""
-    if not prices:
-        return None
-    if not ref:
-        return int(min(prices) / 10)  # no reference: assume Rial (schema.org default)
-    best, dist = None, math.inf
+MAX_MOVE = 1.35  # a "current price" more than 35% away from the landing price is treated as a different item/variant
+
+
+def _readings(prices: list[float]):
     for p in prices:
-        for v in (p, p / 10):
-            d = abs(math.log(v / ref))
-            if d < dist:
-                best, dist = v, d
-    return int(round(best)) if dist <= math.log(3) else None
+        yield p
+        yield p / 10
+
+
+def pick_price(prices: list[float], ref: float | None, variants: bool = False) -> tuple[int | None, str]:
+    """(Toman price, status). Each value is read as Toman or Rial; the reading closest to the landing price wins."""
+    if not prices:
+        return None, "no_price"
+    if not ref:
+        return int(min(prices) / 10), "ok"
+    best = min(_readings(prices), key=lambda v: abs(math.log(v / ref)))
+    dist = abs(math.log(best / ref))
+    if variants:
+        # with several variants only an exact hit on the landing price tells us anything
+        return (int(round(best)), "ok") if dist <= math.log(1.01) else (None, "variants")
+    if dist > math.log(MAX_MOVE):
+        return None, "mismatch"
+    return int(round(best)), "ok"
 
 
 def page_price(html: str, ref: float | None) -> dict:
     raw = parse_page(html)
-    price = pick_price(raw["prices"], ref)
-    if price:
-        status = "ok"
-    elif raw["stock"] == "out":
+    price, status = pick_price(raw["prices"], ref, raw["variants"])
+    if not price and raw["stock"] == "out":
         status = "out_of_stock"
-    elif raw["prices"]:
-        status = "mismatch"   # a price exists but is far from the landing one (other variant/page)
-    else:
-        status = "no_price"
     return {"price": price, "stock": raw["stock"], "status": status}

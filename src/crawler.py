@@ -578,7 +578,7 @@ XLSX_COLS = [  # (header, key) - Persian headers, Latin digits
 ]
 VERDICT_FA = {"dk_cheaper": "دیجی‌کالا ارزان‌تر", "equal": "برابر", "snapp_cheaper": "اسنپ‌پی ارزان‌تر"}
 LIVE_FA = {"live": "در حال پخش", "upcoming": "نوبت بعد", "ended": "تمام‌شده"}
-SELLER_FA = {"ok": "قیمت خوانده شد", "out_of_stock": "ناموجود", "mismatch": "قیمت صفحه با لندینگ هم‌خوان نیست",
+SELLER_FA = {"ok": "قیمت خوانده شد", "out_of_stock": "ناموجود", "mismatch": "قیمت صفحه با لندینگ هم‌خوان نیست", "variants": "قیمت به حجم/مدل انتخابی بستگی دارد",
              "no_price": "قیمت در صفحه نیست", "blocked": "سایت فروشنده در دسترس نبود",
              "error": "خطای صفحه", "skipped": "خوانده نشد (محدودیت زمان)"}
 
