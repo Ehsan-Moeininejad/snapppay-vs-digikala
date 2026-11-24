@@ -1,9 +1,12 @@
 name: SnappPay vs Digikala price compare
 
 on:
-  # Every 30 minutes at :07 and :37 (off-peak minutes; GitHub's :00/:30 are crowded).
-  # GitHub's own scheduler can be late or skip runs on new repos, so cron-job.org also
-  # calls the workflow_dispatch API (README section 5) - same setup as dk-incredible-crawler.
+  # How the 30-minute cadence is guaranteed (free, no personal token, no laptop):
+  #   1. Self-chaining: every run, after publishing, waits until the next :07 or :37
+  #      and starts the next run itself with workflow_dispatch (GitHub's own token).
+  #   2. Watchdog: GitHub's cron below restarts the chain if it ever breaks. On its own
+  #      it is unreliable on new repos (observed: 1 scheduled run in 12 hours).
+  # The concurrency group keeps at most one running + one queued run, so chains never pile up.
   schedule:
     - cron: "7,37 * * * *"
   workflow_dispatch:
@@ -11,9 +14,13 @@ on:
       limit:
         description: "Only the first N products (0 = all). Use 30 for a quick test."
         default: "0"
+      chain:
+        description: "Schedule the next run automatically (keep 'true')."
+        default: "true"
 
 permissions:
   contents: write
+  actions: write   # lets the run dispatch the next run (self-chaining)
 
 concurrency:
   group: snapppay-vs-digikala
@@ -23,7 +30,7 @@ jobs:
   compare:
     # Runs entirely on GitHub's servers - no personal computer involved.
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 50   # ~5 min crawl + up to 30 min wait for the next slot
     env:
       # Optional fallback (README section 4). Leave the secrets unset to fetch directly.
       DK_PROXY_URL: ${{ secrets.DK_PROXY_URL }}
@@ -71,7 +78,10 @@ jobs:
       # Committing docs/index.html also republishes the GitHub Pages report link.
       - name: Commit report
         if: success()
+        env:
+          LIMIT: ${{ github.event.inputs.limit || '0' }}
         run: |
+          [ "$LIMIT" = "0" ] || { echo "Test run (limit=$LIMIT): report not published"; exit 0; }
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/latest.csv data/latest.json data/report.xlsx data/summary_history.csv data/dk_products_cache.json docs/index.html
@@ -89,3 +99,18 @@ jobs:
             data/report.xlsx
           retention-days: 7
           if-no-files-found: warn
+
+      # Self-chaining: wait for the next :07/:37 slot, then start the next run.
+      # Runs even if the crawl failed, so a temporary outage never stops the schedule.
+      - name: Schedule the next run (every 30 minutes)
+        if: always() && (github.event_name == 'schedule' || github.event.inputs.chain != 'false') && (github.event.inputs.limit == '' || github.event.inputs.limit == '0' || github.event.inputs.limit == null)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          now=$(date +%s)
+          next=$(( ( (now - 420) / 1800 + 1 ) * 1800 + 420 ))   # next hh:07 or hh:37 (UTC; Tehran is +3:30)
+          wait=$(( next - now ))
+          echo "Next run at $(TZ=Asia/Tehran date -d @$next '+%H:%M') Tehran (waiting ${wait}s)"
+          sleep "$wait"
+          gh workflow run compare.yml --repo "$GITHUB_REPOSITORY" --ref main -f chain=true -f limit=0
+
