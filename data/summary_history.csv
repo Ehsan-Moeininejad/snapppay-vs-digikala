@@ -1,4 +1,5 @@
-run_at,snapp_items,searched_ok,matched,matched_medium,dk_cheaper,equal,snapp_cheaper,median_diff_pct,mean_diff_pct
-2026-11-23 12:05,1106,1106,126,128,43,7,76,11.8,29.4
-2026-11-23 16:41,1051,1051,124,112,52,6,66,3.6,23.7
-2026-11-24 04:40,1051,1051,122,117,52,6,64,1.4,22.5
+run_at,snapp_items,searched_ok,matched,matched_medium,dk_cheaper,equal,snapp_cheaper,median_diff_pct,mean_diff_pct,landing_matched,landing_median,landing_dk_cheaper,timed_matched,timed_median,timed_dk_cheaper
+2026-11-23 12:05,1106,1106,126,128,43,7,76,11.8,29.4,,,,,,
+2026-11-23 16:41,1051,1051,124,112,52,6,66,3.6,23.7,,,,,,
+2026-11-24 04:40,1051,1051,122,117,52,6,64,1.4,22.5,,,,,,
+2026-11-24 11:03,1051,1051,124,114,54,7,63,1.1,23.4,91,-4.6,54,33,58.9,0
