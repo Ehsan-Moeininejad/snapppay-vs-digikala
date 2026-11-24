@@ -352,7 +352,7 @@ CSV_COLS = ["dk_status", "recheck", "confidence", "verdict", "diff_pct", "diff_t
             "title", "snapp_price", "snapp_before", "snapp_discount", "cashback_pct",
             "snapp_effective", "diff_pct_vs_effective", "dk_title", "dk_price", "dk_rrp",
             "dk_discount", "dk_is_incredible", "dk_id", "dk_url", "snapp_url", "live_status",
-            "live_text", "match_score", "snapp_id", "query", "error"]
+            "live_text", "match_score", "snapp_id", "query", "error", "dk_link"]
 
 
 def summarize(rows: list[dict], started: datetime) -> dict:
@@ -391,6 +391,104 @@ def summarize(rows: list[dict], started: datetime) -> dict:
                 "dk_cheaper": sum(1 for x in v if x < -EQUAL_BAND_PCT)}
             for k, v in sorted(by_channel.items(), key=lambda kv: -len(kv[1]))
         },
+        # Landing (regular Black Friday prices) and timed deals (flash/limited stock) are
+        # different stories, so the report never mixes them in one headline number.
+        "groups": {g: _group_stats(rows, g) for g in ("landing", "timed")},
+        # Category / merchant tables use landing rows only: timetable "merchants" are often
+        # category tags (e.g. "خانه و آشپزخانه") and flash prices would distort the comparison.
+        "by_category_full": _breakdown([r for r in rows if r["channel"] == "landing"], "category"),
+        "by_merchant": {k: v for k, v in _breakdown([r for r in rows if r["channel"] == "landing"], "merchant").items()
+                        if v["n"] >= 2 and k != "—"},
+        "outliers": sum(1 for r in matched if abs(r["diff_pct"]) >= OUTLIER_PCT),
+    }
+
+
+def _flatten_groups(summary: dict) -> None:
+    for g, v in summary["groups"].items():
+        summary[f"{g}_matched"] = v["n"]
+        summary[f"{g}_median"] = v["median"]
+        summary[f"{g}_dk_cheaper"] = v["dk_cheaper"]
+
+
+OUTLIER_PCT = 100  # a gap this large is usually a different variant/seller price - flagged for a check
+
+
+def _in_group(r: dict, g: str) -> bool:
+    return (r["channel"] == "landing") == (g == "landing")
+
+
+def _stats(diffs: list[float]) -> dict:
+    return {
+        "n": len(diffs),
+        "median": round(statistics.median(diffs), 1) if diffs else None,
+        "dk_cheaper": sum(1 for x in diffs if x < -EQUAL_BAND_PCT),
+        "equal": sum(1 for x in diffs if abs(x) <= EQUAL_BAND_PCT),
+        "snapp_cheaper": sum(1 for x in diffs if x > EQUAL_BAND_PCT),
+    }
+
+
+def _group_stats(rows: list[dict], g: str) -> dict:
+    grp = [r for r in rows if _in_group(r, g)]
+    out = _stats([r["diff_pct"] for r in grp if r["confidence"] == "high"])
+    out.update(total=len(grp),
+               review=sum(1 for r in grp if r.get("dk_status") == "review"),
+               not_found=sum(1 for r in grp if r.get("dk_status") == "not_found"),
+               uncertain=sum(1 for r in grp if r.get("dk_status") == "uncertain"))
+    return out
+
+
+def _breakdown(rows: list[dict], key: str) -> dict:
+    """Per category / merchant: total offers, high matches and price stats on those matches."""
+    total: dict[str, int] = {}
+    diffs: dict[str, list[float]] = {}
+    for r in rows:
+        k = r.get(key) or "—"
+        total[k] = total.get(k, 0) + 1
+        if r["confidence"] == "high":
+            diffs.setdefault(k, []).append(r["diff_pct"])
+    out = {}
+    for k, v in sorted(diffs.items(), key=lambda kv: (-len(kv[1]), kv[0])):
+        st = _stats(v)
+        st["total"] = total[k]
+        out[k] = st
+    return out
+
+
+def _row_key(r: dict) -> str:
+    return f"{r['channel']}:{r['snapp_id']}"
+
+
+def changes_since(prev_rows: list[dict], rows: list[dict]) -> dict:
+    """What moved since the previous run: new/ended SnappPay offers and price changes on matches."""
+    if not prev_rows:
+        return {}
+    prev = {_row_key(r): r for r in prev_rows}
+    cur = {_row_key(r): r for r in rows}
+    price_moves = []
+    for k, r in cur.items():
+        p = prev.get(k)
+        if not p:
+            continue
+        sp0, sp1 = p.get("snapp_price"), r.get("snapp_price")
+        dp0, dp1 = p.get("dk_price"), r.get("dk_price")
+        same_dk = p.get("dk_id") and p.get("dk_id") == r.get("dk_id")
+        snapp_moved = sp0 and sp1 and abs(sp1 - sp0) / sp0 >= 0.01
+        dk_moved = same_dk and dp0 and dp1 and abs(dp1 - dp0) / dp0 >= 0.01
+        if r["confidence"] == "high" and (snapp_moved or dk_moved):
+            price_moves.append({
+                "title": r["title"], "merchant": r["merchant"], "channel": r["channel"],
+                "snapp_url": r["snapp_url"], "dk_url": r.get("dk_url", ""),
+                "snapp_old": sp0, "snapp_new": sp1,
+                "dk_old": dp0 if same_dk else None, "dk_new": dp1,
+                "diff_old": p.get("diff_pct") if same_dk else None, "diff_new": r.get("diff_pct"),
+            })
+    new_keys = [k for k in cur if k not in prev]
+    return {
+        "prev_run_at": None,
+        "new_offers": len(new_keys),
+        "ended_offers": sum(1 for k in prev if k not in cur),
+        "new_titles": [cur[k]["title"] for k in new_keys[:30]],
+        "price_moves": sorted(price_moves, key=lambda x: -abs((x["diff_new"] or 0) - (x["diff_old"] or 0)))[:40],
     }
 
 
@@ -404,7 +502,7 @@ XLSX_COLS = [  # (header, key) - Persian headers, Latin digits
     ("اختلاف (تومان)", "diff_toman"), ("اختلاف %", "diff_pct"),
     ("اختلاف % پس از کش‌بک", "diff_pct_vs_effective"), ("نتیجه", "verdict_fa"),
     ("وضعیت پخش", "live_fa"), ("زمان", "live_text"), ("لینک اسنپ‌پی", "snapp_url"),
-    ("لینک دیجی‌کالا", "dk_url"),
+    ("لینک دیجی‌کالا (کالا یا جستجو)", "dk_link"),
 ]
 VERDICT_FA = {"dk_cheaper": "دیجی‌کالا ارزان‌تر", "equal": "برابر", "snapp_cheaper": "اسنپ‌پی ارزان‌تر"}
 LIVE_FA = {"live": "در حال پخش", "upcoming": "نوبت بعد", "ended": "تمام‌شده"}
@@ -473,6 +571,20 @@ def write_xlsx(rows: list[dict], summary: dict) -> None:
 
 
 def write_outputs(rows: list[dict], summary: dict) -> None:
+    prev_file = DATA / "latest.json"
+    if prev_file.exists():
+        try:
+            prev = json.loads(prev_file.read_text("utf-8"))
+            summary["changes"] = changes_since(prev.get("rows", []), rows)
+            if summary["changes"]:
+                summary["changes"]["prev_run_at"] = prev.get("summary", {}).get("run_at")
+        except Exception as e:  # noqa: BLE001
+            log.warning("Could not compare with previous run: %s", e)
+    for r in rows:
+        # Every row gets a Digikala link: the matched product, or a Digikala search for it.
+        q = (r.get("query") or "").split("|")[0].strip() or r["title"]
+        r["dk_link"] = r.get("dk_url") or "https://www.digikala.com/search/?q=" + quote(q)
+        r["outlier"] = r["confidence"] == "high" and abs(r.get("diff_pct") or 0) >= OUTLIER_PCT
     PRODUCT_CACHE_FILE.write_text(json.dumps(PRODUCT_CACHE, ensure_ascii=False), "utf-8")
     (DATA / "latest.json").write_text(
         json.dumps({"summary": summary, "rows": rows}, ensure_ascii=False, indent=1), "utf-8")
@@ -484,12 +596,16 @@ def write_outputs(rows: list[dict], summary: dict) -> None:
             w.writerow(r)
     hist = DATA / "summary_history.csv"
     keys = ["run_at", "snapp_items", "searched_ok", "matched", "matched_medium", "dk_cheaper",
-            "equal", "snapp_cheaper", "median_diff_pct", "mean_diff_pct"]
-    new = not hist.exists()
-    with open(hist, "a", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=keys, extrasaction="ignore")
-        if new:
-            w.writeheader()
+            "equal", "snapp_cheaper", "median_diff_pct", "mean_diff_pct",
+            "landing_matched", "landing_median", "landing_dk_cheaper",
+            "timed_matched", "timed_median", "timed_dk_cheaper"]
+    _flatten_groups(summary)
+    old_rows = list(csv.DictReader(open(hist, encoding="utf-8"))) if hist.exists() else []
+    with open(hist, "w", newline="", encoding="utf-8") as f:  # rewritten so new columns stay aligned
+        w = csv.DictWriter(f, fieldnames=keys, extrasaction="ignore", restval="")
+        w.writeheader()
+        for r in old_rows[-2000:]:
+            w.writerow(r)
         w.writerow(summary)
     write_xlsx(rows, summary)
     history = list(csv.DictReader(open(hist, encoding="utf-8")))
