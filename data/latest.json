@@ -1,49 +1,49 @@
 {
  "summary": {
-  "run_at": "2026-11-23 16:41",
+  "run_at": "2026-11-24 04:40",
   "snapp_items": 1051,
   "searched_ok": 1051,
-  "matched": 124,
-  "matched_high": 124,
-  "matched_medium": 112,
-  "not_found": 475,
-  "uncertain": 340,
+  "matched": 122,
+  "matched_high": 122,
+  "matched_medium": 117,
+  "not_found": 473,
+  "uncertain": 339,
   "landing_items": 700,
   "dk_cheaper": 52,
   "equal": 6,
-  "snapp_cheaper": 66,
-  "median_diff_pct": 3.6,
-  "mean_diff_pct": 23.7,
+  "snapp_cheaper": 64,
+  "median_diff_pct": 1.4,
+  "mean_diff_pct": 22.5,
   "by_category": {
    "digital": {
-    "n": 35,
-    "median": 26.3,
+    "n": 33,
+    "median": 9.9,
     "dk_cheaper": 11
-   },
-   "home": {
-    "n": 26,
-    "median": -3.4,
-    "dk_cheaper": 16
    },
    "health": {
     "n": 25,
     "median": 4.1,
     "dk_cheaper": 11
    },
+   "home": {
+    "n": 25,
+    "median": -3.2,
+    "dk_cheaper": 14
+   },
    "pet": {
     "n": 7,
     "median": -7.1,
     "dk_cheaper": 5
    },
+   "automotive": {
+    "n": 6,
+    "median": 32.8,
+    "dk_cheaper": 2
+   },
    "fashion": {
     "n": 6,
     "median": 33.4,
     "dk_cheaper": 1
-   },
-   "automotive": {
-    "n": 5,
-    "median": 1.1,
-    "dk_cheaper": 2
    },
    "gold": {
     "n": 5,
@@ -57,8 +57,8 @@
    },
    "sports": {
     "n": 4,
-    "median": 8.9,
-    "dk_cheaper": 0
+    "median": -2.2,
+    "dk_cheaper": 2
    },
    "children": {
     "n": 3,
@@ -67,7 +67,7 @@
    },
    "books": {
     "n": 2,
-    "median": -3.1,
+    "median": -6.0,
     "dk_cheaper": 1
    },
    "others": {
@@ -79,17 +79,17 @@
   "by_channel": {
    "landing": {
     "n": 91,
-    "median": -3.8,
+    "median": -4.5,
     "dk_cheaper": 52
    },
    "online": {
-    "n": 26,
-    "median": 68.5,
+    "n": 24,
+    "median": 68.7,
     "dk_cheaper": 0
    },
    "store": {
     "n": 5,
-    "median": 33.0,
+    "median": 41.4,
     "dk_cheaper": 0
    },
    "social": {
@@ -468,15 +468,15 @@
    "dk_status": "matched",
    "dk_id": 13364158,
    "dk_title": "کپسول ویتامین ای 400 واحد یوروویتال بسته 40 عددی",
-   "dk_price": 308880,
+   "dk_price": 290000,
    "dk_rrp": 792000,
-   "dk_discount": 61,
-   "dk_is_incredible": true,
+   "dk_discount": 63,
+   "dk_is_incredible": false,
    "dk_url": "https://www.digikala.com/product/dkp-13364158/",
-   "diff_toman": 124880,
-   "diff_pct": 67.9,
+   "diff_toman": 106000,
+   "diff_pct": 57.6,
    "snapp_effective": 165600,
-   "diff_pct_vs_effective": 86.5,
+   "diff_pct_vs_effective": 75.1,
    "verdict": "snapp_cheaper"
   },
   {
@@ -496,7 +496,7 @@
    "query": "جای خواب سگ و گربه آرمی پاپیکو مریلند Merryland",
    "error": "",
    "confidence": "low",
-   "match_score": 0.156,
+   "match_score": 0.267,
    "dk_status": "not_found"
   },
   {
@@ -722,7 +722,7 @@
    "query": "ساشه منیزیم سیترات مگامگ بسته 14 عددی",
    "error": "",
    "confidence": "low",
-   "match_score": 0.258,
+   "match_score": 0.0,
    "dk_status": "not_found"
   },
   {
@@ -1042,7 +1042,7 @@
    "query": "آباژور رومیزی مینیمال A500",
    "error": "",
    "confidence": "low",
-   "match_score": 0.267,
+   "match_score": 0.437,
    "dk_status": "not_found"
   },
   {
@@ -1135,7 +1135,7 @@
    "query": "انگشتر طلا ایفوریا R971",
    "error": "",
    "confidence": "low",
-   "match_score": 0.15,
+   "match_score": 0.163,
    "dk_status": "not_found"
   },
   {
@@ -1195,7 +1195,7 @@
    "query": "ژل ترمیم کننده زخم و بخیه گلیورز اسکار Geliver",
    "error": "",
    "confidence": "low",
-   "match_score": 0.171,
+   "match_score": 0.278,
    "dk_status": "not_found"
   },
   {
@@ -1248,7 +1248,7 @@
    "query": "غذا خشک بچه گربه مونلو طعم سالمون و مرغ",
    "error": "",
    "confidence": "low",
-   "match_score": 0.242,
+   "match_score": 0.311,
    "dk_status": "not_found"
   },
   {
@@ -1374,7 +1374,7 @@
    "query": "آداپتور اصلی iPhone XS Max",
    "error": "",
    "confidence": "low",
-   "match_score": 0.256,
+   "match_score": 0.281,
    "dk_status": "not_found"
   },
   {
@@ -1565,15 +1565,15 @@
    "dk_status": "review",
    "dk_id": 268152,
    "dk_title": "سه تار مفاخری مدل یک مهر",
-   "dk_price": 4460000,
-   "dk_rrp": 4700000,
-   "dk_discount": 5,
+   "dk_price": 4730000,
+   "dk_rrp": 4730000,
+   "dk_discount": 0,
    "dk_is_incredible": false,
    "dk_url": "https://www.digikala.com/product/dkp-268152/",
-   "diff_toman": 560000,
-   "diff_pct": 14.4,
+   "diff_toman": 830000,
+   "diff_pct": 21.3,
    "snapp_effective": 3510000,
-   "diff_pct_vs_effective": 27.1,
+   "diff_pct_vs_effective": 34.8,
    "verdict": "snapp_cheaper"
   },
   {
@@ -1613,7 +1613,7 @@
    "query": "ست سویشرت و شلوار مردانه نرمال طرح دار اسپان",
    "error": "",
    "confidence": "low",
-   "match_score": 0.197,
+   "match_score": 0.174,
    "dk_status": "not_found"
   },
   {
@@ -1713,7 +1713,7 @@
    "query": "کرم ضد آفتاب فوتوکر رنگ متوسط اورلینAURELIEN با SPF50 | کرم SPF50",
    "error": "",
    "confidence": "low",
-   "match_score": 0.118,
+   "match_score": 0.05,
    "dk_status": "not_found"
   },
   {
@@ -1778,15 +1778,15 @@
    "dk_status": "matched",
    "dk_id": 14138996,
    "dk_title": "لاستیک خودرو یزد تایر مدل SKY سایز 205/55R16 - تک حلقه",
-   "dk_price": 13237500,
+   "dk_price": 12750200,
    "dk_rrp": 15000000,
-   "dk_discount": 12,
+   "dk_discount": 15,
    "dk_is_incredible": false,
    "dk_url": "https://www.digikala.com/product/dkp-14138996/",
-   "diff_toman": -2762500,
-   "diff_pct": -17.3,
+   "diff_toman": -3249800,
+   "diff_pct": -20.3,
    "snapp_effective": 13920000,
-   "diff_pct_vs_effective": -4.9,
+   "diff_pct_vs_effective": -8.4,
    "verdict": "dk_cheaper"
   },
   {
@@ -1806,7 +1806,7 @@
    "query": "کتاب هوش کمپلکس فول آپشن ششم انتشارات مهر و",
    "error": "",
    "confidence": "low",
-   "match_score": 0.296,
+   "match_score": 0.162,
    "dk_status": "not_found"
   },
   {
@@ -1826,7 +1826,7 @@
    "query": "پک مراقبتی ضد ریزش موهای چرب",
    "error": "",
    "confidence": "low",
-   "match_score": 0.559,
+   "match_score": 0.577,
    "dk_status": "uncertain"
   },
   {
@@ -1891,15 +1891,15 @@
    "dk_status": "matched",
    "dk_id": 22904538,
    "dk_title": "دستبند طلا 18 عیار زنانه با بند بافت مدوپد مدل کارتیه آسانسوری کد ACa-002",
-   "dk_price": 3034780,
-   "dk_rrp": 3335010,
+   "dk_price": 3115130,
+   "dk_rrp": 3423320,
    "dk_discount": 9,
    "dk_is_incredible": false,
    "dk_url": "https://www.digikala.com/product/dkp-22904538/",
-   "diff_toman": 1062495,
-   "diff_pct": 53.9,
+   "diff_toman": 1142845,
+   "diff_pct": 57.9,
    "snapp_effective": 1834225,
-   "diff_pct_vs_effective": 65.5,
+   "diff_pct_vs_effective": 69.8,
    "verdict": "snapp_cheaper"
   },
   {
@@ -1992,7 +1992,7 @@
    "query": "قرص کلاژن گلد پلاس بیوتین قوطی 60 عددی",
    "error": "",
    "confidence": "low",
-   "match_score": 0.55,
+   "match_score": 0.611,
    "dk_status": "uncertain"
   },
   {
@@ -2052,7 +2052,7 @@
    "query": "کتاب هوش کمپلکس هشتم و نهم انتشارات مهر و",
    "error": "",
    "confidence": "low",
-   "match_score": 0.33,
+   "match_score": 0.232,
    "dk_status": "not_found"
   },
   {
@@ -2230,15 +2230,15 @@
    "dk_status": "review",
    "dk_id": 20929324,
    "dk_title": "ساشه منیزیم نکستایل - 400 میلی گرم بسته 20 عددی",
-   "dk_price": 251030,
+   "dk_price": 251830,
    "dk_rrp": 484000,
-   "dk_discount": 48,
+   "dk_discount": 47,
    "dk_is_incredible": false,
    "dk_url": "https://www.digikala.com/product/dkp-20929324/",
-   "diff_toman": -35970,
-   "diff_pct": -12.5,
+   "diff_toman": -35170,
+   "diff_pct": -12.3,
    "snapp_effective": 258300,
-   "diff_pct_vs_effective": -2.8,
+   "diff_pct_vs_effective": -2.5,
    "verdict": "dk_cheaper"
   },
   {
@@ -2331,7 +2331,7 @@
    "query": "زعفران دسته 1 مثقالی پاکتی",
    "error": "",
    "confidence": "low",
-   "match_score": 0.156,
+   "match_score": 0.381,
    "dk_status": "not_found"
   },
   {
@@ -2443,22 +2443,22 @@
    "live_text": "",
    "query": "اتو بخار فیلیپس اصلی",
    "error": "",
-   "recheck": "دیجی‌کالا مدل مشخص دارد (DST5010) ولی عنوان اسنپ‌پی مدل ندارد",
+   "recheck": "دیجی‌کالا مدل مشخص دارد (DST3020) ولی عنوان اسنپ‌پی مدل ندارد",
    "confidence": "medium",
    "match_score": 0.75,
    "dk_status": "review",
-   "dk_id": 8511012,
-   "dk_title": "اتو بخار فیلیپس مدل DST5010",
-   "dk_price": 11550000,
-   "dk_rrp": 11550000,
-   "dk_discount": 0,
-   "dk_is_incredible": false,
-   "dk_url": "https://www.digikala.com/product/dkp-8511012/",
-   "diff_toman": 1880000,
-   "diff_pct": 19.4,
+   "dk_id": 13734625,
+   "dk_title": "اتو بخار فیلیپس مدل DST3020",
+   "dk_price": 7990000,
+   "dk_rrp": 8581450,
+   "dk_discount": 7,
+   "dk_is_incredible": true,
+   "dk_url": "https://www.digikala.com/product/dkp-13734625/",
+   "diff_toman": -1680000,
+   "diff_pct": -17.4,
    "snapp_effective": 8703000,
-   "diff_pct_vs_effective": 32.7,
-   "verdict": "snapp_cheaper"
+   "diff_pct_vs_effective": -8.2,
+   "verdict": "dk_cheaper"
   },
   {
    "snapp_id": "p9be0940d56",
@@ -2607,11 +2607,11 @@
    "img": "https://web-cdn.snapp.ir/fintech-marketing/Campaign/Cash_Back/APL_9e0c6fea859ded73d7b63123a4303eb1_Travelcas_cbv3218700_20261118_174644_880942.png",
    "live_status": "always",
    "live_text": "",
-   "query": "شلوار کوهنوردی پلار V-01 | شلوار V-01",
+   "query": "شلوار کوهنوردی پلار V-01",
    "error": "",
    "confidence": "low",
-   "match_score": 0.475,
-   "dk_status": "uncertain"
+   "match_score": 0.325,
+   "dk_status": "not_found"
   },
   {
    "snapp_id": "p1199162672",
@@ -2706,13 +2706,13 @@
    "confidence": "high",
    "match_score": 0.893,
    "dk_status": "matched",
-   "dk_id": 19073969,
+   "dk_id": 23234313,
    "dk_title": "همزن گوسونیک مدل GHM-839",
    "dk_price": 4100000,
-   "dk_rrp": 4100000,
-   "dk_discount": 0,
+   "dk_rrp": 4500000,
+   "dk_discount": 9,
    "dk_is_incredible": false,
-   "dk_url": "https://www.digikala.com/product/dkp-19073969/",
+   "dk_url": "https://www.digikala.com/product/dkp-23234313/",
    "diff_toman": -1265000,
    "diff_pct": -23.6,
    "snapp_effective": 4989450,
@@ -2736,7 +2736,7 @@
    "query": "پک شامپو کراتینه سوپر تاچ Soft و ماسک مو",
    "error": "",
    "confidence": "low",
-   "match_score": 0.168,
+   "match_score": 0.342,
    "dk_status": "not_found"
   },
   {
@@ -2761,15 +2761,15 @@
    "dk_status": "review",
    "dk_id": 5279924,
    "dk_title": "کپسول نرم ژلاتینی امگا 3 ویواتیون بسته 30 عددی",
-   "dk_price": 405380,
+   "dk_price": 359000,
    "dk_rrp": 831600,
-   "dk_discount": 51,
-   "dk_is_incredible": false,
+   "dk_discount": 57,
+   "dk_is_incredible": true,
    "dk_url": "https://www.digikala.com/product/dkp-5279924/",
-   "diff_toman": 105380,
-   "diff_pct": 35.1,
+   "diff_toman": 59000,
+   "diff_pct": 19.7,
    "snapp_effective": 270000,
-   "diff_pct_vs_effective": 50.1,
+   "diff_pct_vs_effective": 33.0,
    "verdict": "snapp_cheaper"
   },
   {
@@ -2842,7 +2842,7 @@
    "query": "کتاب حسابان جامع کنکور ریاضی سری iQ هیبرید برای",
    "error": "",
    "confidence": "low",
-   "match_score": 0.189,
+   "match_score": 0.195,
    "dk_status": "not_found"
   },
   {
@@ -2978,17 +2978,17 @@
    "confidence": "high",
    "match_score": 0.779,
    "dk_status": "matched",
-   "dk_id": 14883527,
+   "dk_id": 10120562,
    "dk_title": "اتو بخار 3000 وات گوسونیک مدل GSI-301",
-   "dk_price": 6663750,
-   "dk_rrp": 6663750,
+   "dk_price": 7107430,
+   "dk_rrp": 7107430,
    "dk_discount": 0,
    "dk_is_incredible": false,
-   "dk_url": "https://www.digikala.com/product/dkp-14883527/",
-   "diff_toman": 1113750,
-   "diff_pct": 20.1,
+   "dk_url": "https://www.digikala.com/product/dkp-10120562/",
+   "diff_toman": 1557430,
+   "diff_pct": 28.1,
    "snapp_effective": 5383500,
-   "diff_pct_vs_effective": 23.8,
+   "diff_pct_vs_effective": 32.0,
    "verdict": "snapp_cheaper"
   },
   {
@@ -3013,15 +3013,15 @@
    "dk_status": "review",
    "dk_id": 21399326,
    "dk_title": "ریمل حجم‌دهنده ضد آب گاش مدل Coffee",
-   "dk_price": 850000,
+   "dk_price": 680000,
    "dk_rrp": 850000,
-   "dk_discount": 0,
+   "dk_discount": 20,
    "dk_is_incredible": false,
    "dk_url": "https://www.digikala.com/product/dkp-21399326/",
-   "diff_toman": -470000,
-   "diff_pct": -35.6,
+   "diff_toman": -640000,
+   "diff_pct": -48.5,
    "snapp_effective": 1280400,
-   "diff_pct_vs_effective": -33.6,
+   "diff_pct_vs_effective": -46.9,
    "verdict": "dk_cheaper"
   },
   {
@@ -3094,7 +3094,7 @@
    "query": "روغن موتور اچ تی سی HTC SN حجم 4",
    "error": "",
    "confidence": "low",
-   "match_score": 0.286,
+   "match_score": 0.273,
    "dk_status": "not_found"
   },
   {
@@ -3154,7 +3154,7 @@
    "query": "بادگیر مشتی نورث فیس",
    "error": "",
    "confidence": "low",
-   "match_score": 0.393,
+   "match_score": 0.237,
    "dk_status": "not_found"
   },
   {
@@ -3267,8 +3267,8 @@
    "query": "ماسک مو شیسیدو پرمیوم تاچ فینو",
    "error": "",
    "confidence": "low",
-   "match_score": 0.6,
-   "dk_status": "uncertain"
+   "match_score": 0.443,
+   "dk_status": "not_found"
   },
   {
    "snapp_id": "pefc53ac2bd",
@@ -3503,7 +3503,7 @@
    "img": "https://web-cdn.snapp.ir/fintech-marketing/Campaign/Cash_Back/APL_763c16a06002cbbc68eb12da549a2b30_HEcashbac_cbv31623300_20261118_173817_801009.png",
    "live_status": "always",
    "live_text": "",
-   "query": "سرخ کن فیلیپس NA230 00 | سرخ NA230",
+   "query": "سرخ کن فیلیپس NA230 00",
    "error": "",
    "confidence": "low",
    "match_score": 0.502,
@@ -3564,15 +3564,15 @@
    "dk_status": "matched",
    "dk_id": 11031005,
    "dk_title": "قرص فوکوس پلاس کیدز یوروویتال بسته 60 عددی",
-   "dk_price": 237600,
+   "dk_price": 245000,
    "dk_rrp": 880000,
-   "dk_discount": 73,
-   "dk_is_incredible": true,
+   "dk_discount": 72,
+   "dk_is_incredible": false,
    "dk_url": "https://www.digikala.com/product/dkp-11031005/",
-   "diff_toman": -112400,
-   "diff_pct": -32.1,
+   "diff_toman": -105000,
+   "diff_pct": -30.0,
    "snapp_effective": 315000,
-   "diff_pct_vs_effective": -24.6,
+   "diff_pct_vs_effective": -22.2,
    "verdict": "dk_cheaper"
   },
   {
@@ -3612,7 +3612,7 @@
    "query": "قرص اکتان داینوتب مشکی",
    "error": "",
    "confidence": "low",
-   "match_score": 0.237,
+   "match_score": 0.188,
    "dk_status": "not_found"
   },
   {
@@ -3652,7 +3652,7 @@
    "query": "چای ماچا اصل درجه AAA",
    "error": "",
    "confidence": "low",
-   "match_score": 0.225,
+   "match_score": 0.171,
    "dk_status": "not_found"
   },
   {
@@ -3705,7 +3705,7 @@
    "query": "فعالسازی رسمی تلگرام پریمیوم",
    "error": "",
    "confidence": "low",
-   "match_score": 0.0,
+   "match_score": 0.219,
    "dk_status": "not_found"
   },
   {
@@ -3936,16 +3936,16 @@
    "dk_status": "matched",
    "dk_id": 15893173,
    "dk_title": "حوله سفری هپی کمپ کد 46805",
-   "dk_price": 1797000,
-   "dk_rrp": 1797000,
-   "dk_discount": 0,
+   "dk_price": 1575000,
+   "dk_rrp": 1900000,
+   "dk_discount": 17,
    "dk_is_incredible": false,
    "dk_url": "https://www.digikala.com/product/dkp-15893173/",
-   "diff_toman": 147000,
-   "diff_pct": 8.9,
+   "diff_toman": -75000,
+   "diff_pct": -4.5,
    "snapp_effective": 1435500,
-   "diff_pct_vs_effective": 25.2,
-   "verdict": "snapp_cheaper"
+   "diff_pct_vs_effective": 9.7,
+   "verdict": "dk_cheaper"
   },
   {
    "snapp_id": "paf3f7377a7",
@@ -4043,16 +4043,16 @@
    "dk_status": "matched",
    "dk_id": 367209,
    "dk_title": "بخاری برقی فن دار ابر استار مدل Toyoset",
-   "dk_price": 5450000,
+   "dk_price": 5475000,
    "dk_rrp": 5985000,
    "dk_discount": 9,
    "dk_is_incredible": false,
    "dk_url": "https://www.digikala.com/product/dkp-367209/",
-   "diff_toman": 30000,
-   "diff_pct": 0.6,
+   "diff_toman": 55000,
+   "diff_pct": 1.0,
    "snapp_effective": 5040600,
-   "diff_pct_vs_effective": 8.1,
-   "verdict": "equal"
+   "diff_pct_vs_effective": 8.6,
+   "verdict": "snapp_cheaper"
   },
   {
    "snapp_id": "pe6c5bb9b08",
@@ -4152,7 +4152,7 @@
    "query": "وایت برد اکو",
    "error": "",
    "confidence": "low",
-   "match_score": 0.525,
+   "match_score": 0.544,
    "dk_status": "uncertain"
   },
   {
@@ -4197,16 +4197,16 @@
    "dk_status": "matched",
    "dk_id": 15893173,
    "dk_title": "حوله سفری هپی کمپ کد 46805",
-   "dk_price": 1797000,
-   "dk_rrp": 1797000,
-   "dk_discount": 0,
+   "dk_price": 1575000,
+   "dk_rrp": 1900000,
+   "dk_discount": 17,
    "dk_is_incredible": false,
    "dk_url": "https://www.digikala.com/product/dkp-15893173/",
-   "diff_toman": 147000,
-   "diff_pct": 8.9,
+   "diff_toman": -75000,
+   "diff_pct": -4.5,
    "snapp_effective": 1435500,
-   "diff_pct_vs_effective": 25.2,
-   "verdict": "snapp_cheaper"
+   "diff_pct_vs_effective": 9.7,
+   "verdict": "dk_cheaper"
   },
   {
    "snapp_id": "p6a26fea49b",
@@ -4225,8 +4225,8 @@
    "query": "هندزفری بلوتوثی کیو سی وای T13 مشکی ضمانت اصالت",
    "error": "",
    "confidence": "low",
-   "match_score": 0.392,
-   "dk_status": "not_found"
+   "match_score": 0.525,
+   "dk_status": "uncertain"
   },
   {
    "snapp_id": "p7f8d50c601",
@@ -4245,7 +4245,7 @@
    "query": "انگشتر نقره زنانه مجلسی ظریف RI F54",
    "error": "",
    "confidence": "low",
-   "match_score": 0.3,
+   "match_score": 0.417,
    "dk_status": "not_found"
   },
   {
@@ -4265,7 +4265,7 @@
    "query": "تیشرت پسرانه جوتی جینز 21073104",
    "error": "",
    "confidence": "low",
-   "match_score": 0.258,
+   "match_score": 0.269,
    "dk_status": "not_found"
   },
   {
@@ -4284,9 +4284,22 @@
    "live_text": "",
    "query": "سرویس قابلمه 10 پارچه گرانیت ایتالیا B",
    "error": "",
-   "confidence": "low",
-   "match_score": 0.669,
-   "dk_status": "uncertain"
+   "recheck": "برند دیجی‌کالا (پن هوم) در عنوان اسنپ‌پی نیست | کلمه‌ی کلیدی اسنپ‌پی در عنوان دیجی‌کالا نیست: ایتالیا",
+   "confidence": "medium",
+   "match_score": 0.741,
+   "dk_status": "review",
+   "dk_id": 9892512,
+   "dk_title": "سرویس قابلمه 10 پارچه پن هوم مدل گرانیت",
+   "dk_price": 21802500,
+   "dk_rrp": 22950000,
+   "dk_discount": 5,
+   "dk_is_incredible": false,
+   "dk_url": "https://www.digikala.com/product/dkp-9892512/",
+   "diff_toman": -8801500,
+   "diff_pct": -28.8,
+   "snapp_effective": 26625480,
+   "diff_pct_vs_effective": -18.1,
+   "verdict": "dk_cheaper"
   },
   {
    "snapp_id": "p3a07477c1d",
@@ -4584,8 +4597,8 @@
    "query": "قرص جوشان ویتامین ث1000 نیچرز پلنتی بسته 20 عددی",
    "error": "",
    "confidence": "low",
-   "match_score": 0.52,
-   "dk_status": "uncertain"
+   "match_score": 0.449,
+   "dk_status": "not_found"
   },
   {
    "snapp_id": "pb0a4b6ea87",
@@ -4737,7 +4750,7 @@
    "query": "چارم نقره پاندورا قارچ شب تاب آویزی",
    "error": "",
    "confidence": "low",
-   "match_score": 0.277,
+   "match_score": 0.298,
    "dk_status": "not_found"
   },
   {
@@ -4777,7 +4790,7 @@
    "query": "تراول ماگ PUPPY برند DILLER کد003043",
    "error": "",
    "confidence": "low",
-   "match_score": 0.092,
+   "match_score": 0.217,
    "dk_status": "not_found"
   },
   {
@@ -4797,8 +4810,8 @@
    "query": "ویتامین سی آرنسیا",
    "error": "",
    "confidence": "low",
-   "match_score": 0.55,
-   "dk_status": "uncertain"
+   "match_score": 0.288,
+   "dk_status": "not_found"
   },
   {
    "snapp_id": "peba1c30556",
@@ -4822,16 +4835,16 @@
    "dk_status": "review",
    "dk_id": 11728590,
    "dk_title": "ساشه کلاژن گلد آدریان بسته 20 عددی مکمل غذایی تقویت و تغذیه مو، افزایش درخشندگی و بهبود سلامت موها",
-   "dk_price": 1782510,
+   "dk_price": 1521170,
    "dk_rrp": 4200000,
-   "dk_discount": 57,
+   "dk_discount": 63,
    "dk_is_incredible": false,
    "dk_url": "https://www.digikala.com/product/dkp-11728590/",
-   "diff_toman": 209510,
-   "diff_pct": 13.3,
+   "diff_toman": -51830,
+   "diff_pct": -3.3,
    "snapp_effective": 1415700,
-   "diff_pct_vs_effective": 25.9,
-   "verdict": "snapp_cheaper"
+   "diff_pct_vs_effective": 7.5,
+   "verdict": "dk_cheaper"
   },
   {
    "snapp_id": "pb67e998389",
@@ -4890,7 +4903,7 @@
    "query": "کوله پشتی لپ تاپ تنسر Alpe 128 مناسب برای",
    "error": "",
    "confidence": "low",
-   "match_score": 0.331,
+   "match_score": 0.314,
    "dk_status": "not_found"
   },
   {
@@ -5026,13 +5039,13 @@
    "confidence": "medium",
    "match_score": 0.75,
    "dk_status": "review",
-   "dk_id": 365831,
+   "dk_id": 1595835,
    "dk_title": "چای ساز بوش مدل TTA5603",
    "dk_price": 12492500,
    "dk_rrp": 13150000,
    "dk_discount": 5,
    "dk_is_incredible": false,
-   "dk_url": "https://www.digikala.com/product/dkp-365831/",
+   "dk_url": "https://www.digikala.com/product/dkp-1595835/",
    "diff_toman": 6528500,
    "diff_pct": 109.5,
    "snapp_effective": 5546520,
@@ -5061,15 +5074,15 @@
    "dk_status": "review",
    "dk_id": 22398917,
    "dk_title": "پودر فیکس صورت فلورمار مدل Invisible Loose شماره 01 وزن 18 گرم",
-   "dk_price": 1690990,
-   "dk_rrp": 1690990,
+   "dk_price": 1689160,
+   "dk_rrp": 1689160,
    "dk_discount": 0,
    "dk_is_incredible": false,
    "dk_url": "https://www.digikala.com/product/dkp-22398917/",
-   "diff_toman": 238990,
-   "diff_pct": 16.5,
+   "diff_toman": 237160,
+   "diff_pct": 16.3,
    "snapp_effective": 1350360,
-   "diff_pct_vs_effective": 25.2,
+   "diff_pct_vs_effective": 25.1,
    "verdict": "snapp_cheaper"
   },
   {
@@ -5226,16 +5239,16 @@
    "dk_status": "review",
    "dk_id": 9281626,
    "dk_title": "قهوه اسپرسو آرتیمان بن مانو - 250 گرم",
-   "dk_price": 1050000,
-   "dk_rrp": 1050000,
+   "dk_price": 1197000,
+   "dk_rrp": 1197000,
    "dk_discount": 0,
    "dk_is_incredible": false,
    "dk_url": "https://www.digikala.com/product/dkp-9281626/",
-   "diff_toman": -147504,
-   "diff_pct": -12.3,
+   "diff_toman": -504,
+   "diff_pct": -0.0,
    "snapp_effective": 1113679,
-   "diff_pct_vs_effective": -5.7,
-   "verdict": "dk_cheaper"
+   "diff_pct_vs_effective": 7.5,
+   "verdict": "equal"
   },
   {
    "snapp_id": "pdfbc1cbfc6",
@@ -5380,7 +5393,7 @@
    "query": "کرم دور چشم ضد لک و روشن کننده مری",
    "error": "",
    "confidence": "low",
-   "match_score": 0.148,
+   "match_score": 0.31,
    "dk_status": "not_found"
   },
   {
@@ -5478,15 +5491,15 @@
    "dk_status": "review",
    "dk_id": 22647940,
    "dk_title": "بازی فکری شاه گل مدل گل یا پوچ",
-   "dk_price": 782470,
-   "dk_rrp": 782470,
+   "dk_price": 766400,
+   "dk_rrp": 766400,
    "dk_discount": 0,
    "dk_is_incredible": false,
    "dk_url": "https://www.digikala.com/product/dkp-22647940/",
-   "diff_toman": -9530,
-   "diff_pct": -1.2,
+   "diff_toman": -25600,
+   "diff_pct": -3.2,
    "snapp_effective": 689040,
-   "diff_pct_vs_effective": 13.6,
+   "diff_pct_vs_effective": 11.2,
    "verdict": "dk_cheaper"
   },
   {
@@ -5526,7 +5539,7 @@
    "query": "کلاه سوارکاری میلانو Pro مشکی",
    "error": "",
    "confidence": "low",
-   "match_score": -0.25,
+   "match_score": 0.0,
    "dk_status": "not_found"
   },
   {
@@ -5566,7 +5579,7 @@
    "query": "پلاک آویز زنانه طلا 18 عیار ونکلیف الحمرا تراشدار",
    "error": "",
    "confidence": "low",
-   "match_score": 0.675,
+   "match_score": 0.712,
    "dk_status": "uncertain"
   },
   {
@@ -5639,7 +5652,7 @@
    "query": "عطر ادکلن ای ایکس نیهیلو فلور نارکوتیک",
    "error": "",
    "confidence": "low",
-   "match_score": 0.396,
+   "match_score": 0.39,
    "dk_status": "not_found"
   },
   {
@@ -5699,7 +5712,7 @@
    "query": "روغن موتور اچ تی سی HTC JASO MA2 4T",
    "error": "",
    "confidence": "low",
-   "match_score": 0.449,
+   "match_score": 0.352,
    "dk_status": "not_found"
   },
   {
@@ -5719,7 +5732,7 @@
    "query": "فرمان موزیکال چراغدار",
    "error": "",
    "confidence": "low",
-   "match_score": 0.233,
+   "match_score": 0.275,
    "dk_status": "not_found"
   },
   {
@@ -5812,7 +5825,7 @@
    "query": "پلاک آویز طلا نیمه خورشید",
    "error": "",
    "confidence": "low",
-   "match_score": 0.518,
+   "match_score": 0.533,
    "dk_status": "uncertain"
   },
   {
@@ -5951,8 +5964,8 @@
    "query": "غذای خشک توله سگ هیلز مینی پاپی مخصوص نژادهای",
    "error": "",
    "confidence": "low",
-   "match_score": 0.124,
-   "dk_status": "not_found"
+   "match_score": 0.464,
+   "dk_status": "uncertain"
   },
   {
    "snapp_id": "pea965e9b22",
@@ -5971,7 +5984,7 @@
    "query": "مینی فرز دسته بلند 1200 وات اینتیمکس 023511",
    "error": "",
    "confidence": "low",
-   "match_score": 0.291,
+   "match_score": 0.308,
    "dk_status": "not_found"
   },
   {
@@ -6102,15 +6115,15 @@
    "dk_status": "review",
    "dk_id": 13528804,
    "dk_title": "زنجیر طلا 18 عیار زنانه مدل فلامینگو ریز",
-   "dk_price": 6924940,
-   "dk_rrp": 7213700,
-   "dk_discount": 4,
+   "dk_price": 7182460,
+   "dk_rrp": 7404710,
+   "dk_discount": 3,
    "dk_is_incredible": false,
    "dk_url": "https://www.digikala.com/product/dkp-13528804/",
-   "diff_toman": -1289790,
-   "diff_pct": -15.7,
+   "diff_toman": -1032270,
+   "diff_pct": -12.6,
    "snapp_effective": 7639699,
-   "diff_pct_vs_effective": -9.4,
+   "diff_pct_vs_effective": -6.0,
    "verdict": "dk_cheaper"
   },
   {
@@ -6202,9 +6215,22 @@
    "live_text": "",
    "query": "شربت برون کلدحجم 200 میلی لیتر هلث اید",
    "error": "",
-   "confidence": "low",
-   "match_score": 0.145,
-   "dk_status": "not_found"
+   "recheck": "",
+   "confidence": "high",
+   "match_score": 0.885,
+   "dk_status": "matched",
+   "dk_id": 3537422,
+   "dk_title": "شربت برون کلد هلث اید حجم 200 میلی لیتر",
+   "dk_price": 204600,
+   "dk_rrp": 400000,
+   "dk_discount": 48,
+   "dk_is_incredible": false,
+   "dk_url": "https://www.digikala.com/product/dkp-3537422/",
+   "diff_toman": 44600,
+   "diff_pct": 27.9,
+   "snapp_effective": 144000,
+   "diff_pct_vs_effective": 42.1,
+   "verdict": "snapp_cheaper"
   },
   {
    "snapp_id": "pcc2ce5c1e6",
@@ -6489,19 +6515,19 @@
    "error": "",
    "recheck": "",
    "confidence": "high",
-   "match_score": 1.0,
+   "match_score": 0.95,
    "dk_status": "matched",
-   "dk_id": 3536596,
-   "dk_title": "کپسول ففول اینترافارم بسته 30 عددی",
-   "dk_price": 268000,
-   "dk_rrp": 855000,
-   "dk_discount": 69,
-   "dk_is_incredible": true,
-   "dk_url": "https://www.digikala.com/product/dkp-3536596/",
-   "diff_toman": -232000,
-   "diff_pct": -46.4,
+   "dk_id": 10683341,
+   "dk_title": "کپسول ففول گاین اینترافارم بسته 30 عددی",
+   "dk_price": 367580,
+   "dk_rrp": 965000,
+   "dk_discount": 62,
+   "dk_is_incredible": false,
+   "dk_url": "https://www.digikala.com/product/dkp-10683341/",
+   "diff_toman": -132420,
+   "diff_pct": -26.5,
    "snapp_effective": 450000,
-   "diff_pct_vs_effective": -40.4,
+   "diff_pct_vs_effective": -18.3,
    "verdict": "dk_cheaper"
   },
   {
@@ -6553,9 +6579,22 @@
    "live_text": "",
    "query": "مکمل بنزین اکتان بوستر آرتمن 300 میلی لیتر 2",
    "error": "",
-   "confidence": "low",
-   "match_score": 0.365,
-   "dk_status": "not_found"
+   "recheck": "دیجی‌کالا مدل مشخص دارد (3001) ولی عنوان اسنپ‌پی مدل ندارد",
+   "confidence": "medium",
+   "match_score": 0.789,
+   "dk_status": "review",
+   "dk_id": 19461500,
+   "dk_title": "اکتان بوستر خودرو بنزینی آرتمن مدل 3001 حجم 300 میلی لیتر بسته 2 عددی",
+   "dk_price": 1227600,
+   "dk_rrp": 1364000,
+   "dk_discount": 10,
+   "dk_is_incredible": false,
+   "dk_url": "https://www.digikala.com/product/dkp-19461500/",
+   "diff_toman": -149400,
+   "diff_pct": -10.8,
+   "snapp_effective": 1308150,
+   "diff_pct_vs_effective": -6.2,
+   "verdict": "dk_cheaper"
   },
   {
    "snapp_id": "p214917fea4",
@@ -6687,7 +6726,7 @@
    "query": "شومیز آستین بلند زنانه جوتی جینز Jooti Jeans 51731656",
    "error": "",
    "confidence": "low",
-   "match_score": 0.088,
+   "match_score": 0.093,
    "dk_status": "not_found"
   },
   {
@@ -6765,15 +6804,15 @@
    "dk_status": "review",
    "dk_id": 8669621,
    "dk_title": "کپسول روغن ماهی امگا 3 فاقد جیوه فرمولیتد ساینسز بسته 60 عددی",
-   "dk_price": 699000,
-   "dk_rrp": 1452000,
-   "dk_discount": 52,
-   "dk_is_incredible": true,
+   "dk_price": 700000,
+   "dk_rrp": 1881300,
+   "dk_discount": 63,
+   "dk_is_incredible": false,
    "dk_url": "https://www.digikala.com/product/dkp-8669621/",
-   "diff_toman": -168644,
-   "diff_pct": -19.4,
+   "diff_toman": -167644,
+   "diff_pct": -19.3,
    "snapp_effective": 806909,
-   "diff_pct_vs_effective": -13.4,
+   "diff_pct_vs_effective": -13.2,
    "verdict": "dk_cheaper"
   },
   {
@@ -6825,9 +6864,22 @@
    "live_text": "",
    "query": "لاستیک کویر سایز 235 55 18 گل Tenacious KB800",
    "error": "",
-   "confidence": "low",
-   "match_score": 0.233,
-   "dk_status": "not_found"
+   "recheck": "",
+   "confidence": "high",
+   "match_score": 0.775,
+   "dk_status": "matched",
+   "dk_id": 17961861,
+   "dk_title": "لاستیک خودرو کویر تایر مدل Tenacious KB800 سایز 18 / 55 / 235 میلی‌متر تولید سال 2025 - 1 حلقه",
+   "dk_price": 15290000,
+   "dk_rrp": 15290000,
+   "dk_discount": 0,
+   "dk_is_incredible": false,
+   "dk_url": "https://www.digikala.com/product/dkp-17961861/",
+   "diff_toman": 5991000,
+   "diff_pct": 64.4,
+   "snapp_effective": 8648070,
+   "diff_pct_vs_effective": 76.8,
+   "verdict": "snapp_cheaper"
   },
   {
    "snapp_id": "p155033c38b",
@@ -6951,7 +7003,7 @@
    "live_text": "",
    "query": "شلوار اسلش دخترانه جين وست كد",
    "error": "",
-   "recheck": "رد شد (شلوار اسلش مردانه جين وست كد 24152002): جنسیت/گروه سنی متفاوت: دختر ≠ مرد | رد شد (شلوار مردانه جین وست مدل اسلش کد 122191): جنسیت/گروه سنی متفاوت: دختر ≠ مرد؛ دیجی‌کالا مدل مشخص دارد (122191) ولی عنوان اسنپ‌پی مدل ندارد",
+   "recheck": "رد شد (شلوار مردانه جین وست مدل اسلش کد 122191): جنسیت/گروه سنی متفاوت: دختر ≠ مرد؛ دیجی‌کالا مدل مشخص دارد (122191) ولی عنوان اسنپ‌پی مدل ندارد | رد شد (شلوار ورزشی اسلش مردانه جین وست مدل 4415): جنسیت/گروه سنی متفاوت: دختر ≠ مرد",
    "confidence": "low",
    "match_score": 0.767,
    "dk_status": "uncertain"
@@ -7046,7 +7098,7 @@
    "query": "آب آشامیدنی سگ آکواپت Aquapet Dogs Drinking Water حجم",
    "error": "",
    "confidence": "low",
-   "match_score": -0.131,
+   "match_score": -0.25,
    "dk_status": "not_found"
   },
   {
@@ -7123,7 +7175,7 @@
    "img": "https://web-cdn.snapp.ir/fintech-marketing/Campaign/Cash_Back/APL_503fce637f0f7db896b981fd31a4b78d_Digitalca_cbv3444500_20261118_174420_228413.png",
    "live_status": "always",
    "live_text": "",
-   "query": "جت فن و جارو شارژی ویولنت Violent F028 | جت F028",
+   "query": "جت فن و جارو شارژی ویولنت Violent F028",
    "error": "",
    "confidence": "low",
    "match_score": 0.321,
@@ -7166,7 +7218,7 @@
    "query": "تیشرت آستین بلند نخی زنانه جوتی جینز 33771903",
    "error": "",
    "confidence": "low",
-   "match_score": 0.244,
+   "match_score": 0.342,
    "dk_status": "not_found"
   },
   {
@@ -7186,7 +7238,7 @@
    "query": "سشوار وی جی آر VGR V-413 سفید 2200 وات",
    "error": "",
    "confidence": "low",
-   "match_score": 0.446,
+   "match_score": 0.326,
    "dk_status": "not_found"
   },
   {
@@ -7391,16 +7443,16 @@
    "dk_status": "matched",
    "dk_id": 90456,
    "dk_title": "جاروبرقی 500 وات سایا مدل Merlin",
-   "dk_price": 9199600,
+   "dk_price": 9461700,
    "dk_rrp": 9877300,
-   "dk_discount": 6,
+   "dk_discount": 4,
    "dk_is_incredible": false,
    "dk_url": "https://www.digikala.com/product/dkp-90456/",
-   "diff_toman": -340400,
-   "diff_pct": -3.6,
+   "diff_toman": -78300,
+   "diff_pct": -0.8,
    "snapp_effective": 8872200,
-   "diff_pct_vs_effective": 3.7,
-   "verdict": "dk_cheaper"
+   "diff_pct_vs_effective": 6.6,
+   "verdict": "equal"
   },
   {
    "snapp_id": "p0d437d116c",
@@ -7439,7 +7491,7 @@
    "query": "کپسول آپاکل و ویتامین D3 های هلث تامین کلسیم",
    "error": "",
    "confidence": "low",
-   "match_score": 0.271,
+   "match_score": 0.291,
    "dk_status": "not_found"
   },
   {
@@ -7504,15 +7556,15 @@
    "dk_status": "review",
    "dk_id": 19313761,
    "dk_title": "بازی فکری کارتی شیر سماور مدل آموزش خلاقیت و ساخت داستان با 216 کارت، رقابتی و مزایده‌ای، مناسب بزرگسالان، 2 تا 20 نفر، مدت بازی 30 تا 60 دقیقه، درجه سختی آسان و سبک سنتی ایرانی",
-   "dk_price": 626840,
-   "dk_rrp": 626840,
+   "dk_price": 624220,
+   "dk_rrp": 624220,
    "dk_discount": 0,
    "dk_is_incredible": false,
    "dk_url": "https://www.digikala.com/product/dkp-19313761/",
-   "diff_toman": -318410,
-   "diff_pct": -33.7,
+   "diff_toman": -321030,
+   "diff_pct": -34.0,
    "snapp_effective": 879082,
-   "diff_pct_vs_effective": -28.7,
+   "diff_pct_vs_effective": -29.0,
    "verdict": "dk_cheaper"
   },
   {
@@ -7671,15 +7723,15 @@
    "dk_status": "matched",
    "dk_id": 9575500,
    "dk_title": "سافت ژل لیکوئی کلسیم 6 پلاس آنتی ایجینگ بسته 60 عددی",
-   "dk_price": 680000,
+   "dk_price": 720740,
    "dk_rrp": 1254200,
-   "dk_discount": 46,
+   "dk_discount": 42,
    "dk_is_incredible": false,
    "dk_url": "https://www.digikala.com/product/dkp-9575500/",
-   "diff_toman": -320000,
-   "diff_pct": -32.0,
+   "diff_toman": -279260,
+   "diff_pct": -27.9,
    "snapp_effective": 900000,
-   "diff_pct_vs_effective": -24.4,
+   "diff_pct_vs_effective": -19.9,
    "verdict": "dk_cheaper"
   },
   {
@@ -7797,15 +7849,15 @@
    "dk_status": "matched",
    "dk_id": 20109389,
    "dk_title": "گوشی موبایل سامسونگ مدل Galaxy A07 دو سیم کارت ظرفیت 64 گیگابایت و رم 4 گیگابایت",
-   "dk_price": 38099000,
+   "dk_price": 40764500,
    "dk_rrp": 42025200,
-   "dk_discount": 9,
-   "dk_is_incredible": true,
+   "dk_discount": 3,
+   "dk_is_incredible": false,
    "dk_url": "https://www.digikala.com/product/dkp-20109389/",
-   "diff_toman": -6901000,
-   "diff_pct": -15.3,
+   "diff_toman": -4235500,
+   "diff_pct": -9.4,
    "snapp_effective": 42750000,
-   "diff_pct_vs_effective": -10.9,
+   "diff_pct_vs_effective": -4.6,
    "verdict": "dk_cheaper"
   },
   {
@@ -7923,15 +7975,15 @@
    "dk_status": "matched",
    "dk_id": 12671761,
    "dk_title": "کپسول فمی لاکت تو پلاس زیست تخمیر بسته 30 عددی",
-   "dk_price": 312080,
+   "dk_price": 312810,
    "dk_rrp": 600000,
    "dk_discount": 47,
    "dk_is_incredible": false,
    "dk_url": "https://www.digikala.com/product/dkp-12671761/",
-   "diff_toman": -137920,
-   "diff_pct": -30.6,
+   "diff_toman": -137190,
+   "diff_pct": -30.5,
    "snapp_effective": 418500,
-   "diff_pct_vs_effective": -25.4,
+   "diff_pct_vs_effective": -25.3,
    "verdict": "dk_cheaper"
   },
   {
@@ -7984,7 +8036,7 @@
    "query": "لاستیک بارز سایز 185 65R14 طرح گل P640 تولید | لاستیک 65R14 P640",
    "error": "",
    "confidence": "low",
-   "match_score": 0.297,
+   "match_score": 0.342,
    "dk_status": "not_found"
   },
   {
@@ -8003,9 +8055,22 @@
    "live_text": "",
    "query": "اکانت ظرفیتی Forza Horizon 6",
    "error": "",
-   "confidence": "low",
-   "match_score": 0.031,
-   "dk_status": "not_found"
+   "recheck": "برند دیجی‌کالا (مایکروسافت) در عنوان اسنپ‌پی نیست | کلمه‌ی کلیدی اسنپ‌پی در عنوان دیجی‌کالا نیست: اکانت، ظرفیتی",
+   "confidence": "medium",
+   "match_score": 0.656,
+   "dk_status": "review",
+   "dk_id": 22337715,
+   "dk_title": "بازی Forza Horizon 6 مخصوص Xbox Series X",
+   "dk_price": 17000000,
+   "dk_rrp": 17000000,
+   "dk_discount": 0,
+   "dk_is_incredible": false,
+   "dk_url": "https://www.digikala.com/product/dkp-22337715/",
+   "diff_toman": 8000000,
+   "diff_pct": 88.9,
+   "snapp_effective": 7830000,
+   "diff_pct_vs_effective": 117.1,
+   "verdict": "snapp_cheaper"
   },
   {
    "snapp_id": "p9357464243",
@@ -8129,16 +8194,16 @@
    "dk_status": "review",
    "dk_id": 3516245,
    "dk_title": "کپسول مگنیفورت هولیستیکا بسته 32 عددی",
-   "dk_price": 627000,
+   "dk_price": 269000,
    "dk_rrp": 862900,
-   "dk_discount": 27,
+   "dk_discount": 68,
    "dk_is_incredible": false,
    "dk_url": "https://www.digikala.com/product/dkp-3516245/",
-   "diff_toman": 128000,
-   "diff_pct": 25.7,
+   "diff_toman": -230000,
+   "diff_pct": -46.1,
    "snapp_effective": 459080,
-   "diff_pct_vs_effective": 36.6,
-   "verdict": "snapp_cheaper"
+   "diff_pct_vs_effective": -41.4,
+   "verdict": "dk_cheaper"
   },
   {
    "snapp_id": "pd0efef0235",
@@ -8197,7 +8262,7 @@
    "query": "اکانت ظرفیتی Forza Horizon 6 Premium Edition",
    "error": "",
    "confidence": "low",
-   "match_score": -0.25,
+   "match_score": 0.269,
    "dk_status": "not_found"
   },
   {
@@ -8350,7 +8415,7 @@
    "query": "کنسرو غذای گربه یو اس پت با طعم گوشت",
    "error": "",
    "confidence": "low",
-   "match_score": 0.31,
+   "match_score": 0.282,
    "dk_status": "not_found"
   },
   {
@@ -8375,15 +8440,15 @@
    "dk_status": "matched",
    "dk_id": 22672439,
    "dk_title": "اکتان بوستر خودرو بنزینی آرتمن مدل نیترو پلاس حجم 600 میلی لیتر",
-   "dk_price": 1337700,
-   "dk_rrp": 1470000,
-   "dk_discount": 9,
+   "dk_price": 1297800,
+   "dk_rrp": 1442000,
+   "dk_discount": 10,
    "dk_is_incredible": false,
    "dk_url": "https://www.digikala.com/product/dkp-22672439/",
-   "diff_toman": -52300,
-   "diff_pct": -3.8,
+   "diff_toman": -92200,
+   "diff_pct": -6.6,
    "snapp_effective": 1251000,
-   "diff_pct_vs_effective": 6.9,
+   "diff_pct_vs_effective": 3.7,
    "verdict": "dk_cheaper"
   },
   {
@@ -8408,15 +8473,15 @@
    "dk_status": "matched",
    "dk_id": 1472102,
    "dk_title": "سیم تاب مدل tx45",
-   "dk_price": 399000,
-   "dk_rrp": 399000,
-   "dk_discount": 0,
+   "dk_price": 370000,
+   "dk_rrp": 400000,
+   "dk_discount": 8,
    "dk_is_incredible": false,
    "dk_url": "https://www.digikala.com/product/dkp-1472102/",
-   "diff_toman": -91000,
-   "diff_pct": -18.6,
+   "diff_toman": -120000,
+   "diff_pct": -24.5,
    "snapp_effective": 441000,
-   "diff_pct_vs_effective": -9.5,
+   "diff_pct_vs_effective": -16.1,
    "verdict": "dk_cheaper"
   },
   {
@@ -8882,7 +8947,7 @@
    "query": "مخلوط کن و اسموتی ساز سنکور SNB 6600",
    "error": "",
    "confidence": "low",
-   "match_score": 0.224,
+   "match_score": 0.217,
    "dk_status": "not_found"
   },
   {
@@ -9035,8 +9100,8 @@
    "query": "انگشتر طلا 18 عیار ظریف مینیمال A0201",
    "error": "",
    "confidence": "low",
-   "match_score": 0.425,
-   "dk_status": "not_found"
+   "match_score": 0.508,
+   "dk_status": "uncertain"
   },
   {
    "snapp_id": "pd7dabebc66",
@@ -9188,7 +9253,7 @@
    "query": "کالیمبا 17 تیغه K17R حفره زودیاک هاردکیس همراه با",
    "error": "",
    "confidence": "low",
-   "match_score": 0.237,
+   "match_score": 0.255,
    "dk_status": "not_found"
   },
   {
@@ -9205,10 +9270,10 @@
    "img": "https://web-cdn.snapp.ir/fintech-marketing/Campaign/Cash_Back/APL_da5b52584bb57dfffd7a3de168bd66d8_Digitalca_cbv33190000_20261118_174420_228413.png",
    "live_status": "always",
    "live_text": "",
-   "query": "مودم همراه ZTE U30 Pro 5G TD-LTE | مودم U30",
+   "query": "مودم همراه ZTE U30 Pro 5G TD-LTE",
    "error": "",
    "confidence": "low",
-   "match_score": 0.36,
+   "match_score": 0.121,
    "dk_status": "not_found"
   },
   {
@@ -9440,21 +9505,21 @@
    "live_text": "",
    "query": "کت چرم مصنوعی زنانه",
    "error": "",
-   "recheck": "کالای دیجی‌کالا برند مشخص ندارد و کد یا شماره‌ی مدل مشترکی هم نیست",
+   "recheck": "برند دیجی‌کالا (رجحانی) در عنوان اسنپ‌پی نیست",
    "confidence": "medium",
    "match_score": 0.917,
    "dk_status": "review",
-   "dk_id": 22844322,
-   "dk_title": "کت چرم کوتاه زنانه چرم مصنوعی مدل Ch2",
-   "dk_price": 3942000,
-   "dk_rrp": 4380000,
-   "dk_discount": 10,
+   "dk_id": 22797014,
+   "dk_title": "کت چرم کوتاه زنانه چرم مصنوعی مدل 21",
+   "dk_price": 4740000,
+   "dk_rrp": 7899000,
+   "dk_discount": 40,
    "dk_is_incredible": false,
-   "dk_url": "https://www.digikala.com/product/dkp-22844322/",
-   "diff_toman": 42300,
-   "diff_pct": 1.1,
+   "dk_url": "https://www.digikala.com/product/dkp-22797014/",
+   "diff_toman": 840300,
+   "diff_pct": 21.5,
    "snapp_effective": 3665718,
-   "diff_pct_vs_effective": 7.5,
+   "diff_pct_vs_effective": 29.3,
    "verdict": "snapp_cheaper"
   },
   {
@@ -9494,7 +9559,7 @@
    "query": "عطر ادکلن لالیک قرمز لالیک له پارفوم",
    "error": "",
    "confidence": "low",
-   "match_score": 0.239,
+   "match_score": 0.246,
    "dk_status": "not_found"
   },
   {
@@ -9706,9 +9771,22 @@
    "live_text": "",
    "query": "انرژتیک بار کارن با طعم شکلات 45 گرم",
    "error": "",
-   "confidence": "low",
-   "match_score": 0.594,
-   "dk_status": "uncertain"
+   "recheck": "کلمه‌ی کلیدی اسنپ‌پی در عنوان دیجی‌کالا نیست: انرژتیک",
+   "confidence": "medium",
+   "match_score": 0.771,
+   "dk_status": "review",
+   "dk_id": 3537296,
+   "dk_title": "شکلات پروتئین بار کارن وزن- 45 گرم",
+   "dk_price": 110100,
+   "dk_rrp": 132000,
+   "dk_discount": 17,
+   "dk_is_incredible": false,
+   "dk_url": "https://www.digikala.com/product/dkp-3537296/",
+   "diff_toman": -49400,
+   "diff_pct": -31.0,
+   "snapp_effective": 146740,
+   "diff_pct_vs_effective": -25.0,
+   "verdict": "dk_cheaper"
   },
   {
    "snapp_id": "pd477133d5a",
@@ -10107,7 +10185,7 @@
    "query": "کپسول سافروکالم گیاهان سبز زندگی 30 عددی",
    "error": "",
    "confidence": "low",
-   "match_score": 0.405,
+   "match_score": 0.421,
    "dk_status": "not_found"
   },
   {
@@ -10147,7 +10225,7 @@
    "query": "عرقگیر صندلی خودرو طبی فنری برند فرمونو",
    "error": "",
    "confidence": "low",
-   "match_score": 0.446,
+   "match_score": 0.264,
    "dk_status": "not_found"
   },
   {
@@ -10623,10 +10701,10 @@
    "img": "https://web-cdn.snapp.ir/fintech-marketing/Campaign/Cash_Back/APL_2b67d69f99f86b4811fde680c0d4f3b6_Digitalca_cbv3246330_20261118_174420_228413.png",
    "live_status": "always",
    "live_text": "",
-   "query": "شارژر دیواری 45 وات به همراه کابل USB-C مک | شارژر CH-443",
+   "query": "شارژر دیواری 45 وات به همراه کابل USB-C مک",
    "error": "",
    "confidence": "low",
-   "match_score": 0.55,
+   "match_score": 0.473,
    "dk_status": "uncertain"
   },
   {
@@ -10646,7 +10724,7 @@
    "query": "پلاک طلا دم وال توپر زنانه 3396 SF",
    "error": "",
    "confidence": "low",
-   "match_score": 0.2,
+   "match_score": 0.191,
    "dk_status": "not_found"
   },
   {
@@ -10686,8 +10764,8 @@
    "query": "رادیاتور پنلی بوتان 100 سانتی متری",
    "error": "",
    "confidence": "low",
-   "match_score": 0.616,
-   "dk_status": "uncertain"
+   "match_score": 0.371,
+   "dk_status": "not_found"
   },
   {
    "snapp_id": "p0a3d9bf354",
@@ -10779,7 +10857,7 @@
    "query": "کفش ایمنی مردانه نوین 401 13195759 کفش ملی",
    "error": "",
    "confidence": "low",
-   "match_score": 0.288,
+   "match_score": 0.25,
    "dk_status": "not_found"
   },
   {
@@ -10839,7 +10917,7 @@
    "query": "دستبند طلا فیگارو کونیک",
    "error": "",
    "confidence": "low",
-   "match_score": 0.67,
+   "match_score": 0.85,
    "dk_status": "uncertain"
   },
   {
@@ -10879,7 +10957,7 @@
    "query": "شیر روشویی یک تکه توکار شودر رومر",
    "error": "",
    "confidence": "low",
-   "match_score": 0.629,
+   "match_score": 0.509,
    "dk_status": "uncertain"
   },
   {
@@ -10899,7 +10977,7 @@
    "query": "عطر ادکلن بی دی کی پارفومز گریس چارنل",
    "error": "",
    "confidence": "low",
-   "match_score": 0.243,
+   "match_score": 0.11,
    "dk_status": "not_found"
   },
   {
@@ -11064,9 +11142,22 @@
    "live_text": "",
    "query": "شیر توالت توکار شودر رومر",
    "error": "",
-   "confidence": "low",
-   "match_score": 0.6,
-   "dk_status": "uncertain"
+   "recheck": "",
+   "confidence": "medium",
+   "match_score": 0.85,
+   "dk_status": "review",
+   "dk_id": 22703516,
+   "dk_title": "شیر توالت شودر مدل رومر",
+   "dk_price": 18096000,
+   "dk_rrp": 20800000,
+   "dk_discount": 13,
+   "dk_is_incredible": false,
+   "dk_url": "https://www.digikala.com/product/dkp-22703516/",
+   "diff_toman": -2601600,
+   "diff_pct": -12.6,
+   "snapp_effective": 19248768,
+   "diff_pct_vs_effective": -6.0,
+   "verdict": "dk_cheaper"
   },
   {
    "snapp_id": "pa61e474544",
@@ -11085,7 +11176,7 @@
    "query": "عطر ادکلن زرجف چهل نت",
    "error": "",
    "confidence": "low",
-   "match_score": 0.092,
+   "match_score": 0.0,
    "dk_status": "not_found"
   },
   {
@@ -11243,12 +11334,12 @@
    "dk_status": "matched",
    "dk_id": 22721488,
    "dk_title": "تلویزیون 43 اینچ ال ای دی هوشمند ایکس ویژن مدل 43XH610",
-   "dk_price": 70000000,
-   "dk_rrp": 70800000,
-   "dk_discount": 1,
+   "dk_price": 69979000,
+   "dk_rrp": 69979000,
+   "dk_discount": 0,
    "dk_is_incredible": false,
    "dk_url": "https://www.digikala.com/product/dkp-22721488/",
-   "diff_toman": -6002000,
+   "diff_toman": -6023000,
    "diff_pct": -7.9,
    "snapp_effective": 70681860,
    "diff_pct_vs_effective": -1.0,
@@ -11296,15 +11387,15 @@
    "dk_status": "review",
    "dk_id": 14275926,
    "dk_title": "ماسک ورقه‌ای صورت دیپ سنس مدل شیر و عسل حجم 25 میلی‌لیتر مناسب پوست خشک و معمولی آبرسان، روشن‌کننده، جوان‌کننده و تسکین‌دهنده با ویتامین‌های آ، ب، ای و سی و روغن آملا",
-   "dk_price": 85320,
-   "dk_rrp": 89810,
-   "dk_discount": 5,
+   "dk_price": 99500,
+   "dk_rrp": 99500,
+   "dk_discount": 0,
    "dk_is_incredible": false,
    "dk_url": "https://www.digikala.com/product/dkp-14275926/",
-   "diff_toman": 20320,
-   "diff_pct": 31.3,
+   "diff_toman": 34500,
+   "diff_pct": 53.1,
    "snapp_effective": 65000,
-   "diff_pct_vs_effective": 31.3,
+   "diff_pct_vs_effective": 53.1,
    "verdict": "snapp_cheaper"
   },
   {
@@ -11344,7 +11435,7 @@
    "query": "چسب چوب تایتباند آبی 946 میلی لیتر",
    "error": "",
    "confidence": "low",
-   "match_score": -0.175,
+   "match_score": 0.0,
    "dk_status": "not_found"
   },
   {
@@ -11437,7 +11528,7 @@
    "query": "پارچه ملحفه ای مولتی فایبر عرض 145 بروجرد طرح",
    "error": "",
    "confidence": "low",
-   "match_score": 0.193,
+   "match_score": 0.311,
    "dk_status": "not_found"
   },
   {
@@ -11482,15 +11573,15 @@
    "dk_status": "review",
    "dk_id": 14275926,
    "dk_title": "ماسک ورقه‌ای صورت دیپ سنس مدل شیر و عسل حجم 25 میلی‌لیتر مناسب پوست خشک و معمولی آبرسان، روشن‌کننده، جوان‌کننده و تسکین‌دهنده با ویتامین‌های آ، ب، ای و سی و روغن آملا",
-   "dk_price": 85320,
-   "dk_rrp": 89810,
-   "dk_discount": 5,
+   "dk_price": 99500,
+   "dk_rrp": 99500,
+   "dk_discount": 0,
    "dk_is_incredible": false,
    "dk_url": "https://www.digikala.com/product/dkp-14275926/",
-   "diff_toman": 20320,
-   "diff_pct": 31.3,
+   "diff_toman": 34500,
+   "diff_pct": 53.1,
    "snapp_effective": 65000,
-   "diff_pct_vs_effective": 31.3,
+   "diff_pct_vs_effective": 53.1,
    "verdict": "snapp_cheaper"
   },
   {
@@ -11643,7 +11734,7 @@
    "query": "عطر ادکلن د مارلی شاگیا",
    "error": "",
    "confidence": "low",
-   "match_score": 0.21,
+   "match_score": 0.215,
    "dk_status": "not_found"
   },
   {
@@ -11716,7 +11807,7 @@
    "query": "خوشبو کننده خودرو ایفل رایحه اقیانوس ساخت ترکیه",
    "error": "",
    "confidence": "low",
-   "match_score": 0.677,
+   "match_score": 0.625,
    "dk_status": "uncertain"
   },
   {
@@ -11736,7 +11827,7 @@
    "query": "قاب آیفون 17 پرو مکس Aulumu A17 Rugged Outdoor",
    "error": "",
    "confidence": "low",
-   "match_score": -0.25,
+   "match_score": 0.0,
    "dk_status": "not_found"
   },
   {
@@ -11757,19 +11848,19 @@
    "error": "",
    "recheck": "",
    "confidence": "high",
-   "match_score": 1.0,
+   "match_score": 0.946,
    "dk_status": "matched",
-   "dk_id": 21360885,
-   "dk_title": "دستبند زنجیری طلا 18 عیار زنانه تالین گالری مدل ونیزی مرواریدی لوزی B101",
-   "dk_price": 1602580,
-   "dk_rrp": 1687010,
+   "dk_id": 21311545,
+   "dk_title": "دستبند زنجیری طلا 18 عیار زنانه تالین گالری مدل ونیزی لوزی B101",
+   "dk_price": 1619860,
+   "dk_rrp": 1705210,
    "dk_discount": 5,
    "dk_is_incredible": false,
-   "dk_url": "https://www.digikala.com/product/dkp-21360885/",
-   "diff_toman": -963420,
-   "diff_pct": -37.5,
+   "dk_url": "https://www.digikala.com/product/dkp-21311545/",
+   "diff_toman": -946140,
+   "diff_pct": -36.9,
    "snapp_effective": 2386380,
-   "diff_pct_vs_effective": -32.8,
+   "diff_pct_vs_effective": -32.1,
    "verdict": "dk_cheaper"
   },
   {
@@ -11842,7 +11933,7 @@
    "query": "عطر ادکلن کلینیک هپی مردانه",
    "error": "",
    "confidence": "low",
-   "match_score": 0.512,
+   "match_score": 0.525,
    "dk_status": "uncertain"
   },
   {
@@ -11895,7 +11986,7 @@
    "query": "بستنی گربه ونپی با طعم بره",
    "error": "",
    "confidence": "low",
-   "match_score": 0.242,
+   "match_score": 0.258,
    "dk_status": "not_found"
   },
   {
@@ -12008,7 +12099,7 @@
    "query": "عطر ادکلن زرجوف امبر استار",
    "error": "",
    "confidence": "low",
-   "match_score": 0.345,
+   "match_score": 0.356,
    "dk_status": "not_found"
   },
   {
@@ -12081,8 +12172,8 @@
    "query": "هندفری بی سیم انکر Soundcore Liberty Buds",
    "error": "",
    "confidence": "low",
-   "match_score": 0.504,
-   "dk_status": "uncertain"
+   "match_score": 0.204,
+   "dk_status": "not_found"
   },
   {
    "snapp_id": "pc10e79fcf8",
@@ -12352,15 +12443,15 @@
    "dk_status": "matched",
    "dk_id": 5064806,
    "dk_title": "قرص ول من اورجینال ویتابیوتیکس مخصوص آقایان بسته 30 عددی",
-   "dk_price": 947100,
+   "dk_price": 940000,
    "dk_rrp": 1196000,
    "dk_discount": 21,
    "dk_is_incredible": false,
    "dk_url": "https://www.digikala.com/product/dkp-5064806/",
-   "diff_toman": 447100,
-   "diff_pct": 89.4,
+   "diff_toman": 440000,
+   "diff_pct": 88.0,
    "snapp_effective": 500000,
-   "diff_pct_vs_effective": 89.4,
+   "diff_pct_vs_effective": 88.0,
    "verdict": "snapp_cheaper"
   },
   {
@@ -12672,7 +12763,7 @@
    "query": "عطر ادکلن کازاموراتی لیرا",
    "error": "",
    "confidence": "low",
-   "match_score": 0.42,
+   "match_score": 0.431,
    "dk_status": "not_found"
   },
   {
@@ -12697,15 +12788,15 @@
    "dk_status": "matched",
    "dk_id": 6241499,
    "dk_title": "قرص لاکتول نیچرز اونلی بسته 30 عددی",
-   "dk_price": 984960,
+   "dk_price": 735130,
    "dk_rrp": 1061500,
-   "dk_discount": 7,
+   "dk_discount": 31,
    "dk_is_incredible": false,
    "dk_url": "https://www.digikala.com/product/dkp-6241499/",
-   "diff_toman": 484960,
-   "diff_pct": 97.0,
+   "diff_toman": 235130,
+   "diff_pct": 47.0,
    "snapp_effective": 500000,
-   "diff_pct_vs_effective": 97.0,
+   "diff_pct_vs_effective": 47.0,
    "verdict": "snapp_cheaper"
   },
   {
@@ -12742,7 +12833,7 @@
    "img": "https://web-cdn.snapp.ir/fintech-marketing/Campaign/Cash_Back/APL_0056bd2e7825945812eb6d1bbf10aa59_firstcash_cbv32071300_20261118_183105_032020.png",
    "live_status": "always",
    "live_text": "",
-   "query": "مودم خانگی دو سیم کارت GRAYTEN GT525 5G | مودم GT525",
+   "query": "مودم خانگی دو سیم کارت GRAYTEN GT525 5G",
    "error": "",
    "confidence": "low",
    "match_score": 0.478,
@@ -12850,16 +12941,16 @@
    "dk_status": "matched",
    "dk_id": 9713992,
    "dk_title": "قرص یونی فرو ابیان دارو بسته 30 عددی",
-   "dk_price": 738760,
+   "dk_price": 612610,
    "dk_rrp": 1221000,
-   "dk_discount": 39,
+   "dk_discount": 50,
    "dk_is_incredible": false,
    "dk_url": "https://www.digikala.com/product/dkp-9713992/",
-   "diff_toman": 88760,
-   "diff_pct": 13.7,
+   "diff_toman": -37390,
+   "diff_pct": -5.8,
    "snapp_effective": 650000,
-   "diff_pct_vs_effective": 13.7,
-   "verdict": "snapp_cheaper"
+   "diff_pct_vs_effective": -5.8,
+   "verdict": "dk_cheaper"
   },
   {
    "snapp_id": "p3b49222c35",
@@ -12938,7 +13029,7 @@
    "query": "کفش زنانه تولوکا مارال چرم",
    "error": "",
    "confidence": "low",
-   "match_score": 0.492,
+   "match_score": 0.544,
    "dk_status": "uncertain"
   },
   {
@@ -12978,7 +13069,7 @@
    "query": "عطر ادکلن جورجیو آرمانی امپریو آرمانی استرانگر ویت یو",
    "error": "",
    "confidence": "low",
-   "match_score": 0.596,
+   "match_score": 0.583,
    "dk_status": "uncertain"
   },
   {
@@ -13043,15 +13134,15 @@
    "dk_status": "matched",
    "dk_id": 21989731,
    "dk_title": "هدفون بلوتوثی مدل R50i",
-   "dk_price": 1494000,
-   "dk_rrp": 1890000,
-   "dk_discount": 21,
+   "dk_price": 1450000,
+   "dk_rrp": 1450000,
+   "dk_discount": 0,
    "dk_is_incredible": false,
    "dk_url": "https://www.digikala.com/product/dkp-21989731/",
-   "diff_toman": -401000,
-   "diff_pct": -21.2,
+   "diff_toman": -445000,
+   "diff_pct": -23.5,
    "snapp_effective": 1800250,
-   "diff_pct_vs_effective": -17.0,
+   "diff_pct_vs_effective": -19.5,
    "verdict": "dk_cheaper"
   },
   {
@@ -13131,8 +13222,8 @@
    "query": "عطر ادکلن تام فورد ارکید سولیل زنانه",
    "error": "",
    "confidence": "low",
-   "match_score": 0.279,
-   "dk_status": "not_found"
+   "match_score": 0.512,
+   "dk_status": "uncertain"
   },
   {
    "snapp_id": "p0570d8dfb2",
@@ -13264,7 +13355,7 @@
    "query": "کاور مبل کجراه",
    "error": "",
    "confidence": "low",
-   "match_score": 0.6,
+   "match_score": 0.562,
    "dk_status": "uncertain"
   },
   {
@@ -13303,22 +13394,9 @@
    "live_text": "",
    "query": "سرم نرم کننده و درخشان کننده مو ویتاپلکس 90",
    "error": "",
-   "recheck": "",
-   "confidence": "high",
-   "match_score": 0.904,
-   "dk_status": "matched",
-   "dk_id": 16597511,
-   "dk_title": "سرم نرم کننده و درخشان کننده مو ویتاپلکس مدل Routine Care مناسب مو خشک و معمولی حجم 90 میلی لیتر",
-   "dk_price": 657700,
-   "dk_rrp": 781900,
-   "dk_discount": 16,
-   "dk_is_incredible": false,
-   "dk_url": "https://www.digikala.com/product/dkp-16597511/",
-   "diff_toman": -287300,
-   "diff_pct": -30.4,
-   "snapp_effective": 945000,
-   "diff_pct_vs_effective": -30.4,
-   "verdict": "dk_cheaper"
+   "confidence": "low",
+   "match_score": 0.182,
+   "dk_status": "not_found"
   },
   {
    "snapp_id": "pe3d763af70",
@@ -13377,7 +13455,7 @@
    "query": "گوشواره نقره بخیه ای آویز E2140 با روکش طلای",
    "error": "",
    "confidence": "low",
-   "match_score": 0.175,
+   "match_score": 0.225,
    "dk_status": "not_found"
   },
   {
@@ -13437,7 +13515,7 @@
    "query": "عطر ادکلن جیوانچی پلی اینتنس مردانه",
    "error": "",
    "confidence": "low",
-   "match_score": 0.295,
+   "match_score": 0.15,
    "dk_status": "not_found"
   },
   {
@@ -13457,7 +13535,7 @@
    "query": "هندزفری بلوتوث کیو سی وای T13",
    "error": "",
    "confidence": "low",
-   "match_score": 0.573,
+   "match_score": 0.679,
    "dk_status": "uncertain"
   },
   {
@@ -13517,7 +13595,7 @@
    "query": "رومبلی پیکه",
    "error": "",
    "confidence": "low",
-   "match_score": 0.4,
+   "match_score": 0.406,
    "dk_status": "not_found"
   },
   {
@@ -13577,8 +13655,8 @@
    "query": "انگشتر نقره دم وال 4113",
    "error": "",
    "confidence": "low",
-   "match_score": 0.112,
-   "dk_status": "not_found"
+   "match_score": 0.5,
+   "dk_status": "uncertain"
   },
   {
    "snapp_id": "pd634dad1e1",
@@ -13697,7 +13775,7 @@
    "query": "کیف دوشی زنانه آویسا LHB5059",
    "error": "",
    "confidence": "low",
-   "match_score": 0.3,
+   "match_score": 0.325,
    "dk_status": "not_found"
   },
   {
@@ -13717,7 +13795,7 @@
    "query": "هالوژن رشد گیاه سیلندری 15 وات",
    "error": "",
    "confidence": "low",
-   "match_score": 0.215,
+   "match_score": 0.229,
    "dk_status": "not_found"
   },
   {
@@ -13977,7 +14055,7 @@
    "query": "سبد مواد شوینده ریل کف مکس استیل",
    "error": "",
    "confidence": "low",
-   "match_score": 0.231,
+   "match_score": 0.275,
    "dk_status": "not_found"
   },
   {
@@ -13997,7 +14075,7 @@
    "query": "عطر ادکلن اسنتریک مولکولز مولکول 04",
    "error": "",
    "confidence": "low",
-   "match_score": 0.064,
+   "match_score": 0.086,
    "dk_status": "not_found"
   },
   {
@@ -14069,22 +14147,9 @@
    "live_text": "",
    "query": "شال مبل و تخت کهربایی هامون",
    "error": "",
-   "recheck": "برند دیجی‌کالا (هرمود) در عنوان اسنپ‌پی نیست | دیجی‌کالا مدل مشخص دارد (240X240) ولی عنوان اسنپ‌پی مدل ندارد | کلمه‌ی کلیدی اسنپ‌پی در عنوان دیجی‌کالا نیست: کهربایی",
-   "confidence": "medium",
-   "match_score": 0.725,
-   "dk_status": "review",
-   "dk_id": 22071071,
-   "dk_title": "شال مبل و تخت هرمود مدل هامون سایز 240x240 سانتی متر",
-   "dk_price": 7139000,
-   "dk_rrp": 7139000,
-   "dk_discount": 0,
-   "dk_is_incredible": false,
-   "dk_url": "https://www.digikala.com/product/dkp-22071071/",
-   "diff_toman": 649000,
-   "diff_pct": 10.0,
-   "snapp_effective": 5841000,
-   "diff_pct_vs_effective": 22.2,
-   "verdict": "snapp_cheaper"
+   "confidence": "low",
+   "match_score": 0.557,
+   "dk_status": "uncertain"
   },
   {
    "snapp_id": "p870ebf6c40",
@@ -14223,8 +14288,8 @@
    "query": "شلوار مردانه گلکسی armour",
    "error": "",
    "confidence": "low",
-   "match_score": 0.45,
-   "dk_status": "uncertain"
+   "match_score": 0.407,
+   "dk_status": "not_found"
   },
   {
    "snapp_id": "p950350f82d",
@@ -14243,7 +14308,7 @@
    "query": "پاتختی مینیمال فلزی تن تن",
    "error": "",
    "confidence": "low",
-   "match_score": 0.067,
+   "match_score": 0.0,
    "dk_status": "not_found"
   },
   {
@@ -14435,9 +14500,22 @@
    "live_text": "",
    "query": "عطر ادکلن کازاموراتی لاتوسکا زرجوف",
    "error": "",
-   "confidence": "low",
-   "match_score": 0.518,
-   "dk_status": "uncertain"
+   "recheck": "کالای دیجی‌کالا برند مشخص ندارد و کد یا شماره‌ی مدل مشترکی هم نیست | حجم/وزن/ظرفیت در عنوان اسنپ‌پی نیامده و قابل تطبیق نیست | کلمه‌ی کلیدی اسنپ‌پی در عنوان دیجی‌کالا نیست: ادکلن",
+   "confidence": "medium",
+   "match_score": 0.677,
+   "dk_status": "review",
+   "dk_id": 22930711,
+   "dk_title": "عطر جیبی زنانه عطر راد مدل زرجوف کازاموراتی لاتوسکا با رایحه خنک و گلی حجم 10 میلی لیتر",
+   "dk_price": 900900,
+   "dk_rrp": 990000,
+   "dk_discount": 9,
+   "dk_is_incredible": false,
+   "dk_url": "https://www.digikala.com/product/dkp-22930711/",
+   "diff_toman": -887100,
+   "diff_pct": -49.6,
+   "snapp_effective": 1788000,
+   "diff_pct_vs_effective": -49.6,
+   "verdict": "dk_cheaper"
   },
   {
    "snapp_id": "paeade5c790",
@@ -14456,7 +14534,7 @@
    "query": "آویز طلا پاپیون",
    "error": "",
    "confidence": "low",
-   "match_score": 0.825,
+   "match_score": 0.833,
    "dk_status": "uncertain"
   },
   {
@@ -14536,7 +14614,7 @@
    "query": "پلاک طلا برگ پاییز",
    "error": "",
    "confidence": "low",
-   "match_score": 0.42,
+   "match_score": 0.446,
    "dk_status": "not_found"
   },
   {
@@ -14633,7 +14711,7 @@
    "img": "https://web-cdn.snapp.ir/fintech-marketing/Campaign/Cash_Back/APL_01c9fe18b498c67ab0b5e459e60f4ca6_Bagcashba_cbv3428000_20261118_174042_054568.png",
    "live_status": "always",
    "live_text": "",
-   "query": "کیف دوشی بیورا dbb172 | کیف dbb172",
+   "query": "کیف دوشی بیورا dbb172",
    "error": "",
    "recheck": "",
    "confidence": "high",
@@ -14641,15 +14719,15 @@
    "dk_status": "matched",
    "dk_id": 22052189,
    "dk_title": "کیف رودوشی مردانه بیورا مدل dbb172",
-   "dk_price": 3348000,
-   "dk_rrp": 5580000,
-   "dk_discount": 40,
+   "dk_price": 2941740,
+   "dk_rrp": 4986000,
+   "dk_discount": 41,
    "dk_is_incredible": false,
    "dk_url": "https://www.digikala.com/product/dkp-22052189/",
-   "diff_toman": -932000,
-   "diff_pct": -21.8,
+   "diff_toman": -1338260,
+   "diff_pct": -31.3,
    "snapp_effective": 3852000,
-   "diff_pct_vs_effective": -13.1,
+   "diff_pct_vs_effective": -23.6,
    "verdict": "dk_cheaper"
   },
   {
@@ -14689,7 +14767,7 @@
    "query": "عطر ادکلن بولگاری له جم اوروم",
    "error": "",
    "confidence": "low",
-   "match_score": 0.15,
+   "match_score": 0.148,
    "dk_status": "not_found"
   },
   {
@@ -14794,15 +14872,15 @@
    "dk_status": "matched",
    "dk_id": 11410503,
    "dk_title": "زنجیر طلا 18 عیار زنانه مدل طنابی کد T45Z25",
-   "dk_price": 16831980,
-   "dk_rrp": 16831980,
+   "dk_price": 17277670,
+   "dk_rrp": 17277670,
    "dk_discount": 0,
    "dk_is_incredible": false,
    "dk_url": "https://www.digikala.com/product/dkp-11410503/",
-   "diff_toman": -5417020,
-   "diff_pct": -24.3,
+   "diff_toman": -4971330,
+   "diff_pct": -22.3,
    "snapp_effective": 20691570,
-   "diff_pct_vs_effective": -18.7,
+   "diff_pct_vs_effective": -16.5,
    "verdict": "dk_cheaper"
   },
   {
@@ -14901,22 +14979,22 @@
    "live_text": "",
    "query": "شال زنانه چهارخانه موهر",
    "error": "",
-   "recheck": "کالای دیجی‌کالا برند مشخص ندارد و کد یا شماره‌ی مدل مشترکی هم نیست | دیجی‌کالا مدل مشخص دارد (CTU114) ولی عنوان اسنپ‌پی مدل ندارد",
+   "recheck": "کالای دیجی‌کالا برند مشخص ندارد و کد یا شماره‌ی مدل مشترکی هم نیست",
    "confidence": "medium",
    "match_score": 0.917,
    "dk_status": "review",
-   "dk_id": 22883816,
-   "dk_title": "شال زنانه پاییزی موهر چهارخانه مدل ctu114",
-   "dk_price": 2280000,
-   "dk_rrp": 2850000,
-   "dk_discount": 20,
+   "dk_id": 17156695,
+   "dk_title": "شال زنانه مدل موهر نخ بافت چهارخانه",
+   "dk_price": 649000,
+   "dk_rrp": 649000,
+   "dk_discount": 0,
    "dk_is_incredible": false,
-   "dk_url": "https://www.digikala.com/product/dkp-22883816/",
-   "diff_toman": 1155900,
-   "diff_pct": 102.8,
+   "dk_url": "https://www.digikala.com/product/dkp-17156695/",
+   "diff_toman": -475100,
+   "diff_pct": -42.3,
    "snapp_effective": 1067895,
-   "diff_pct_vs_effective": 113.5,
-   "verdict": "snapp_cheaper"
+   "diff_pct_vs_effective": -39.2,
+   "verdict": "dk_cheaper"
   },
   {
    "snapp_id": "pda20a821a7",
@@ -14975,7 +15053,7 @@
    "query": "گردنبند طلا لویی ویتون",
    "error": "",
    "confidence": "low",
-   "match_score": 0.861,
+   "match_score": 0.841,
    "dk_status": "uncertain"
   },
   {
@@ -15048,7 +15126,7 @@
    "query": "عطر ادکلن پرادا لونا روزا",
    "error": "",
    "confidence": "low",
-   "match_score": 0.171,
+   "match_score": 0.0,
    "dk_status": "not_found"
   },
   {
@@ -15068,7 +15146,7 @@
    "query": "طوق ریما",
    "error": "",
    "confidence": "low",
-   "match_score": 0.25,
+   "match_score": 0.161,
    "dk_status": "not_found"
   },
   {
@@ -15148,7 +15226,7 @@
    "query": "انگشتر طاووس پروفیلی",
    "error": "",
    "confidence": "low",
-   "match_score": 0.35,
+   "match_score": 0.375,
    "dk_status": "not_found"
   },
   {
@@ -15208,7 +15286,7 @@
    "query": "آویز خورشید نگین سبز 25419",
    "error": "",
    "confidence": "low",
-   "match_score": -0.138,
+   "match_score": 0.1,
    "dk_status": "not_found"
   },
   {
@@ -15547,7 +15625,7 @@
    "query": "دستبند طلا فیگارو مینی",
    "error": "",
    "confidence": "low",
-   "match_score": 0.325,
+   "match_score": 0.333,
    "dk_status": "not_found"
   },
   {
@@ -15587,7 +15665,7 @@
    "query": "هود مخفی 2068A",
    "error": "",
    "confidence": "low",
-   "match_score": 0.258,
+   "match_score": 0.3,
    "dk_status": "not_found"
   },
   {
@@ -15646,22 +15724,9 @@
    "live_text": "",
    "query": "بخارگر مخزن دار دوکاره ژانومه GH7640",
    "error": "",
-   "recheck": "",
-   "confidence": "high",
-   "match_score": 0.821,
-   "dk_status": "matched",
-   "dk_id": 22443914,
-   "dk_title": "بخارگر مخزن دار 1800 وات ژانومه مدل GH7640",
-   "dk_price": 32500000,
-   "dk_rrp": 32500000,
-   "dk_discount": 0,
-   "dk_is_incredible": false,
-   "dk_url": "https://www.digikala.com/product/dkp-22443914/",
-   "diff_toman": -400000,
-   "diff_pct": -1.2,
-   "snapp_effective": 30597000,
-   "diff_pct_vs_effective": 6.2,
-   "verdict": "dk_cheaper"
+   "confidence": "low",
+   "match_score": 0.371,
+   "dk_status": "not_found"
   },
   {
    "snapp_id": "p1a4a6bb983",
@@ -15685,15 +15750,15 @@
    "dk_status": "review",
    "dk_id": 17614327,
    "dk_title": "آویز گردنبند طلا 18 عیار زنانه ماوی گالری مدل دایره برگ ساده و نگینی",
-   "dk_price": 13768600,
-   "dk_rrp": 14194620,
+   "dk_price": 14133170,
+   "dk_rrp": 14570480,
    "dk_discount": 3,
    "dk_is_incredible": false,
    "dk_url": "https://www.digikala.com/product/dkp-17614327/",
-   "diff_toman": -2684900,
-   "diff_pct": -16.3,
+   "diff_toman": -2320330,
+   "diff_pct": -14.1,
    "snapp_effective": 16453500,
-   "diff_pct_vs_effective": -16.3,
+   "diff_pct_vs_effective": -14.1,
    "verdict": "dk_cheaper"
   },
   {
@@ -15733,7 +15798,7 @@
    "query": "اسپرسوساز مباشی MEBASHI ME-ECM2114",
    "error": "",
    "confidence": "low",
-   "match_score": 0.209,
+   "match_score": 0.206,
    "dk_status": "not_found"
   },
   {
@@ -15933,7 +15998,7 @@
    "query": "گوش گیر زنانه رنگی پوست کد1006833",
    "error": "",
    "confidence": "low",
-   "match_score": 0.114,
+   "match_score": 0.139,
    "dk_status": "not_found"
   },
   {
@@ -16013,7 +16078,7 @@
    "query": "کفش اسپرت زنانه نایک V5 rnr مشکی و سفید",
    "error": "",
    "confidence": "low",
-   "match_score": 0.138,
+   "match_score": 0.281,
    "dk_status": "not_found"
   },
   {
@@ -16033,7 +16098,7 @@
    "query": "پالتو فوتر آستردار بلند مایلا",
    "error": "",
    "confidence": "low",
-   "match_score": 0.637,
+   "match_score": 0.6,
    "dk_status": "uncertain"
   },
   {
@@ -16093,7 +16158,7 @@
    "query": "بوت چروک پاشنه For لومانا 3203",
    "error": "",
    "confidence": "low",
-   "match_score": 0.0,
+   "match_score": 0.008,
    "dk_status": "not_found"
   },
   {
@@ -16109,7 +16174,7 @@
    "snapp_url": "https://snapppay.ir/timetable/",
    "img": "https://snapppay.ir/timetable/online/HK_AC1E63AE.jpg",
    "live_status": "upcoming",
-   "live_text": "11/23 17:00",
+   "live_text": "11/24 13:00",
    "is_range": false,
    "query": "هواپز 6.2 لیتری فیلیپس NA230",
    "error": "",
@@ -16169,7 +16234,7 @@
    "query": "تیشرت کراپ زنانه",
    "error": "",
    "confidence": "low",
-   "match_score": 0.667,
+   "match_score": 0.571,
    "dk_status": "uncertain"
   },
   {
@@ -16263,15 +16328,15 @@
    "dk_status": "matched",
    "dk_id": 21462684,
    "dk_title": "گوشی موبایل سامسونگ مدل Galaxy S26 Ultra دو سیم‌کارت ظرفیت 256 گیگابایت و رم 12 گیگابایت - ویتنام",
-   "dk_price": 418999000,
-   "dk_rrp": 447759700,
-   "dk_discount": 6,
+   "dk_price": 419999000,
+   "dk_rrp": 477000000,
+   "dk_discount": 12,
    "dk_is_incredible": true,
    "dk_url": "https://www.digikala.com/product/dkp-21462684/",
-   "diff_toman": 36799000,
-   "diff_pct": 9.6,
+   "diff_toman": 37799000,
+   "diff_pct": 9.9,
    "snapp_effective": 382200000,
-   "diff_pct_vs_effective": 9.6,
+   "diff_pct_vs_effective": 9.9,
    "verdict": "snapp_cheaper"
   },
   {
@@ -16342,7 +16407,7 @@
    "snapp_url": "https://snapppay.ir/timetable/",
    "img": "https://snapppay.ir/timetable/online/DG_0618E763.jpg",
    "live_status": "upcoming",
-   "live_text": "11/23 17:00",
+   "live_text": "11/24 13:00",
    "is_range": false,
    "query": "گوشی iPhone 17 ظرفیت 256 گیگ",
    "error": "",
@@ -16352,15 +16417,15 @@
    "dk_status": "matched",
    "dk_id": 20127115,
    "dk_title": "گوشی موبایل اپل مدل iPhone 17 CH دو سیم کارت ظرفیت 256 گیگابایت و رم 8 گیگابایت - نات اکتیو",
-   "dk_price": 349999000,
-   "dk_rrp": 382653000,
-   "dk_discount": 9,
-   "dk_is_incredible": true,
+   "dk_price": 379610990,
+   "dk_rrp": 379610990,
+   "dk_discount": 0,
+   "dk_is_incredible": false,
    "dk_url": "https://www.digikala.com/product/dkp-20127115/",
-   "diff_toman": 74899000,
-   "diff_pct": 27.2,
+   "diff_toman": 104510990,
+   "diff_pct": 38.0,
    "snapp_effective": 275100000,
-   "diff_pct_vs_effective": 27.2,
+   "diff_pct_vs_effective": 38.0,
    "verdict": "snapp_cheaper"
   },
   {
@@ -16407,15 +16472,15 @@
    "dk_status": "review",
    "dk_id": 20127115,
    "dk_title": "گوشی موبایل اپل مدل iPhone 17 CH دو سیم کارت ظرفیت 256 گیگابایت و رم 8 گیگابایت - نات اکتیو",
-   "dk_price": 349999000,
-   "dk_rrp": 382653000,
-   "dk_discount": 9,
-   "dk_is_incredible": true,
+   "dk_price": 379610990,
+   "dk_rrp": 379610990,
+   "dk_discount": 0,
+   "dk_is_incredible": false,
    "dk_url": "https://www.digikala.com/product/dkp-20127115/",
-   "diff_toman": 74899000,
-   "diff_pct": 27.2,
+   "diff_toman": 104510990,
+   "diff_pct": 38.0,
    "snapp_effective": 275100000,
-   "diff_pct_vs_effective": 27.2,
+   "diff_pct_vs_effective": 38.0,
    "verdict": "snapp_cheaper"
   },
   {
@@ -16490,21 +16555,21 @@
    "is_range": false,
    "query": "ماشین ظرفشویی 14 نفره دوو",
    "error": "",
-   "recheck": "دیجی‌کالا مدل مشخص دارد (DW-160S) ولی عنوان اسنپ‌پی مدل ندارد",
+   "recheck": "دیجی‌کالا مدل مشخص دارد (DW-160W) ولی عنوان اسنپ‌پی مدل ندارد",
    "confidence": "medium",
    "match_score": 0.929,
    "dk_status": "review",
-   "dk_id": 18196183,
-   "dk_title": "ماشین ظرفشویی 14 نفره دوو مدل DW-160S",
-   "dk_price": 121768800,
-   "dk_rrp": 132230000,
-   "dk_discount": 8,
+   "dk_id": 18196432,
+   "dk_title": "ماشین ظرفشویی 14 نفره دوو مدل DW-160W",
+   "dk_price": 120000000,
+   "dk_rrp": 129500000,
+   "dk_discount": 7,
    "dk_is_incredible": false,
-   "dk_url": "https://www.digikala.com/product/dkp-18196183/",
-   "diff_toman": 22318800,
-   "diff_pct": 22.4,
+   "dk_url": "https://www.digikala.com/product/dkp-18196432/",
+   "diff_toman": 20550000,
+   "diff_pct": 20.7,
    "snapp_effective": 99450000,
-   "diff_pct_vs_effective": 22.4,
+   "diff_pct_vs_effective": 20.7,
    "verdict": "snapp_cheaper"
   },
   {
@@ -16530,15 +16595,15 @@
    "dk_status": "matched",
    "dk_id": 19488267,
    "dk_title": "اسپیکر بلوتوثی قابل حمل جی بی ال مدل PartyBox 520",
-   "dk_price": 149000000,
-   "dk_rrp": 149000000,
-   "dk_discount": 0,
+   "dk_price": 149128900,
+   "dk_rrp": 169464600,
+   "dk_discount": 12,
    "dk_is_incredible": false,
    "dk_url": "https://www.digikala.com/product/dkp-19488267/",
-   "diff_toman": 51500000,
-   "diff_pct": 52.8,
+   "diff_toman": 51628900,
+   "diff_pct": 53.0,
    "snapp_effective": 97500000,
-   "diff_pct_vs_effective": 52.8,
+   "diff_pct_vs_effective": 53.0,
    "verdict": "snapp_cheaper"
   },
   {
@@ -16574,8 +16639,8 @@
    "cashback_pct": 0,
    "snapp_url": "https://snapppay.ir/timetable/",
    "img": "https://snapppay.ir/timetable/instore/inst_mel-and-moj_g39.jpg",
-   "live_status": "live",
-   "live_text": "تا 11/23 22:00",
+   "live_status": "ended",
+   "live_text": "",
    "is_range": true,
    "query": "تی شرت ورزشی زنانه",
    "error": "",
@@ -16643,7 +16708,7 @@
    "query": "اپل واچ SE 3 سایز 44",
    "error": "",
    "confidence": "low",
-   "match_score": 0.285,
+   "match_score": 0.254,
    "dk_status": "not_found"
   },
   {
@@ -16690,15 +16755,15 @@
    "dk_status": "matched",
    "dk_id": 20481188,
    "dk_title": "گوشی موبایل اپل مدل iPhone 17 Pro Max ZAA تک سیم کارت + eSim ظرفیت 256 گیگابایت و رم 12 گیگابایت - نات اکتیو",
-   "dk_price": 539999000,
-   "dk_rrp": 580208000,
-   "dk_discount": 7,
-   "dk_is_incredible": true,
+   "dk_price": 573999000,
+   "dk_rrp": 573999000,
+   "dk_discount": 0,
+   "dk_is_incredible": false,
    "dk_url": "https://www.digikala.com/product/dkp-20481188/",
-   "diff_toman": 133999000,
-   "diff_pct": 33.0,
+   "diff_toman": 167999000,
+   "diff_pct": 41.4,
    "snapp_effective": 406000000,
-   "diff_pct_vs_effective": 33.0,
+   "diff_pct_vs_effective": 41.4,
    "verdict": "snapp_cheaper"
   },
   {
@@ -16789,13 +16854,13 @@
    "cashback_pct": 0,
    "snapp_url": "https://snapppay.ir/timetable/",
    "img": "https://snapppay.ir/timetable/instore/inst_mel-and-moj_g01.jpg",
-   "live_status": "live",
-   "live_text": "تا 11/23 22:00",
+   "live_status": "ended",
+   "live_text": "",
    "is_range": true,
    "query": "هودی ورزشی مردانه",
    "error": "",
    "confidence": "low",
-   "match_score": 0.688,
+   "match_score": 0.875,
    "dk_status": "uncertain"
   },
   {
@@ -16821,15 +16886,15 @@
    "dk_status": "review",
    "dk_id": 20966808,
    "dk_title": "پاوراستیشن 700 وات پاورولوژی مدل PWGC700GY ظرفیت 10600 میلی‌ آمپر ساعت",
-   "dk_price": 98000000,
-   "dk_rrp": 98000000,
-   "dk_discount": 0,
+   "dk_price": 89000000,
+   "dk_rrp": 100000000,
+   "dk_discount": 11,
    "dk_is_incredible": false,
    "dk_url": "https://www.digikala.com/product/dkp-20966808/",
-   "diff_toman": 50500000,
-   "diff_pct": 106.3,
+   "diff_toman": 41500000,
+   "diff_pct": 87.4,
    "snapp_effective": 47500000,
-   "diff_pct_vs_effective": 106.3,
+   "diff_pct_vs_effective": 87.4,
    "verdict": "snapp_cheaper"
   },
   {
@@ -16865,8 +16930,8 @@
    "cashback_pct": 0,
    "snapp_url": "https://snapppay.ir/timetable/",
    "img": "https://snapppay.ir/timetable/online/DG_409DDFAC.jpg",
-   "live_status": "upcoming",
-   "live_text": "11/23 21:00",
+   "live_status": "ended",
+   "live_text": "",
    "is_range": false,
    "query": "گوشی Galaxy S26 Ultra ظرفیت 256 گیگ",
    "error": "",
@@ -16876,15 +16941,15 @@
    "dk_status": "matched",
    "dk_id": 21462684,
    "dk_title": "گوشی موبایل سامسونگ مدل Galaxy S26 Ultra دو سیم‌کارت ظرفیت 256 گیگابایت و رم 12 گیگابایت - ویتنام",
-   "dk_price": 418999000,
-   "dk_rrp": 447759700,
-   "dk_discount": 6,
+   "dk_price": 419999000,
+   "dk_rrp": 477000000,
+   "dk_discount": 12,
    "dk_is_incredible": true,
    "dk_url": "https://www.digikala.com/product/dkp-21462684/",
-   "diff_toman": 89999000,
-   "diff_pct": 27.4,
+   "diff_toman": 90999000,
+   "diff_pct": 27.7,
    "snapp_effective": 329000000,
-   "diff_pct_vs_effective": 27.4,
+   "diff_pct_vs_effective": 27.7,
    "verdict": "snapp_cheaper"
   },
   {
@@ -17020,15 +17085,15 @@
    "dk_status": "matched",
    "dk_id": 20127115,
    "dk_title": "گوشی موبایل اپل مدل iPhone 17 CH دو سیم کارت ظرفیت 256 گیگابایت و رم 8 گیگابایت - نات اکتیو",
-   "dk_price": 349999000,
-   "dk_rrp": 382653000,
-   "dk_discount": 9,
-   "dk_is_incredible": true,
+   "dk_price": 379610990,
+   "dk_rrp": 379610990,
+   "dk_discount": 0,
+   "dk_is_incredible": false,
    "dk_url": "https://www.digikala.com/product/dkp-20127115/",
-   "diff_toman": 72799000,
-   "diff_pct": 26.3,
+   "diff_toman": 102410990,
+   "diff_pct": 36.9,
    "snapp_effective": 277200000,
-   "diff_pct_vs_effective": 26.3,
+   "diff_pct_vs_effective": 36.9,
    "verdict": "snapp_cheaper"
   },
   {
@@ -17049,8 +17114,8 @@
    "query": "جعبه وسایل خیاطی و دارو",
    "error": "",
    "confidence": "low",
-   "match_score": 0.5,
-   "dk_status": "uncertain"
+   "match_score": 0.225,
+   "dk_status": "not_found"
   },
   {
    "snapp_id": "inst-mel-and-moj-g03",
@@ -17064,8 +17129,8 @@
    "cashback_pct": 0,
    "snapp_url": "https://snapppay.ir/timetable/",
    "img": "https://snapppay.ir/timetable/instore/inst_mel-and-moj_g03.jpg",
-   "live_status": "live",
-   "live_text": "تا 11/23 22:00",
+   "live_status": "ended",
+   "live_text": "",
    "is_range": true,
    "query": "تاپ و جلیقه ورزشی",
    "error": "",
@@ -17193,15 +17258,15 @@
    "dk_status": "matched",
    "dk_id": 20481188,
    "dk_title": "گوشی موبایل اپل مدل iPhone 17 Pro Max ZAA تک سیم کارت + eSim ظرفیت 256 گیگابایت و رم 12 گیگابایت - نات اکتیو",
-   "dk_price": 539999000,
-   "dk_rrp": 580208000,
-   "dk_discount": 7,
-   "dk_is_incredible": true,
+   "dk_price": 573999000,
+   "dk_rrp": 573999000,
+   "dk_discount": 0,
+   "dk_is_incredible": false,
    "dk_url": "https://www.digikala.com/product/dkp-20481188/",
-   "diff_toman": 133999000,
-   "diff_pct": 33.0,
+   "diff_toman": 167999000,
+   "diff_pct": 41.4,
    "snapp_effective": 406000000,
-   "diff_pct_vs_effective": 33.0,
+   "diff_pct_vs_effective": 41.4,
    "verdict": "snapp_cheaper"
   },
   {
@@ -17279,8 +17344,8 @@
    "cashback_pct": 0,
    "snapp_url": "https://snapppay.ir/timetable/",
    "img": "https://snapppay.ir/timetable/instore/inst_mel-and-moj_g25.jpg",
-   "live_status": "live",
-   "live_text": "تا 11/23 22:00",
+   "live_status": "ended",
+   "live_text": "",
    "is_range": true,
    "query": "تاپ و بادی ورزشی زنانه",
    "error": "",
@@ -17484,15 +17549,15 @@
    "dk_status": "matched",
    "dk_id": 17580036,
    "dk_title": "گوشی موبایل شیائومی مدل Redmi Note 14 4G دو سیم کارت ظرفیت 256 گیگابایت و رم 8 گیگابایت",
-   "dk_price": 83159000,
-   "dk_rrp": 83159000,
-   "dk_discount": 0,
-   "dk_is_incredible": false,
+   "dk_price": 81499900,
+   "dk_rrp": 84550000,
+   "dk_discount": 4,
+   "dk_is_incredible": true,
    "dk_url": "https://www.digikala.com/product/dkp-17580036/",
-   "diff_toman": 37659000,
-   "diff_pct": 82.8,
+   "diff_toman": 35999900,
+   "diff_pct": 79.1,
    "snapp_effective": 45500000,
-   "diff_pct_vs_effective": 82.8,
+   "diff_pct_vs_effective": 79.1,
    "verdict": "snapp_cheaper"
   },
   {
@@ -17507,8 +17572,8 @@
    "cashback_pct": 0,
    "snapp_url": "https://snapppay.ir/timetable/",
    "img": "https://snapppay.ir/timetable/instore/inst_mel-and-moj_g37.jpg",
-   "live_status": "live",
-   "live_text": "تا 11/23 22:00",
+   "live_status": "ended",
+   "live_text": "",
    "is_range": true,
    "query": "دامن و شلوارک ورزشی زنانه",
    "error": "",
@@ -17568,7 +17633,7 @@
    "query": "ننو مسافرتی QUECHUA Basic",
    "error": "",
    "confidence": "low",
-   "match_score": 0.0,
+   "match_score": -0.25,
    "dk_status": "not_found"
   },
   {
@@ -17609,22 +17674,9 @@
    "is_range": false,
    "query": "گوشی Redmi A7 Pro ظرفیت 128 گیگ",
    "error": "",
-   "recheck": "",
-   "confidence": "high",
-   "match_score": 0.886,
-   "dk_status": "matched",
-   "dk_id": 21870108,
-   "dk_title": "گوشی موبایل شیائومی مدل Redmi A7 Pro 4G ظرفیت 128 گیگابایت و رم 4 گیگابایت",
-   "dk_price": 36999000,
-   "dk_rrp": 46880400,
-   "dk_discount": 21,
-   "dk_is_incredible": false,
-   "dk_url": "https://www.digikala.com/product/dkp-21870108/",
-   "diff_toman": 15036500,
-   "diff_pct": 68.5,
-   "snapp_effective": 21962500,
-   "diff_pct_vs_effective": 68.5,
-   "verdict": "snapp_cheaper"
+   "confidence": "low",
+   "match_score": 0.496,
+   "dk_status": "uncertain"
   },
   {
    "snapp_id": "inst-mio-gold-g04",
@@ -17707,8 +17759,8 @@
    "query": "دریل چکشی 13 میلی متری ادون",
    "error": "",
    "confidence": "low",
-   "match_score": 0.271,
-   "dk_status": "not_found"
+   "match_score": 0.486,
+   "dk_status": "uncertain"
   },
   {
    "snapp_id": "inst-sensi-g02",
@@ -17767,15 +17819,15 @@
    "dk_status": "matched",
    "dk_id": 17580036,
    "dk_title": "گوشی موبایل شیائومی مدل Redmi Note 14 4G دو سیم کارت ظرفیت 256 گیگابایت و رم 8 گیگابایت",
-   "dk_price": 83159000,
-   "dk_rrp": 83159000,
-   "dk_discount": 0,
-   "dk_is_incredible": false,
+   "dk_price": 81499900,
+   "dk_rrp": 84550000,
+   "dk_discount": 4,
+   "dk_is_incredible": true,
    "dk_url": "https://www.digikala.com/product/dkp-17580036/",
-   "diff_toman": 39759000,
-   "diff_pct": 91.6,
+   "diff_toman": 38099900,
+   "diff_pct": 87.8,
    "snapp_effective": 43400000,
-   "diff_pct_vs_effective": 91.6,
+   "diff_pct_vs_effective": 87.8,
    "verdict": "snapp_cheaper"
   },
   {
@@ -17796,8 +17848,8 @@
    "query": "کتانی نایکی تراویس اسکات و جردن",
    "error": "",
    "confidence": "low",
-   "match_score": 0.544,
-   "dk_status": "uncertain"
+   "match_score": 0.328,
+   "dk_status": "not_found"
   },
   {
    "snapp_id": "hk-e42e5877",
@@ -17817,7 +17869,7 @@
    "query": "سرخ کن نینجا Crispi",
    "error": "",
    "confidence": "low",
-   "match_score": 0.437,
+   "match_score": 0.4,
    "dk_status": "not_found"
   },
   {
@@ -17981,13 +18033,13 @@
    "confidence": "medium",
    "match_score": 0.917,
    "dk_status": "review",
-   "dk_id": 23291545,
+   "dk_id": 23290795,
    "dk_title": "ست بلوز و شلوار زنانه بافت مدل آواک",
    "dk_price": 3800000,
    "dk_rrp": 3800000,
    "dk_discount": 0,
    "dk_is_incredible": false,
-   "dk_url": "https://www.digikala.com/product/dkp-23291545/",
+   "dk_url": "https://www.digikala.com/product/dkp-23290795/",
    "diff_toman": 3100100,
    "diff_pct": 442.9,
    "snapp_effective": 699900,
@@ -18017,15 +18069,15 @@
    "dk_status": "review",
    "dk_id": 20917780,
    "dk_title": "کنسول بازی سونی مدل PlayStation 5 Slim Digital Edition ظرفیت 825 گیگابایت ریجن CFI-2116 اروپا",
-   "dk_price": 196999000,
-   "dk_rrp": 210000000,
-   "dk_discount": 6,
-   "dk_is_incredible": true,
+   "dk_price": 213199990,
+   "dk_rrp": 260000000,
+   "dk_discount": 18,
+   "dk_is_incredible": false,
    "dk_url": "https://www.digikala.com/product/dkp-20917780/",
-   "diff_toman": 68899000,
-   "diff_pct": 53.8,
+   "diff_toman": 85099990,
+   "diff_pct": 66.4,
    "snapp_effective": 128100000,
-   "diff_pct_vs_effective": 53.8,
+   "diff_pct_vs_effective": 66.4,
    "verdict": "snapp_cheaper"
   },
   {
@@ -18088,7 +18140,7 @@
    "query": "کفش پاشنه بلند چرم زنانه پوردو",
    "error": "",
    "confidence": "low",
-   "match_score": 0.375,
+   "match_score": 0.393,
    "dk_status": "not_found"
   },
   {
@@ -18324,7 +18376,7 @@
    "query": "دامن",
    "error": "",
    "confidence": "low",
-   "match_score": 0.786,
+   "match_score": 0.833,
    "dk_status": "uncertain"
   },
   {
@@ -18400,7 +18452,7 @@
    "query": "روغن نارگیل",
    "error": "",
    "confidence": "low",
-   "match_score": 0.821,
+   "match_score": 0.812,
    "dk_status": "uncertain"
   },
   {
@@ -18421,7 +18473,7 @@
    "query": "تجهیزات کمپینگ",
    "error": "",
    "confidence": "low",
-   "match_score": 0.417,
+   "match_score": 0.425,
    "dk_status": "not_found"
   },
   {
@@ -18468,15 +18520,15 @@
    "dk_status": "matched",
    "dk_id": 20127115,
    "dk_title": "گوشی موبایل اپل مدل iPhone 17 CH دو سیم کارت ظرفیت 256 گیگابایت و رم 8 گیگابایت - نات اکتیو",
-   "dk_price": 349999000,
-   "dk_rrp": 382653000,
-   "dk_discount": 9,
-   "dk_is_incredible": true,
+   "dk_price": 379610990,
+   "dk_rrp": 379610990,
+   "dk_discount": 0,
+   "dk_is_incredible": false,
    "dk_url": "https://www.digikala.com/product/dkp-20127115/",
-   "diff_toman": 72799000,
-   "diff_pct": 26.3,
+   "diff_toman": 102410990,
+   "diff_pct": 36.9,
    "snapp_effective": 277200000,
-   "diff_pct_vs_effective": 26.3,
+   "diff_pct_vs_effective": 36.9,
    "verdict": "snapp_cheaper"
   },
   {
@@ -18512,8 +18564,8 @@
    "cashback_pct": 0,
    "snapp_url": "https://snapppay.ir/timetable/",
    "img": "https://snapppay.ir/timetable/online/ONL_6670C49E.jpg",
-   "live_status": "live",
-   "live_text": "تا 11/23 20:00",
+   "live_status": "ended",
+   "live_text": "",
    "is_range": false,
    "query": "اشتراک 12 ماهه آموزش متوسطه دوم",
    "error": "",
@@ -18539,7 +18591,7 @@
    "query": "ادوپرفیوم مردانه",
    "error": "",
    "confidence": "low",
-   "match_score": 0.792,
+   "match_score": 0.8,
    "dk_status": "uncertain"
   },
   {
@@ -18623,7 +18675,7 @@
    "query": "پیراهن مردانه پارچه ای و فوتر",
    "error": "",
    "confidence": "low",
-   "match_score": 0.6,
+   "match_score": 0.575,
    "dk_status": "uncertain"
   },
   {
@@ -18644,7 +18696,7 @@
    "query": "کرم های ضدآفتاب",
    "error": "",
    "confidence": "low",
-   "match_score": 0.8,
+   "match_score": 0.812,
    "dk_status": "uncertain"
   },
   {
@@ -18659,8 +18711,8 @@
    "cashback_pct": 0,
    "snapp_url": "https://snapppay.ir/timetable/",
    "img": "https://snapppay.ir/timetable/online/HK_4F116752.jpg",
-   "live_status": "upcoming",
-   "live_text": "11/23 17:00",
+   "live_status": "ended",
+   "live_text": "",
    "is_range": false,
    "query": "بطری استنلی Slim 590 میل",
    "error": "",
@@ -18712,15 +18764,15 @@
    "dk_status": "matched",
    "dk_id": 21462684,
    "dk_title": "گوشی موبایل سامسونگ مدل Galaxy S26 Ultra دو سیم‌کارت ظرفیت 256 گیگابایت و رم 12 گیگابایت - ویتنام",
-   "dk_price": 418999000,
-   "dk_rrp": 447759700,
-   "dk_discount": 6,
+   "dk_price": 419999000,
+   "dk_rrp": 477000000,
+   "dk_discount": 12,
    "dk_is_incredible": true,
    "dk_url": "https://www.digikala.com/product/dkp-21462684/",
-   "diff_toman": 36799000,
-   "diff_pct": 9.6,
+   "diff_toman": 37799000,
+   "diff_pct": 9.9,
    "snapp_effective": 382200000,
-   "diff_pct_vs_effective": 9.6,
+   "diff_pct_vs_effective": 9.9,
    "verdict": "snapp_cheaper"
   },
   {
@@ -18741,7 +18793,7 @@
    "query": "کتونی نایکی زوم ومرو",
    "error": "",
    "confidence": "low",
-   "match_score": 0.223,
+   "match_score": 0.229,
    "dk_status": "not_found"
   },
   {
@@ -18909,7 +18961,7 @@
    "query": "عطرهای مردانه هومهر",
    "error": "",
    "confidence": "low",
-   "match_score": 0.273,
+   "match_score": 0.278,
    "dk_status": "not_found"
   },
   {
@@ -19019,7 +19071,7 @@
    "query": "کتونی آن کلود اولترا پرو",
    "error": "",
    "confidence": "low",
-   "match_score": 0.039,
+   "match_score": 0.056,
    "dk_status": "not_found"
   },
   {
@@ -19076,14 +19128,14 @@
    "cashback_pct": 0,
    "snapp_url": "https://snapppay.ir/timetable/",
    "img": "https://snapppay.ir/timetable/online/ONL_4FA462E6.jpg",
-   "live_status": "upcoming",
-   "live_text": "11/23 20:00",
+   "live_status": "ended",
+   "live_text": "",
    "is_range": false,
    "query": "ست دریل 48 پارچه ادون",
    "error": "",
    "confidence": "low",
-   "match_score": 0.15,
-   "dk_status": "not_found"
+   "match_score": 0.475,
+   "dk_status": "uncertain"
   },
   {
    "snapp_id": "inst-vahid-leather-g05",
@@ -19129,15 +19181,15 @@
    "dk_status": "matched",
    "dk_id": 21462684,
    "dk_title": "گوشی موبایل سامسونگ مدل Galaxy S26 Ultra دو سیم‌کارت ظرفیت 256 گیگابایت و رم 12 گیگابایت - ویتنام",
-   "dk_price": 418999000,
-   "dk_rrp": 447759700,
-   "dk_discount": 6,
+   "dk_price": 419999000,
+   "dk_rrp": 477000000,
+   "dk_discount": 12,
    "dk_is_incredible": true,
    "dk_url": "https://www.digikala.com/product/dkp-21462684/",
-   "diff_toman": 36799000,
-   "diff_pct": 9.6,
+   "diff_toman": 37799000,
+   "diff_pct": 9.9,
    "snapp_effective": 382200000,
-   "diff_pct_vs_effective": 9.6,
+   "diff_pct_vs_effective": 9.9,
    "verdict": "snapp_cheaper"
   },
   {
@@ -19241,22 +19293,22 @@
    "is_range": false,
    "query": "کت چرم مردانه مشکی",
    "error": "",
-   "recheck": "برند دیجی‌کالا (چرم هشت) در عنوان اسنپ‌پی نیست",
+   "recheck": "کالای دیجی‌کالا برند مشخص ندارد و کد یا شماره‌ی مدل مشترکی هم نیست",
    "confidence": "medium",
-   "match_score": 0.713,
+   "match_score": 0.75,
    "dk_status": "review",
-   "dk_id": 22906435,
-   "dk_title": "کت چرم مردانه چرم طبیعی مدل کیان",
-   "dk_price": 38000000,
-   "dk_rrp": 38000000,
+   "dk_id": 22852599,
+   "dk_title": "کت چرم مردانه مدل 33",
+   "dk_price": 11800000,
+   "dk_rrp": 11800000,
    "dk_discount": 0,
    "dk_is_incredible": false,
-   "dk_url": "https://www.digikala.com/product/dkp-22906435/",
-   "diff_toman": 8000000,
-   "diff_pct": 26.7,
+   "dk_url": "https://www.digikala.com/product/dkp-22852599/",
+   "diff_toman": -18200000,
+   "diff_pct": -60.7,
    "snapp_effective": 30000000,
-   "diff_pct_vs_effective": 26.7,
-   "verdict": "snapp_cheaper"
+   "diff_pct_vs_effective": -60.7,
+   "verdict": "dk_cheaper"
   },
   {
    "snapp_id": "socl-peymanbaba-ir-g03",
@@ -19275,21 +19327,21 @@
    "is_range": false,
    "query": "اتو مخزن دار وگاس",
    "error": "",
-   "recheck": "برند دیجی‌کالا (ژانومه) در عنوان اسنپ‌پی نیست | دیجی‌کالا مدل مشخص دارد (SE1850) ولی عنوان اسنپ‌پی مدل ندارد | کلمه‌ی کلیدی اسنپ‌پی در عنوان دیجی‌کالا نیست: وگاس",
+   "recheck": "برند دیجی‌کالا (دی اس پی) در عنوان اسنپ‌پی نیست | دیجی‌کالا مدل مشخص دارد (KD1120) ولی عنوان اسنپ‌پی مدل ندارد | کلمه‌ی کلیدی اسنپ‌پی در عنوان دیجی‌کالا نیست: وگاس",
    "confidence": "medium",
    "match_score": 0.67,
    "dk_status": "review",
-   "dk_id": 21286147,
-   "dk_title": "اتو مخزن‌دار 2200 وات ژانومه مدل SE1850",
-   "dk_price": 27000000,
-   "dk_rrp": 27850000,
-   "dk_discount": 3,
+   "dk_id": 15406171,
+   "dk_title": "اتو مخزن دار دی اس پی مدل KD1120",
+   "dk_price": 13999000,
+   "dk_rrp": 13999000,
+   "dk_discount": 0,
    "dk_is_incredible": false,
-   "dk_url": "https://www.digikala.com/product/dkp-21286147/",
-   "diff_toman": 16800000,
-   "diff_pct": 164.7,
+   "dk_url": "https://www.digikala.com/product/dkp-15406171/",
+   "diff_toman": 3799000,
+   "diff_pct": 37.2,
    "snapp_effective": 10200000,
-   "diff_pct_vs_effective": 164.7,
+   "diff_pct_vs_effective": 37.2,
    "verdict": "snapp_cheaper"
   },
   {
@@ -19325,8 +19377,8 @@
    "cashback_pct": 0,
    "snapp_url": "https://snapppay.ir/timetable/",
    "img": "https://snapppay.ir/timetable/online/ONL_0CFCB0BC.jpg",
-   "live_status": "upcoming",
-   "live_text": "11/23 20:00",
+   "live_status": "ended",
+   "live_text": "",
    "is_range": false,
    "query": "کرم ترمیم کننده 345 دکتر آلتیا",
    "error": "",
@@ -19422,8 +19474,8 @@
    "cashback_pct": 0,
    "snapp_url": "https://snapppay.ir/timetable/",
    "img": "https://snapppay.ir/timetable/online/ONL_35408688.jpg",
-   "live_status": "upcoming",
-   "live_text": "11/23 20:00",
+   "live_status": "ended",
+   "live_text": "",
    "is_range": false,
    "query": "جاقاشقی چوبی مینیمال",
    "error": "",
@@ -19503,22 +19555,9 @@
    "is_range": false,
    "query": "گوشی Redmi A7 Pro ظرفیت 128 گیگ",
    "error": "",
-   "recheck": "",
-   "confidence": "high",
-   "match_score": 0.886,
-   "dk_status": "matched",
-   "dk_id": 21870108,
-   "dk_title": "گوشی موبایل شیائومی مدل Redmi A7 Pro 4G ظرفیت 128 گیگابایت و رم 4 گیگابایت",
-   "dk_price": 36999000,
-   "dk_rrp": 46880400,
-   "dk_discount": 21,
-   "dk_is_incredible": false,
-   "dk_url": "https://www.digikala.com/product/dkp-21870108/",
-   "diff_toman": 14803500,
-   "diff_pct": 66.7,
-   "snapp_effective": 22195500,
-   "diff_pct_vs_effective": 66.7,
-   "verdict": "snapp_cheaper"
+   "confidence": "low",
+   "match_score": 0.496,
+   "dk_status": "uncertain"
   },
   {
    "snapp_id": "inst-mel-and-moj-g26",
@@ -19571,21 +19610,21 @@
    "is_range": false,
    "query": "همزن کاسه دار میرالوکس",
    "error": "",
-   "recheck": "برند دیجی‌کالا (پرل) در عنوان اسنپ‌پی نیست | دیجی‌کالا مدل مشخص دارد (SM-138_W) ولی عنوان اسنپ‌پی مدل ندارد | حجم/وزن/ظرفیت در عنوان اسنپ‌پی نیامده و قابل تطبیق نیست | کلمه‌ی کلیدی اسنپ‌پی در عنوان دیجی‌کالا نیست: میرالوکس",
+   "recheck": "برند دیجی‌کالا (پرل) در عنوان اسنپ‌پی نیست | دیجی‌کالا مدل مشخص دارد (SM-138) ولی عنوان اسنپ‌پی مدل ندارد | حجم/وزن/ظرفیت در عنوان اسنپ‌پی نیامده و قابل تطبیق نیست | کلمه‌ی کلیدی اسنپ‌پی در عنوان دیجی‌کالا نیست: میرالوکس",
    "confidence": "medium",
    "match_score": 0.656,
    "dk_status": "review",
-   "dk_id": 21823453,
-   "dk_title": "همزن کاسه‌دار 5 لیتری پرل مدل SM-138_W",
-   "dk_price": 21440000,
-   "dk_rrp": 21440000,
+   "dk_id": 21823308,
+   "dk_title": "همزن کاسه‌دار 5 لیتری پرل مدل SM-138",
+   "dk_price": 22200000,
+   "dk_rrp": 22200000,
    "dk_discount": 0,
    "dk_is_incredible": false,
-   "dk_url": "https://www.digikala.com/product/dkp-21823453/",
-   "diff_toman": 15110000,
-   "diff_pct": 238.7,
+   "dk_url": "https://www.digikala.com/product/dkp-21823308/",
+   "diff_toman": 15870000,
+   "diff_pct": 250.7,
    "snapp_effective": 6330000,
-   "diff_pct_vs_effective": 238.7,
+   "diff_pct_vs_effective": 250.7,
    "verdict": "snapp_cheaper"
   },
   {
@@ -19643,7 +19682,7 @@
    "snapp_url": "https://snapppay.ir/timetable/",
    "img": "https://snapppay.ir/timetable/online/DG_04EA465A.jpg",
    "live_status": "upcoming",
-   "live_text": "11/23 17:00",
+   "live_text": "11/24 21:00",
    "is_range": false,
    "query": "ساعت هوشمند موبودو H1",
    "error": "",
@@ -19773,8 +19812,8 @@
    "cashback_pct": 0,
    "snapp_url": "https://snapppay.ir/timetable/",
    "img": "https://snapppay.ir/timetable/online/ONL_3840FF08.jpg",
-   "live_status": "upcoming",
-   "live_text": "11/23 20:00",
+   "live_status": "ended",
+   "live_text": "",
    "is_range": false,
    "query": "کیف دوشی زنانه",
    "error": "",
@@ -19849,8 +19888,8 @@
    "cashback_pct": 0,
    "snapp_url": "https://snapppay.ir/timetable/",
    "img": "https://snapppay.ir/timetable/online/ONL_29A1EE7B.jpg",
-   "live_status": "live",
-   "live_text": "تا 11/23 20:00",
+   "live_status": "ended",
+   "live_text": "",
    "is_range": false,
    "query": "کت بلند پاییزه زنانه",
    "error": "",
@@ -19951,22 +19990,22 @@
    "is_range": false,
    "query": "کفش بندی چرم مردانه",
    "error": "",
-   "recheck": "کالای دیجی‌کالا برند مشخص ندارد و کد یا شماره‌ی مدل مشترکی هم نیست | دیجی‌کالا مدل مشخص دارد (KH35002) ولی عنوان اسنپ‌پی مدل ندارد",
+   "recheck": "کالای دیجی‌کالا برند مشخص ندارد و کد یا شماره‌ی مدل مشترکی هم نیست",
    "confidence": "medium",
-   "match_score": 0.806,
+   "match_score": 0.793,
    "dk_status": "review",
-   "dk_id": 21001605,
-   "dk_title": "کفش روزمره مردانه بندی چرم طبیعی با زیره پلی اورتان و کفی قابل تعویض مدل KH35002 وزن سبک و آج‌دار و قالب استاندارد",
-   "dk_price": 8200000,
-   "dk_rrp": 8200000,
-   "dk_discount": 0,
+   "dk_id": 22288341,
+   "dk_title": "کفش روزمره مردانه بندی مدل چرم طبیعی با زیره پلی اورتان، مقاوم در برابر سایش و لغزش، کفی طبی با قابلیت ارتجاعی، سبک و انعطاف‌پذیر مناسب استفاده طولانی مدت",
+   "dk_price": 16217500,
+   "dk_rrp": 24950000,
+   "dk_discount": 35,
    "dk_is_incredible": false,
-   "dk_url": "https://www.digikala.com/product/dkp-21001605/",
-   "diff_toman": -6600000,
-   "diff_pct": -44.6,
+   "dk_url": "https://www.digikala.com/product/dkp-22288341/",
+   "diff_toman": 1417500,
+   "diff_pct": 9.6,
    "snapp_effective": 14800000,
-   "diff_pct_vs_effective": -44.6,
-   "verdict": "dk_cheaper"
+   "diff_pct_vs_effective": 9.6,
+   "verdict": "snapp_cheaper"
   },
   {
    "snapp_id": "onl-819b0352",
@@ -20048,22 +20087,9 @@
    "is_range": false,
    "query": "هندزفری بلوتوثی مک دودو HP-330",
    "error": "",
-   "recheck": "",
-   "confidence": "high",
-   "match_score": 1.0,
-   "dk_status": "matched",
-   "dk_id": 14896218,
-   "dk_title": "هندزفری بلوتوثی مک دودو مدل HP-330",
-   "dk_price": 4950000,
-   "dk_rrp": 4950000,
-   "dk_discount": 0,
-   "dk_is_incredible": false,
-   "dk_url": "https://www.digikala.com/product/dkp-14896218/",
-   "diff_toman": 3510000,
-   "diff_pct": 243.8,
-   "snapp_effective": 1440000,
-   "diff_pct_vs_effective": 243.8,
-   "verdict": "snapp_cheaper"
+   "confidence": "low",
+   "match_score": 0.571,
+   "dk_status": "uncertain"
   },
   {
    "snapp_id": "inst-vahid-leather-g19",
@@ -20083,8 +20109,8 @@
    "query": "کفش کالج چرم آسپینا",
    "error": "",
    "confidence": "low",
-   "match_score": 0.667,
-   "dk_status": "uncertain"
+   "match_score": 0.42,
+   "dk_status": "not_found"
   },
   {
    "snapp_id": "onl-4749967e",
@@ -20104,7 +20130,7 @@
    "query": "پلاک طلا ونکلیف",
    "error": "",
    "confidence": "low",
-   "match_score": 0.55,
+   "match_score": 0.562,
    "dk_status": "uncertain"
   },
   {
@@ -20263,8 +20289,8 @@
    "cashback_pct": 0,
    "snapp_url": "https://snapppay.ir/timetable/",
    "img": "https://snapppay.ir/timetable/online/ONL_F449C3F7.jpg",
-   "live_status": "upcoming",
-   "live_text": "11/23 20:00",
+   "live_status": "ended",
+   "live_text": "",
    "is_range": false,
    "query": "گوشواره طلا میخی تک نگین",
    "error": "",
@@ -20305,8 +20331,8 @@
    "cashback_pct": 0,
    "snapp_url": "https://snapppay.ir/timetable/",
    "img": "https://snapppay.ir/timetable/online/ONL_29DDE99E.jpg",
-   "live_status": "upcoming",
-   "live_text": "11/23 20:00",
+   "live_status": "ended",
+   "live_text": "",
    "is_range": false,
    "query": "شورت اسلیپ گیپور زنانه",
    "error": "",
@@ -20371,15 +20397,15 @@
    "dk_status": "review",
    "dk_id": 22701418,
    "dk_title": "سرویس تابه استیل 3 پارچه پارس استیل مدل شایا",
-   "dk_price": 7742240,
+   "dk_price": 8208640,
    "dk_rrp": 9328000,
-   "dk_discount": 17,
-   "dk_is_incredible": true,
+   "dk_discount": 12,
+   "dk_is_incredible": false,
    "dk_url": "https://www.digikala.com/product/dkp-22701418/",
-   "diff_toman": 5410240,
-   "diff_pct": 232.0,
+   "diff_toman": 5876640,
+   "diff_pct": 252.0,
    "snapp_effective": 2332000,
-   "diff_pct_vs_effective": 232.0,
+   "diff_pct_vs_effective": 252.0,
    "verdict": "snapp_cheaper"
   },
   {
@@ -20499,8 +20525,8 @@
    "cashback_pct": 0,
    "snapp_url": "https://snapppay.ir/timetable/",
    "img": "https://snapppay.ir/timetable/online/HK_A13A3980.jpg",
-   "live_status": "upcoming",
-   "live_text": "11/23 21:00",
+   "live_status": "ended",
+   "live_text": "",
    "is_range": false,
    "query": "پروتئین ساز شارژی پرودو 550 میل",
    "error": "",
@@ -20526,7 +20552,7 @@
    "query": "هودی ورزشی مردانه",
    "error": "",
    "confidence": "low",
-   "match_score": 0.688,
+   "match_score": 0.875,
    "dk_status": "uncertain"
   },
   {
@@ -20547,7 +20573,7 @@
    "query": "کاردیگان پولو",
    "error": "",
    "confidence": "low",
-   "match_score": 0.425,
+   "match_score": 0.438,
    "dk_status": "not_found"
   },
   {
@@ -20628,15 +20654,15 @@
    "dk_status": "review",
    "dk_id": 2822172,
    "dk_title": "قابلمه پارس استیل مدل کف سه لایه کد 240 سایز 24",
-   "dk_price": 7227700,
+   "dk_price": 7230700,
    "dk_rrp": 7238000,
    "dk_discount": 0,
    "dk_is_incredible": false,
    "dk_url": "https://www.digikala.com/product/dkp-2822172/",
-   "diff_toman": 5056300,
-   "diff_pct": 232.9,
+   "diff_toman": 5059300,
+   "diff_pct": 233.0,
    "snapp_effective": 2171400,
-   "diff_pct_vs_effective": 232.9,
+   "diff_pct_vs_effective": 233.0,
    "verdict": "snapp_cheaper"
   },
   {
@@ -20706,8 +20732,8 @@
    "cashback_pct": 0,
    "snapp_url": "https://snapppay.ir/timetable/",
    "img": "https://snapppay.ir/timetable/online/DG_9CC48FD8.jpg",
-   "live_status": "upcoming",
-   "live_text": "11/23 21:00",
+   "live_status": "ended",
+   "live_text": "",
    "is_range": false,
    "query": "اپل واچ SE سایز 44",
    "error": "",
@@ -20759,15 +20785,15 @@
    "dk_status": "matched",
    "dk_id": 22789544,
    "dk_title": "تخته گوشت پارس استیل مدل ۴۰-۳۰",
-   "dk_price": 3705000,
-   "dk_rrp": 3900000,
-   "dk_discount": 5,
+   "dk_price": 3960000,
+   "dk_rrp": 3960000,
+   "dk_discount": 0,
    "dk_is_incredible": false,
    "dk_url": "https://www.digikala.com/product/dkp-22789544/",
-   "diff_toman": 2517000,
-   "diff_pct": 211.9,
+   "diff_toman": 2772000,
+   "diff_pct": 233.3,
    "snapp_effective": 1188000,
-   "diff_pct_vs_effective": 211.9,
+   "diff_pct_vs_effective": 233.3,
    "verdict": "snapp_cheaper"
   },
   {
@@ -20782,13 +20808,13 @@
    "cashback_pct": 0,
    "snapp_url": "https://snapppay.ir/timetable/",
    "img": "https://snapppay.ir/timetable/instore/inst_mel-and-moj_g35.jpg",
-   "live_status": "live",
-   "live_text": "تا 11/23 22:00",
+   "live_status": "ended",
+   "live_text": "",
    "is_range": true,
    "query": "کفش ورزشی زنانه",
    "error": "",
    "confidence": "low",
-   "match_score": 0.857,
+   "match_score": 0.875,
    "dk_status": "uncertain"
   },
   {
@@ -20830,8 +20856,8 @@
    "query": "ماشین اصلاح دوکاره انچن A4",
    "error": "",
    "confidence": "low",
-   "match_score": 0.269,
-   "dk_status": "not_found"
+   "match_score": 0.583,
+   "dk_status": "uncertain"
   },
   {
    "snapp_id": "inst-vahid-leather-g15",
@@ -20851,7 +20877,7 @@
    "query": "کفش پاشنه دار ورنی زنانه اریکا",
    "error": "",
    "confidence": "low",
-   "match_score": 0.554,
+   "match_score": 0.583,
    "dk_status": "uncertain"
   },
   {
@@ -20871,21 +20897,21 @@
    "is_range": false,
    "query": "اره زنجیری بنزینی متکس",
    "error": "",
-   "recheck": "برند دیجی‌کالا (باس) در عنوان اسنپ‌پی نیست | دیجی‌کالا مدل مشخص دارد (8500) ولی عنوان اسنپ‌پی مدل ندارد | کلمه‌ی کلیدی اسنپ‌پی در عنوان دیجی‌کالا نیست: متکس",
+   "recheck": "برند دیجی‌کالا (اینتیمکث) در عنوان اسنپ‌پی نیست | دیجی‌کالا مدل مشخص دارد (45CM) ولی عنوان اسنپ‌پی مدل ندارد | کلمه‌ی کلیدی اسنپ‌پی در عنوان دیجی‌کالا نیست: متکس",
    "confidence": "medium",
    "match_score": 0.713,
    "dk_status": "review",
-   "dk_id": 17027461,
-   "dk_title": "اره بنزینی زنجیری باس مدل 8500",
-   "dk_price": 18990000,
-   "dk_rrp": 22922800,
-   "dk_discount": 17,
+   "dk_id": 17197041,
+   "dk_title": "اره زنجیری بنزینی اینتیمکث کد 45cm",
+   "dk_price": 19900000,
+   "dk_rrp": 19900000,
+   "dk_discount": 0,
    "dk_is_incredible": false,
-   "dk_url": "https://www.digikala.com/product/dkp-17027461/",
-   "diff_toman": 11991000,
-   "diff_pct": 171.3,
+   "dk_url": "https://www.digikala.com/product/dkp-17197041/",
+   "diff_toman": 12901000,
+   "diff_pct": 184.3,
    "snapp_effective": 6999000,
-   "diff_pct_vs_effective": 171.3,
+   "diff_pct_vs_effective": 184.3,
    "verdict": "snapp_cheaper"
   },
   {
@@ -20906,8 +20932,8 @@
    "query": "صندل طبیعت گردی هامتو Humtto",
    "error": "",
    "confidence": "low",
-   "match_score": 0.467,
-   "dk_status": "uncertain"
+   "match_score": 0.3,
+   "dk_status": "not_found"
   },
   {
    "snapp_id": "onl-4867e931",
@@ -20997,8 +21023,8 @@
    "cashback_pct": 0,
    "snapp_url": "https://snapppay.ir/timetable/",
    "img": "https://snapppay.ir/timetable/instore/inst_mel-and-moj_g43.jpg",
-   "live_status": "live",
-   "live_text": "تا 11/23 22:00",
+   "live_status": "ended",
+   "live_text": "",
    "is_range": true,
    "query": "پولوشرت ورزشی زنانه",
    "error": "",
@@ -21087,7 +21113,7 @@
    "query": "تلویزیون سامسونگ 43 اینچ U8000F 4K",
    "error": "",
    "confidence": "low",
-   "match_score": 0.202,
+   "match_score": 0.217,
    "dk_status": "not_found"
   },
   {
@@ -21199,8 +21225,8 @@
    "cashback_pct": 0,
    "snapp_url": "https://snapppay.ir/timetable/",
    "img": "https://snapppay.ir/timetable/instore/inst_mel-and-moj_g11.jpg",
-   "live_status": "live",
-   "live_text": "تا 11/23 22:00",
+   "live_status": "ended",
+   "live_text": "",
    "is_range": true,
    "query": "لگ ورزشی مردانه",
    "error": "",
@@ -21344,7 +21370,7 @@
    "query": "ست ادیداس",
    "error": "",
    "confidence": "low",
-   "match_score": 0.562,
+   "match_score": 0.556,
    "dk_status": "uncertain"
   },
   {
@@ -21435,13 +21461,13 @@
    "cashback_pct": 0,
    "snapp_url": "https://snapppay.ir/timetable/",
    "img": "https://snapppay.ir/timetable/instore/inst_mel-and-moj_g05.jpg",
-   "live_status": "live",
-   "live_text": "تا 11/23 22:00",
+   "live_status": "ended",
+   "live_text": "",
    "is_range": true,
    "query": "شلوارک ورزشی مردانه",
    "error": "",
    "confidence": "low",
-   "match_score": 0.875,
+   "match_score": 0.938,
    "dk_status": "uncertain"
   },
   {
@@ -21482,9 +21508,22 @@
    "is_range": false,
    "query": "گوشی Galaxy A06 ظرفیت 128 گیگ",
    "error": "",
-   "confidence": "low",
-   "match_score": 0.446,
-   "dk_status": "not_found"
+   "recheck": "",
+   "confidence": "high",
+   "match_score": 0.854,
+   "dk_status": "matched",
+   "dk_id": 16552106,
+   "dk_title": "گوشی موبایل سامسونگ مدل Galaxy A06 دو سیم کارت ظرفیت 128 گیگابایت و رم 6 گیگابایت",
+   "dk_price": 68000000,
+   "dk_rrp": 68000000,
+   "dk_discount": 0,
+   "dk_is_incredible": false,
+   "dk_url": "https://www.digikala.com/product/dkp-16552106/",
+   "diff_toman": 29000000,
+   "diff_pct": 74.4,
+   "snapp_effective": 39000000,
+   "diff_pct_vs_effective": 74.4,
+   "verdict": "snapp_cheaper"
   },
   {
    "snapp_id": "inst-lozi-g04",
@@ -21546,7 +21585,7 @@
    "query": "انگشتر طلا",
    "error": "",
    "confidence": "low",
-   "match_score": 0.8,
+   "match_score": 0.812,
    "dk_status": "uncertain"
   },
   {
@@ -21567,7 +21606,7 @@
    "query": "کت چرم مشکی",
    "error": "",
    "confidence": "low",
-   "match_score": 0.625,
+   "match_score": 0.583,
    "dk_status": "uncertain"
   },
   {
@@ -21624,13 +21663,13 @@
    "cashback_pct": 0,
    "snapp_url": "https://snapppay.ir/timetable/",
    "img": "https://snapppay.ir/timetable/instore/inst_mel-and-moj_g07.jpg",
-   "live_status": "live",
-   "live_text": "تا 11/23 22:00",
+   "live_status": "ended",
+   "live_text": "",
    "is_range": true,
    "query": "تی شرت ورزشی مردانه",
    "error": "",
    "confidence": "low",
-   "match_score": 0.917,
+   "match_score": 0.625,
    "dk_status": "uncertain"
   },
   {
@@ -21651,7 +21690,7 @@
    "query": "ساندویچ ساز 4 خانه بلک اند دکر",
    "error": "",
    "confidence": "low",
-   "match_score": 0.482,
+   "match_score": 0.612,
    "dk_status": "uncertain"
   },
   {
@@ -21839,8 +21878,8 @@
    "cashback_pct": 0,
    "snapp_url": "https://snapppay.ir/timetable/",
    "img": "https://snapppay.ir/timetable/instore/inst_mel-and-moj_g31.jpg",
-   "live_status": "live",
-   "live_text": "تا 11/23 22:00",
+   "live_status": "ended",
+   "live_text": "",
    "is_range": true,
    "query": "جکت و هودی ورزشی زنانه",
    "error": "",
@@ -22041,13 +22080,13 @@
    "cashback_pct": 0,
    "snapp_url": "https://snapppay.ir/timetable/",
    "img": "https://snapppay.ir/timetable/instore/inst_mel-and-moj_g09.jpg",
-   "live_status": "live",
-   "live_text": "تا 11/23 22:00",
+   "live_status": "ended",
+   "live_text": "",
    "is_range": true,
    "query": "شلوار ورزشی مردانه",
    "error": "",
    "confidence": "low",
-   "match_score": 0.688,
+   "match_score": 0.65,
    "dk_status": "uncertain"
   },
   {
@@ -22228,7 +22267,7 @@
    "query": "ست هرمس",
    "error": "",
    "confidence": "low",
-   "match_score": 0.583,
+   "match_score": 0.55,
    "dk_status": "uncertain"
   },
   {
@@ -22243,8 +22282,8 @@
    "cashback_pct": 0,
    "snapp_url": "https://snapppay.ir/timetable/",
    "img": "https://snapppay.ir/timetable/instore/inst_mel-and-moj_g29.jpg",
-   "live_status": "live",
-   "live_text": "تا 11/23 22:00",
+   "live_status": "ended",
+   "live_text": "",
    "is_range": true,
    "query": "شلوار ورزشی زنانه",
    "error": "",
@@ -22471,8 +22510,8 @@
    "cashback_pct": 0,
    "snapp_url": "https://snapppay.ir/timetable/",
    "img": "https://snapppay.ir/timetable/instore/inst_mel-and-moj_g15.jpg",
-   "live_status": "live",
-   "live_text": "تا 11/23 22:00",
+   "live_status": "ended",
+   "live_text": "",
    "is_range": true,
    "query": "پولوشرت ورزشی مردانه",
    "error": "",
@@ -22519,7 +22558,7 @@
    "query": "دستبند طلا",
    "error": "",
    "confidence": "low",
-   "match_score": 0.806,
+   "match_score": 0.833,
    "dk_status": "uncertain"
   },
   {
@@ -22699,13 +22738,13 @@
    "cashback_pct": 0,
    "snapp_url": "https://snapppay.ir/timetable/",
    "img": "https://snapppay.ir/timetable/instore/inst_mel-and-moj_g19.jpg",
-   "live_status": "live",
-   "live_text": "تا 11/23 22:00",
+   "live_status": "ended",
+   "live_text": "",
    "is_range": true,
    "query": "سویشرت ورزشی مردانه",
    "error": "",
    "confidence": "low",
-   "match_score": 0.938,
+   "match_score": 0.607,
    "dk_status": "uncertain"
   },
   {
@@ -22750,17 +22789,17 @@
    "confidence": "medium",
    "match_score": 0.833,
    "dk_status": "review",
-   "dk_id": 26672,
-   "dk_title": "آب مرکبات گیری پارس خزر مدل Limonade",
-   "dk_price": 3700000,
-   "dk_rrp": 3732400,
+   "dk_id": 31610,
+   "dk_title": "آب مرکبات گیری پارس خزر مدل PULP",
+   "dk_price": 4882000,
+   "dk_rrp": 4882300,
    "dk_discount": 0,
    "dk_is_incredible": false,
-   "dk_url": "https://www.digikala.com/product/dkp-26672/",
-   "diff_toman": 1180000,
-   "diff_pct": 46.8,
+   "dk_url": "https://www.digikala.com/product/dkp-31610/",
+   "diff_toman": 2362000,
+   "diff_pct": 93.7,
    "snapp_effective": 2520000,
-   "diff_pct_vs_effective": 46.8,
+   "diff_pct_vs_effective": 93.7,
    "verdict": "snapp_cheaper"
   },
   {
@@ -22802,8 +22841,8 @@
    "query": "ساعت هوشمند موبودو K1",
    "error": "",
    "confidence": "low",
-   "match_score": 0.225,
-   "dk_status": "not_found"
+   "match_score": 0.477,
+   "dk_status": "uncertain"
   },
   {
    "snapp_id": "inst-infinity-g06",
@@ -22901,14 +22940,14 @@
    "cashback_pct": 0,
    "snapp_url": "https://snapppay.ir/timetable/",
    "img": "https://snapppay.ir/timetable/instore/inst_mel-and-moj_g27.jpg",
-   "live_status": "live",
-   "live_text": "تا 11/23 22:00",
+   "live_status": "ended",
+   "live_text": "",
    "is_range": true,
    "query": "لگ ورزشی زنانه",
    "error": "",
    "confidence": "low",
-   "match_score": 0.375,
-   "dk_status": "not_found"
+   "match_score": 0.583,
+   "dk_status": "uncertain"
   },
   {
    "snapp_id": "socl-esfahan-hijab-g08",
@@ -23025,7 +23064,7 @@
    "query": "ست ونکلیف طرح طلا و انگشتر پورتوفینو",
    "error": "",
    "confidence": "low",
-   "match_score": 0.283,
+   "match_score": 0.275,
    "dk_status": "not_found"
   },
   {
@@ -23101,7 +23140,7 @@
    "query": "ساعت هوشمند ویسمی X35 Max",
    "error": "",
    "confidence": "low",
-   "match_score": 0.436,
+   "match_score": 0.379,
    "dk_status": "not_found"
   },
   {
@@ -23116,8 +23155,8 @@
    "cashback_pct": 0,
    "snapp_url": "https://snapppay.ir/timetable/",
    "img": "https://snapppay.ir/timetable/instore/inst_mel-and-moj_g13.jpg",
-   "live_status": "live",
-   "live_text": "تا 11/23 22:00",
+   "live_status": "ended",
+   "live_text": "",
    "is_range": true,
    "query": "مایو شنا مردانه",
    "error": "",
@@ -23221,8 +23260,8 @@
    "cashback_pct": 0,
    "snapp_url": "https://snapppay.ir/timetable/",
    "img": "https://snapppay.ir/timetable/instore/inst_mel-and-moj_g41.jpg",
-   "live_status": "live",
-   "live_text": "تا 11/23 22:00",
+   "live_status": "ended",
+   "live_text": "",
    "is_range": true,
    "query": "سویشرت ورزشی زنانه",
    "error": "",
@@ -23274,15 +23313,15 @@
    "dk_status": "review",
    "dk_id": 1760908,
    "dk_title": "دیسک ترمز چرخ جلو ایساکو کد 2905 مناسب برای پژو 405 و پارس و سمند",
-   "dk_price": 5230000,
-   "dk_rrp": 5230000,
+   "dk_price": 5420000,
+   "dk_rrp": 5420000,
    "dk_discount": 0,
    "dk_is_incredible": false,
    "dk_url": "https://www.digikala.com/product/dkp-1760908/",
-   "diff_toman": -770000,
-   "diff_pct": -12.8,
+   "diff_toman": -580000,
+   "diff_pct": -9.7,
    "snapp_effective": 6000000,
-   "diff_pct_vs_effective": -12.8,
+   "diff_pct_vs_effective": -9.7,
    "verdict": "dk_cheaper"
   },
   {
@@ -23302,21 +23341,21 @@
    "is_range": false,
    "query": "ساعت مچی موادو زنانه",
    "error": "",
-   "recheck": "کالای دیجی‌کالا برند مشخص ندارد و کد یا شماره‌ی مدل مشترکی هم نیست | کلمه‌ی کلیدی اسنپ‌پی در عنوان دیجی‌کالا نیست: موادو",
+   "recheck": "برند دیجی‌کالا (اسکمی) در عنوان اسنپ‌پی نیست | دیجی‌کالا مدل مشخص دارد (1390RG) ولی عنوان اسنپ‌پی مدل ندارد | کلمه‌ی کلیدی اسنپ‌پی در عنوان دیجی‌کالا نیست: موادو",
    "confidence": "medium",
-   "match_score": 0.688,
+   "match_score": 0.67,
    "dk_status": "review",
-   "dk_id": 5371319,
-   "dk_title": "ساعت مچی عقربه ای زنانه  مدل 01",
-   "dk_price": 2958000,
-   "dk_rrp": 3400000,
-   "dk_discount": 13,
+   "dk_id": 5652646,
+   "dk_title": "ساعت مچی عقربه ای زنانه اسکمی مدل 1390RG",
+   "dk_price": 4015540,
+   "dk_rrp": 4897000,
+   "dk_discount": 18,
    "dk_is_incredible": false,
-   "dk_url": "https://www.digikala.com/product/dkp-5371319/",
-   "diff_toman": -3792000,
-   "diff_pct": -56.2,
+   "dk_url": "https://www.digikala.com/product/dkp-5652646/",
+   "diff_toman": -2734460,
+   "diff_pct": -40.5,
    "snapp_effective": 6750000,
-   "diff_pct_vs_effective": -56.2,
+   "diff_pct_vs_effective": -40.5,
    "verdict": "dk_cheaper"
   },
   {
@@ -23373,13 +23412,13 @@
    "cashback_pct": 0,
    "snapp_url": "https://snapppay.ir/timetable/",
    "img": "https://snapppay.ir/timetable/instore/inst_mel-and-moj_g33.jpg",
-   "live_status": "live",
-   "live_text": "تا 11/23 22:00",
+   "live_status": "ended",
+   "live_text": "",
    "is_range": true,
    "query": "نیم تنه ورزشی زنانه",
    "error": "",
    "confidence": "low",
-   "match_score": 0.917,
+   "match_score": 0.95,
    "dk_status": "uncertain"
   },
   {
@@ -23447,15 +23486,15 @@
    "dk_status": "review",
    "dk_id": 3314789,
    "dk_title": "ویفر شکلاتی مینی بایکیت تلخ شونیز - 500 گرم",
-   "dk_price": 449050,
-   "dk_rrp": 498950,
-   "dk_discount": 10,
+   "dk_price": 500000,
+   "dk_rrp": 500000,
+   "dk_discount": 0,
    "dk_is_incredible": false,
    "dk_url": "https://www.digikala.com/product/dkp-3314789/",
-   "diff_toman": 324050,
-   "diff_pct": 259.2,
+   "diff_toman": 375000,
+   "diff_pct": 300.0,
    "snapp_effective": 125000,
-   "diff_pct_vs_effective": 259.2,
+   "diff_pct_vs_effective": 300.0,
    "verdict": "snapp_cheaper"
   },
   {
@@ -23491,13 +23530,13 @@
    "cashback_pct": 0,
    "snapp_url": "https://snapppay.ir/timetable/",
    "img": "https://snapppay.ir/timetable/instore/inst_mel-and-moj_g23.jpg",
-   "live_status": "live",
-   "live_text": "تا 11/23 22:00",
+   "live_status": "ended",
+   "live_text": "",
    "is_range": true,
    "query": "لوازم ورزشی",
    "error": "",
    "confidence": "low",
-   "match_score": 0.483,
+   "match_score": 0.458,
    "dk_status": "uncertain"
   },
   {
@@ -23539,7 +23578,7 @@
    "query": "پک جلوبندی شرکتی 12 تکه استاندارد",
    "error": "",
    "confidence": "low",
-   "match_score": 0.393,
+   "match_score": 0.405,
    "dk_status": "not_found"
   },
   {
@@ -23617,8 +23656,8 @@
    "cashback_pct": 0,
    "snapp_url": "https://snapppay.ir/timetable/",
    "img": "https://snapppay.ir/timetable/instore/inst_mel-and-moj_g21.jpg",
-   "live_status": "live",
-   "live_text": "تا 11/23 22:00",
+   "live_status": "ended",
+   "live_text": "",
    "is_range": true,
    "query": "جوراب و شورت ورزشی مردانه",
    "error": "",
@@ -23735,8 +23774,8 @@
    "cashback_pct": 0,
    "snapp_url": "https://snapppay.ir/timetable/",
    "img": "https://snapppay.ir/timetable/instore/inst_mel-and-moj_g45.jpg",
-   "live_status": "live",
-   "live_text": "تا 11/23 22:00",
+   "live_status": "ended",
+   "live_text": "",
    "is_range": true,
    "query": "جوراب ورزشی زنانه",
    "error": "",
@@ -23825,7 +23864,7 @@
    "query": "کفش ورزشی زنانه",
    "error": "",
    "confidence": "low",
-   "match_score": 0.857,
+   "match_score": 0.875,
    "dk_status": "uncertain"
   },
   {
@@ -23845,21 +23884,21 @@
    "is_range": false,
    "query": "ست کت و سارافون روناک",
    "error": "",
-   "recheck": "کالای دیجی‌کالا برند مشخص ندارد و کد یا شماره‌ی مدل مشترکی هم نیست | دیجی‌کالا مدل مشخص دارد (ASH573) ولی عنوان اسنپ‌پی مدل ندارد | کلمه‌ی کلیدی اسنپ‌پی در عنوان دیجی‌کالا نیست: روناک",
+   "recheck": "کالای دیجی‌کالا برند مشخص ندارد و کد یا شماره‌ی مدل مشترکی هم نیست | کلمه‌ی کلیدی اسنپ‌پی در عنوان دیجی‌کالا نیست: روناک",
    "confidence": "medium",
-   "match_score": 0.713,
+   "match_score": 0.688,
    "dk_status": "review",
-   "dk_id": 14403186,
-   "dk_title": "ست کت و سارافون دخترانه مدل ASH573",
-   "dk_price": 1100000,
-   "dk_rrp": 1100000,
+   "dk_id": 21703383,
+   "dk_title": "ست کت و سارافون دخترانه مدل رویایی 2",
+   "dk_price": 1870000,
+   "dk_rrp": 1870000,
    "dk_discount": 0,
    "dk_is_incredible": false,
-   "dk_url": "https://www.digikala.com/product/dkp-14403186/",
-   "diff_toman": -897000,
-   "diff_pct": -44.9,
+   "dk_url": "https://www.digikala.com/product/dkp-21703383/",
+   "diff_toman": -127000,
+   "diff_pct": -6.4,
    "snapp_effective": 1997000,
-   "diff_pct_vs_effective": -44.9,
+   "diff_pct_vs_effective": -6.4,
    "verdict": "dk_cheaper"
   },
   {
@@ -23943,7 +23982,7 @@
    "query": "شلوار ورزشی مردانه",
    "error": "",
    "confidence": "low",
-   "match_score": 0.875,
+   "match_score": 0.65,
    "dk_status": "uncertain"
   },
   {
@@ -24271,7 +24310,7 @@
    "query": "شلوارک ورزشی مردانه",
    "error": "",
    "confidence": "low",
-   "match_score": 0.875,
+   "match_score": 0.938,
    "dk_status": "uncertain"
   },
   {
@@ -24313,7 +24352,7 @@
    "query": "نیم تنه ورزشی زنانه",
    "error": "",
    "confidence": "low",
-   "match_score": 0.917,
+   "match_score": 0.95,
    "dk_status": "uncertain"
   },
   {
@@ -24334,7 +24373,7 @@
    "query": "بافت کمرکش",
    "error": "",
    "confidence": "low",
-   "match_score": 0.411,
+   "match_score": 0.417,
    "dk_status": "not_found"
   },
   {
@@ -24355,7 +24394,7 @@
    "query": "تی شرت ورزشی مردانه",
    "error": "",
    "confidence": "low",
-   "match_score": 0.917,
+   "match_score": 0.625,
    "dk_status": "uncertain"
   },
   {
@@ -24439,7 +24478,7 @@
    "query": "سویشرت ورزشی مردانه",
    "error": "",
    "confidence": "low",
-   "match_score": 0.938,
+   "match_score": 0.607,
    "dk_status": "uncertain"
   },
   {
@@ -24502,7 +24541,7 @@
    "query": "لوازم ورزشی",
    "error": "",
    "confidence": "low",
-   "match_score": 0.483,
+   "match_score": 0.458,
    "dk_status": "uncertain"
   },
   {
