@@ -39,6 +39,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 from matcher import best_match, build_fallback_query, build_query, rank_candidates  # noqa: E402
 from recheck import recheck  # noqa: E402
 from report import render_report  # noqa: E402
+from snapp_page import page_price  # noqa: E402
 
 # ----------------------------------------------------------------------------
 # CONFIG
@@ -146,6 +147,11 @@ def live_window(times: list[dict]) -> tuple[str, str]:
     return ("ended", "") if times else ("always", "")
 
 
+def _social_link(p: dict) -> str:
+    links = (p.get("meta") or {}).get("socialLinks") or {}
+    return links.get("instagram") or links.get("bale") or next(iter(links.values()), "") if links else ""
+
+
 def load_snapppay(s: requests.Session) -> list[dict]:
     items: list[dict] = []
 
@@ -176,12 +182,60 @@ def load_snapppay(s: requests.Session) -> list[dict]:
             "category": CATEGORY_CANON.get(p.get("category") or "", p.get("category") or ""),
             "snapp_price": int(p["price"]), "snapp_before": int(p.get("prePrice") or 0) or None,
             "snapp_discount": p.get("discount"), "cashback_pct": 0,
-            "snapp_url": "https://snapppay.ir/timetable/",
+            # Timetable deals have no product page: online ones sell only inside the SnappPay
+            # app, in-store ones at the branches. Live/social shops get their own page link.
+            "snapp_url": _social_link(p) or "https://snapppay.ir/timetable/",
             "img": f"https://snapppay.ir/timetable{img}" if img.startswith("/") else img,
             "live_status": status, "live_text": text, "is_range": bool(p.get("isRange")),
         })
     log.info("SnappPay timetable: %d deals (vouchers skipped)", len(items) - n0)
     return items
+
+
+# ----------------------------------------------------------------------------
+# SELLER PAGE (current SnappPay-landing price on the shop's own product page)
+# ----------------------------------------------------------------------------
+SELLER_PAGES = os.environ.get("SELLER_PAGES", "1") != "0"
+SELLER_WORKERS = 8
+SELLER_BUDGET_S = 420  # stop starting new page fetches after 7 minutes
+
+
+def seller_now(row: dict, deadline: float) -> dict:
+    if time.time() > deadline:
+        return {"status": "skipped"}
+    try:
+        r = requests.get(row["snapp_url"], headers={**HEADERS, "Accept": "text/html,*/*"},
+                         timeout=12, allow_redirects=True)
+    except requests.RequestException:
+        return {"status": "blocked"}
+    if r.status_code != 200 or "html" not in r.headers.get("content-type", "html"):
+        return {"status": "blocked" if r.status_code in (403, 429, 451, 503) else "error"}
+    r.encoding = r.encoding or "utf-8"
+    return page_price(r.text, row["snapp_price"])
+
+
+def add_seller_prices(rows: list[dict]) -> None:
+    todo = [r for r in rows if r["channel"] == "landing" and r.get("snapp_url", "").startswith("http")]
+    for r in rows:
+        r.update(snapp_now=None, snapp_now_status="", snapp_now_stock="",
+                 snapp_now_diff_pct=None, dk_vs_now_pct=None)
+    if not SELLER_PAGES or not todo:
+        return
+    deadline = time.time() + SELLER_BUDGET_S
+    with ThreadPoolExecutor(max_workers=SELLER_WORKERS) as ex:
+        for r, res in zip(todo, ex.map(lambda r: seller_now(r, deadline), todo)):
+            r["snapp_now_status"] = res.get("status", "")
+            r["snapp_now_stock"] = res.get("stock", "")
+            now = res.get("price")
+            if now:
+                r["snapp_now"] = now
+                r["snapp_now_diff_pct"] = round((now - r["snapp_price"]) / r["snapp_price"] * 100, 1)
+                if r.get("dk_price") and r["confidence"] == "high":
+                    r["dk_vs_now_pct"] = round((r["dk_price"] - now) / now * 100, 1)
+    st: dict[str, int] = {}
+    for r in todo:
+        st[r["snapp_now_status"]] = st.get(r["snapp_now_status"], 0) + 1
+    log.info("Seller pages: %s", st)
 
 
 # ----------------------------------------------------------------------------
@@ -352,7 +406,8 @@ CSV_COLS = ["dk_status", "recheck", "confidence", "verdict", "diff_pct", "diff_t
             "title", "snapp_price", "snapp_before", "snapp_discount", "cashback_pct",
             "snapp_effective", "diff_pct_vs_effective", "dk_title", "dk_price", "dk_rrp",
             "dk_discount", "dk_is_incredible", "dk_id", "dk_url", "snapp_url", "live_status",
-            "live_text", "match_score", "snapp_id", "query", "error", "dk_link"]
+            "live_text", "match_score", "snapp_id", "query", "error", "dk_link",
+            "snapp_now", "snapp_now_status", "snapp_now_stock", "snapp_now_diff_pct", "dk_vs_now_pct"]
 
 
 def summarize(rows: list[dict], started: datetime) -> dict:
@@ -400,6 +455,21 @@ def summarize(rows: list[dict], started: datetime) -> dict:
         "by_merchant": {k: v for k, v in _breakdown([r for r in rows if r["channel"] == "landing"], "merchant").items()
                         if v["n"] >= 2 and k != "—"},
         "outliers": sum(1 for r in matched if abs(r["diff_pct"]) >= OUTLIER_PCT),
+        "seller_page": _seller_summary(rows),
+    }
+
+
+def _seller_summary(rows: list[dict]) -> dict:
+    land = [r for r in rows if r["channel"] == "landing"]
+    read = [r for r in land if r.get("snapp_now")]
+    return {
+        "landing": len(land),
+        "read": len(read),
+        "out_of_stock": sum(1 for r in land if r.get("snapp_now_status") == "out_of_stock" or r.get("snapp_now_stock") == "out"),
+        "unreachable": sum(1 for r in land if r.get("snapp_now_status") in ("blocked", "error", "skipped")),
+        "changed": sum(1 for r in read if abs(r["snapp_now_diff_pct"]) > EQUAL_BAND_PCT),
+        "higher": sum(1 for r in read if r["snapp_now_diff_pct"] > EQUAL_BAND_PCT),
+        "lower": sum(1 for r in read if r["snapp_now_diff_pct"] < -EQUAL_BAND_PCT),
     }
 
 
@@ -495,6 +565,8 @@ def changes_since(prev_rows: list[dict], rows: list[dict]) -> dict:
 XLSX_COLS = [  # (header, key) - Persian headers, Latin digits
     ("وضعیت در دیجی‌کالا", "dk_status_fa"), ("نتیجه‌ی بازبینی (Recheck)", "recheck"), ("محصول اسنپ‌پی", "title"), ("فروشنده", "merchant"),
     ("نوع آفر", "channel_fa"), ("دسته‌بندی", "category_fa"), ("قیمت اسنپ‌پی (تومان)", "snapp_price"),
+    ("قیمت الان در صفحه‌ی فروشنده", "snapp_now"), ("تغییر قیمت صفحه نسبت به لندینگ %", "snapp_now_diff_pct"),
+    ("وضعیت صفحه‌ی فروشنده", "snapp_now_fa"), ("اختلاف دیجی‌کالا با قیمت الان %", "dk_vs_now_pct"),
     ("قیمت قبل اسنپ‌پی", "snapp_before"), ("کش‌بک اسنپ‌پی %", "cashback_pct"),
     ("قیمت اسنپ‌پی پس از کش‌بک", "snapp_effective"), ("محصول دیجی‌کالا", "dk_title"),
     ("قیمت دیجی‌کالا (تومان)", "dk_price"), ("قیمت قبل دیجی‌کالا", "dk_rrp"),
@@ -506,6 +578,9 @@ XLSX_COLS = [  # (header, key) - Persian headers, Latin digits
 ]
 VERDICT_FA = {"dk_cheaper": "دیجی‌کالا ارزان‌تر", "equal": "برابر", "snapp_cheaper": "اسنپ‌پی ارزان‌تر"}
 LIVE_FA = {"live": "در حال پخش", "upcoming": "نوبت بعد", "ended": "تمام‌شده"}
+SELLER_FA = {"ok": "قیمت خوانده شد", "out_of_stock": "ناموجود", "mismatch": "قیمت صفحه با لندینگ هم‌خوان نیست",
+             "no_price": "قیمت در صفحه نیست", "blocked": "سایت فروشنده در دسترس نبود",
+             "error": "خطای صفحه", "skipped": "خوانده نشد (محدودیت زمان)"}
 
 
 def write_xlsx(rows: list[dict], summary: dict) -> None:
@@ -523,7 +598,8 @@ def write_xlsx(rows: list[dict], summary: dict) -> None:
              "category_fa": CATEGORY_LABELS.get(r["category"], r["category"]),
              "dk_incredible_fa": "بله" if r.get("dk_is_incredible") else "",
              "verdict_fa": VERDICT_FA.get(r.get("verdict"), ""),
-             "live_fa": LIVE_FA.get(r.get("live_status"), "")}
+             "live_fa": LIVE_FA.get(r.get("live_status"), ""),
+             "snapp_now_fa": SELLER_FA.get(r.get("snapp_now_stock") == "out" and "out_of_stock" or r.get("snapp_now_status"), "")}
         return [x.get(k) for _, k in XLSX_COLS]
 
     wb = Workbook()
@@ -541,8 +617,9 @@ def write_xlsx(rows: list[dict], summary: dict) -> None:
             ws.append(flat(r))
         ws.freeze_panes = "A2"
         ws.auto_filter.ref = ws.dimensions
-        for col, w in zip("ABCDEFGHIJKLMNOPQRSTUVW", [22, 40, 45, 18, 18, 16, 14, 14, 10, 14, 45, 14, 14, 10, 9, 14, 9, 12, 16, 12, 14, 35, 35]):
-            ws.column_dimensions[col].width = w
+        from openpyxl.utils import get_column_letter
+        for i, (h, _) in enumerate(XLSX_COLS, 1):
+            ws.column_dimensions[get_column_letter(i)].width = 45 if h.startswith(("محصول", "لینک")) else 16
         for row in ws.iter_rows(min_row=2):
             for c in row:
                 if isinstance(c.value, (int, float)) and not isinstance(c.value, bool):
@@ -637,6 +714,8 @@ def main() -> int:
             rows.append(enrich(row))
             if i % 50 == 0:
                 log.info("  %d / %d", i, len(items))
+
+    add_seller_prices(rows)
 
     errors = sum(1 for r in rows if r["error"])
     if errors > len(rows) * 0.5:

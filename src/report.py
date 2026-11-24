@@ -62,15 +62,38 @@ def _share(part, whole) -> int:
     return round(part / whole * 100) if whole else 0
 
 
+SNAPP_LINK_LABEL = {"landing": "صفحه‌ی کالا در سایت فروشنده ↗", "online": "فقط در اپ اسنپ‌پی (تقویم) ↗",
+                    "store": "خرید حضوری (تقویم) ↗", "social": "صفحه‌ی فروشنده ↗"}
+
+
+def _snapp_label(channel: str, url: str) -> str:
+    if channel == "social" and "snapppay.ir" in url:
+        return "تقویم اسنپ‌پی ↗"
+    return SNAPP_LINK_LABEL.get(channel, "اسنپ‌پی ↗")
+
+
 def _links(snapp_url: str, channel: str, dk_link: str, matched: bool) -> str:
-    s_label = "صفحه‌ی کالا (اسنپ‌پی) ↗" if channel == "landing" else "تقویم اسنپ‌پی ↗"
-    d_label = "صفحه‌ی کالا (دیجی‌کالا) ↗" if matched else "جستجو در دیجی‌کالا ↗"
+    d_label = "صفحه‌ی کالا در دیجی‌کالا ↗" if matched else "جستجو در دیجی‌کالا ↗"
     out = []
     if snapp_url:
-        out.append(f"<a class='lk s' href='{esc(snapp_url)}' target='_blank' rel='noopener'>{s_label}</a>")
+        out.append(f"<a class='lk s' href='{esc(snapp_url)}' target='_blank' rel='noopener'>{_snapp_label(channel, snapp_url)}</a>")
     if dk_link:
         out.append(f"<a class='lk d' href='{esc(dk_link)}' target='_blank' rel='noopener'>{d_label}</a>")
     return f"<div class='lks'>{''.join(out)}</div>"
+
+
+def _now_line(r: dict) -> str:
+    """Current price on the seller's page under the landing price."""
+    if r.get("snapp_now_stock") == "out" or r.get("snapp_now_status") == "out_of_stock":
+        return "<div class='muted'><span class='tag warn'>الان در سایت فروشنده ناموجود</span></div>"
+    now = r.get("snapp_now")
+    if not now:
+        return ""
+    d = r.get("snapp_now_diff_pct") or 0
+    if abs(d) <= 1:
+        return "<div class='muted'>الان در سایت فروشنده: همین قیمت</div>"
+    cls = "pos" if d > 0 else "neg"
+    return f"<div class='muted'>الان در سایت فروشنده: <span class='{cls}'>{_n(now)}</span> <span dir='ltr'>({d:+.0f}%)</span></div>"
 
 
 def _spark(values: list[float], color: str) -> str:
@@ -103,7 +126,7 @@ def _item_table(items, channel_labels, show_live=False) -> str:
             f"<td>{esc(r['title'][:80])}{flag}"
             f"<div class='muted'>{esc((r['merchant'] or '—')[:40])} · {esc(channel_labels.get(r['channel'], r['channel']))}</div>"
             f"{_links(r['snapp_url'], r['channel'], r.get('dk_link') or r.get('dk_url', ''), True)}</td>"
-            f"{live}<td>{_n(r['snapp_price'])}</td>"
+            f"{live}<td>{_n(r['snapp_price'])}{_now_line(r)}</td>"
             f"<td>{_n(r['dk_price'])}{'<span class=tag>شگفت‌انگیز</span>' if r.get('dk_is_incredible') else ''}</td>"
             f"<td class='{_cls(r['diff_pct'])}'>{_signed(r.get('diff_toman'))}</td>"
             f"<td class='{_cls(r['diff_pct'])}'>{_pct(r['diff_pct'])}</td></tr>")
@@ -171,38 +194,56 @@ def _insights(summary, rows, cat_labels) -> str:
             out.append(
                 f"<b>فروشنده‌ها (لندینگ):</b> «{esc(top[0])}» با {top[1]['n']} کالای مشترک بیشترین فاصله‌ی قیمتی را با دیجی‌کالا دارد "
                 f"({_phrase(top[1]['median'])}).")
+    sp = summary.get("seller_page") or {}
+    if sp.get("read"):
+        out.append(
+            f"<b>قیمت الان در سایت فروشنده‌ها:</b> قیمت {sp['read']} کالای لندینگ از صفحه‌ی خود کالا خوانده شد؛ "
+            f"{sp['changed']} کالا قیمتی متفاوت با لندینگ اسنپ‌پی دارد ({sp['higher']} گران‌تر، {sp['lower']} ارزان‌تر)"
+            + (f" و {sp['out_of_stock']} کالا ناموجود است" if sp.get("out_of_stock") else "") + ".")
     if summary.get("outliers"):
         out.append(f"<b>کنترل کیفیت:</b> {summary['outliers']} تطبیق اختلاف بیش از 100% دارند و با برچسب «قیمت چک شود» مشخص شده‌اند "
                    "(معمولاً قیمت یک فروشنده‌ی گران در دیجی‌کالا یا نسخه‌ی متفاوت).")
     return "".join(f"<li>{x}</li>" for x in out)
 
 
+def _from_to(old, new, fmt) -> str:
+    if old is None or new is None:
+        return fmt(new) if new is not None else "—"
+    if old == new or (isinstance(old, float) and abs(old - new) < 0.05):
+        return f"{fmt(new)} <span class='muted'>(بدون تغییر)</span>"
+    return f"از {fmt(old)} به <b>{fmt(new)}</b>"
+
+
 def _changes(summary, channel_labels) -> str:
     ch = summary.get("changes") or {}
     if not ch:
         return "<div class='muted'>از اجرای بعدی، تغییرات نسبت به اجرای قبل اینجا نمایش داده می‌شود.</div>"
+    prev = esc((ch.get("prev_run_at") or "—")[-5:])
+    moves = ch.get("price_moves", [])
+    sentence = (f"نسبت به اجرای قبلی (ساعت <span dir='ltr'>{prev}</span>): "
+                f"<b>{ch.get('new_offers', 0)}</b> تخفیف تازه به اسنپ‌پی اضافه شد، "
+                f"<b>{ch.get('ended_offers', 0)}</b> تخفیف از اسنپ‌پی برداشته شد، "
+                f"و قیمت <b>{len(moves)}</b> کالای مشترک (در اسنپ‌پی یا دیجی‌کالا) بیش از 1% تغییر کرد.")
+    new_list = ""
+    if ch.get("new_titles"):
+        items = "".join(f"<li>{esc(t[:90])}</li>" for t in ch["new_titles"])
+        new_list = f"<details class='muted' style='margin-top:6px'><summary>فهرست تخفیف‌های تازه</summary><ul>{items}</ul></details>"
+    if not moves:
+        return f"<div class='key'>{sentence}{new_list}</div>"
+    fmt_n, fmt_p = _n, lambda v: _pct(v)
     rows = []
-    for m in ch.get("price_moves", [])[:25]:
-        what = []
-        if m["snapp_old"] and m["snapp_new"] and m["snapp_old"] != m["snapp_new"]:
-            what.append(f"اسنپ‌پی: {_n(m['snapp_old'])} → {_n(m['snapp_new'])}")
-        if m["dk_old"] and m["dk_new"] and m["dk_old"] != m["dk_new"]:
-            what.append(f"دیجی‌کالا: {_n(m['dk_old'])} → {_n(m['dk_new'])}")
+    for m in moves[:25]:
         rows.append(
             f"<tr><td>{esc(m['title'][:80])}<div class='muted'>{esc((m['merchant'] or '—')[:40])} · "
             f"{esc(channel_labels.get(m['channel'], m['channel']))}</div>"
             f"{_links(m['snapp_url'], m['channel'], m['dk_url'], True)}</td>"
-            f"<td>{'<br>'.join(what)}</td>"
-            f"<td class='{_cls(m['diff_old'])}'>{_pct(m['diff_old'])}</td>"
-            f"<td class='{_cls(m['diff_new'])}'>{_pct(m['diff_new'])}</td></tr>")
-    table = ("<div class='tw'><table><thead><tr><th>محصول</th><th>تغییر قیمت (تومان)</th><th>اختلاف قبلی</th><th>اختلاف فعلی</th></tr></thead>"
-             f"<tbody>{''.join(rows) or '<tr><td colspan=4 class=muted>قیمت هیچ کالای تطبیق‌شده‌ای تغییر نکرده است</td></tr>'}</tbody></table></div>")
-    return (f"<div class='grid' style='margin-bottom:12px'>"
-            f"<div class='tile'><span class='muted'>اجرای قبلی</span><b style='font-size:17px' dir='ltr'>{esc(ch.get('prev_run_at') or '—')}</b></div>"
-            f"<div class='tile'><span class='muted'>تخفیف جدید در اسنپ‌پی</span><b>{ch.get('new_offers', 0)}</b></div>"
-            f"<div class='tile'><span class='muted'>تخفیف حذف‌شده</span><b>{ch.get('ended_offers', 0)}</b></div>"
-            f"<div class='tile'><span class='muted'>تغییر قیمت روی کالاهای تطبیق‌شده</span><b>{len(ch.get('price_moves', []))}</b></div>"
-            f"</div>{table}")
+            f"<td>{_from_to(m['snapp_old'], m['snapp_new'], fmt_n)}</td>"
+            f"<td>{_from_to(m['dk_old'], m['dk_new'], fmt_n)}</td>"
+            f"<td class='{_cls(m['diff_new'])}'>{_from_to(m['diff_old'], m['diff_new'], fmt_p)}</td></tr>")
+    table = ("<div class='tw' style='margin-top:10px'><table><thead><tr><th>محصول</th><th>قیمت اسنپ‌پی (تومان)</th>"
+             "<th>قیمت دیجی‌کالا (تومان)</th><th>دیجی‌کالا چقدر گران‌تر/ارزان‌تر</th></tr></thead>"
+             f"<tbody>{''.join(rows)}</tbody></table></div>")
+    return f"<div class='key'>{sentence}{new_list}</div>{table}"
 
 
 CSS = """
@@ -266,7 +307,9 @@ def render_report(rows, summary, history, cat_labels, channel_labels, font_bytes
         "st": r.get("dk_status", ""), "rc": r.get("recheck", ""),
         "eff": r.get("snapp_effective"), "de": r.get("diff_pct_vs_effective"),
         "dr": r.get("dk_rrp"), "dd": r.get("dk_discount"), "dt2": r.get("diff_toman"),
-        "o": bool(r.get("outlier")),
+        "o": bool(r.get("outlier")), "sn": r.get("snapp_now"), "snd": r.get("snapp_now_diff_pct"),
+        "sns": "out" if (r.get("snapp_now_stock") == "out" or r.get("snapp_now_status") == "out_of_stock") else r.get("snapp_now_status", ""),
+        "dvn": r.get("dk_vs_now_pct"),
     } for r in rows]
 
     hist_l = [h for h in history if h.get("landing_median") not in (None, "")]
@@ -357,7 +400,8 @@ def render_report(rows, summary, history, cat_labels, channel_labels, font_bytes
 <h2>روش و ملاحظات (Method)</h2>
 <ul class="note muted">
 <li>منبع اسنپ‌پی: فید لندینگ بلک فرایدی (قیمت فروشگاه‌های طرف قرارداد) و فید تقویم تخفیف‌ها (آفرهای زمان‌دار آنلاین، حضوری و لایو؛ وچرها حذف شده‌اند). منبع دیجی‌کالا: جستجو و صفحه‌ی محصول دیجی‌کالا در لحظه‌ی اجرا؛ قیمت دیجی‌کالا قیمت فروشنده‌ی پیش‌فرض (buy box) است.</li>
-<li>لینک‌ها: «صفحه‌ی کالا (اسنپ‌پی)» برای کالاهای لندینگ به صفحه‌ی کالا در سایت فروشنده می‌رود. آفرهای تقویم در فید اسنپ‌پی صفحه‌ی اختصاصی ندارند و به تقویم تخفیف‌ها لینک می‌شوند. «صفحه‌ی کالا (دیجی‌کالا)» برای کالاهای تطبیق‌شده و «جستجو در دیجی‌کالا» برای بقیه، تا بررسی دستی ممکن باشد.</li>
+<li>لینک‌ها: کالاهای لندینگ به صفحه‌ی همان کالا در سایت فروشنده لینک می‌شوند. آفرهای زمان‌دار تقویم صفحه‌ی کالا ندارند: آفرهای «آنلاین» فقط داخل اپ اسنپ‌پی (کروسل صفحه‌ی اصلی در ساعت پخش) فروخته می‌شوند و آفرهای «حضوری» در شعبه‌ها؛ این دو به تقویم تخفیف‌ها لینک می‌شوند. آفرهای «لایو / سوشال» به صفحه‌ی اینستاگرام یا بله‌ی فروشنده لینک می‌شوند. در سمت دیجی‌کالا، کالاهای تطبیق‌شده به صفحه‌ی کالا و بقیه به جستجوی همان کالا لینک می‌شوند.</li>
+<li>«الان در سایت فروشنده»: برای کالاهای لندینگ، صفحه‌ی خود کالا در سایت فروشنده در هر اجرا خوانده می‌شود (داده‌ی ساخت‌یافته‌ی schema.org). اگر قیمت آنجا با قیمت لندینگ اسنپ‌پی بیش از 1% فرق کند، زیر قیمت لندینگ نمایش داده می‌شود؛ «ناموجود» یعنی صفحه‌ی فروشنده کالا را ناموجود اعلام کرده است. مقایسه با دیجی‌کالا همچنان روی قیمت لندینگ است و اختلاف دیجی‌کالا با قیمت الان در اکسل آمده است. بعضی سایت‌ها قیمت را در صفحه منتشر نمی‌کنند یا دسترسی از سرور خارج از ایران را می‌بندند؛ برای آن‌ها فقط قیمت لندینگ نمایش داده می‌شود.</li>
 <li>هر محصول اسنپ‌پی با عنوانش در جستجوی دیجی‌کالا جستجو و بهترین نتیجه با امتیاز شباهت عنوان، تطابق مدل/عدد، تطابق حجم و تعداد بسته و منطقی‌بودن قیمت انتخاب شده است.</li>
 <li>همه‌ی آمار این صفحه فقط بر پایه‌ی تطبیق‌های «اطمینان بالا» است (مدل یا کد مشترک و مشخصات یکسان؛ در بررسی دستی حدود 95% درست). تطبیق‌های «متوسط» در بررسی دستی حدود نیمی برند یا محصول متفاوت داشتند و فقط در جدول برای بررسی آمده‌اند.</li>
 <li>قیمت اسنپ‌پی همیشه قیمت کامل کالاست، نه مبلغ یک قسط: روی کارت‌های لندینگ «4 قسط» برابر یک‌چهارم همین قیمت است (مثلاً 970,920 تومان = 4 قسط 242,730) و در تقویم تخفیف‌ها فقط قیمت کامل نمایش داده می‌شود.</li>
@@ -387,7 +431,11 @@ const SO={matched:0,review:1,uncertain:2,not_found:3};
 (function(){const t=Date.parse(RUN.replace(" ","T")+":00+03:30");const m=Math.round((Date.now()-t)/60000);const el=$("fresh");if(isNaN(m))return;
 const txt=m<60?m+" دقیقه پیش":Math.floor(m/60)+" ساعت و "+(m%60)+" دقیقه پیش";el.textContent=txt;el.className="fresh "+(m<=45?"ok":m<=90?"late":"old");
 if(m>90)el.textContent+=" · گزارش به‌روز نیست";})();
-const links=x=>`<div class="lks">${x.su?`<a class="lk s" href="${e(x.su)}" target="_blank" rel="noopener">${x.ch==="landing"?"صفحه‌ی کالا (اسنپ‌پی) ↗":"تقویم اسنپ‌پی ↗"}</a>`:""}${x.dl?`<a class="lk d" href="${e(x.dl)}" target="_blank" rel="noopener">${x.du?"صفحه‌ی کالا (دیجی‌کالا) ↗":"جستجو در دیجی‌کالا ↗"}</a>`:""}</div>`;
+const SNL={landing:"صفحه‌ی کالا در سایت فروشنده ↗",online:"فقط در اپ اسنپ‌پی (تقویم) ↗",store:"خرید حضوری (تقویم) ↗",social:"صفحه‌ی فروشنده ↗"};
+const snl=x=>(x.ch==="social"&&x.su.includes("snapppay.ir"))?"تقویم اسنپ‌پی ↗":(SNL[x.ch]||"اسنپ‌پی ↗");
+const links=x=>`<div class="lks">${x.su?`<a class="lk s" href="${e(x.su)}" target="_blank" rel="noopener">${snl(x)}</a>`:""}${x.dl?`<a class="lk d" href="${e(x.dl)}" target="_blank" rel="noopener">${x.du?"صفحه‌ی کالا در دیجی‌کالا ↗":"جستجو در دیجی‌کالا ↗"}</a>`:""}</div>`;
+const nowl=x=>x.sns==="out"?`<div class="muted"><span class="tag warn">الان در سایت فروشنده ناموجود</span></div>`:!x.sn?"":Math.abs(x.snd)<=1?`<div class="muted">الان در سایت فروشنده: همین قیمت</div>`:`<div class="muted">الان در سایت فروشنده: <span class="${x.snd>0?"pos":"neg"}">${f(x.sn)}</span> <span dir="ltr">(${x.snd>0?"+":""}${Math.round(x.snd)}%)</span></div>`;
+const SNS={ok:"قیمت خوانده شد",out:"ناموجود",mismatch:"قیمت صفحه با لندینگ هم‌خوان نیست",no_price:"قیمت در صفحه نیست",blocked:"سایت فروشنده در دسترس نبود",error:"خطای صفحه",skipped:"خوانده نشد"};
 const VCH=[["","همه",""],["dk_cheaper","دیجی‌کالا ارزان‌تر","g"],["snapp_cheaper","دیجی‌کالا گران‌تر","r"],["equal","برابر",""],["none","بدون داده (بدون معادل قطعی)",""]];
 let fv="",sortK=null,sortDir=1;
 document.addEventListener("click",ev=>{const b=ev.target.closest(".chip");if(b){fv=b.dataset.v;draw();return;}
@@ -404,18 +452,19 @@ $("vchips").innerHTML=VCH.map(([k,l,cls])=>`<button class="chip ${cls} ${fv===k?
 const r=base.filter(x=>!fv||vk(x)===fv).sort(cmp);
 window.__view=r;$("cnt").textContent=r.length.toLocaleString("en-US")+" ردیف";
 $("tb").innerHTML=r.slice(0,1500).map(x=>`<tr><td>${e(x.t)}${x.o?`<span class="tag warn">قیمت چک شود</span>`:""}<div class="muted">${e(x.m)} · ${CH[x.ch]||x.ch}${x.ls&&LS[x.ls]?`<span class="tag ${x.ls==="live"?"on":""}">${LS[x.ls]} ${e(x.lt)}</span>`:""}</div>${links(x)}</td>
-<td>${f(x.sp)}${x.cb?`<div class="muted">کش‌بک ${x.cb}%</div>`:""}</td><td>${x.dt?e(x.dt):"—"}${x.inc?`<span class="tag">شگفت‌انگیز</span>`:""}</td>
+<td>${f(x.sp)}${nowl(x)}${x.cb?`<div class="muted">کش‌بک ${x.cb}%</div>`:""}</td><td>${x.dt?e(x.dt):"—"}${x.inc?`<span class="tag">شگفت‌انگیز</span>`:""}</td>
 <td>${f(x.dp)}</td><td class="${x.d>1?"pos":x.d<-1?"neg":""}" dir="ltr" style="text-align:right">${sg(x.dt2)}</td>
 <td class="${x.d>1?"pos":x.d<-1?"neg":""}" dir="ltr" style="text-align:right">${x.d==null?"—":(x.d>0?"+":"")+x.d.toFixed(1)+"%"}</td>
 <td>${SL[x.st]||""}${x.rc?`<div class="muted" style="max-width:260px">${e(x.rc)}</div>`:""}</td></tr>`).join("");}
 ["q","fconf","fch","fc"].forEach(i=>$(i).addEventListener("input",draw));draw();
 const toRow=x=>({"وضعیت در دیجی‌کالا":SL[x.st]||"","نتیجه‌ی بازبینی (Recheck)":x.rc||"","محصول اسنپ‌پی":x.t,"فروشنده":x.m,"نوع آفر":CH[x.ch]||x.ch,"دسته‌بندی":CAT[x.c]||x.c,
-"قیمت اسنپ‌پی (تومان)":x.sp,"قیمت قبل اسنپ‌پی":x.sb,"کش‌بک اسنپ‌پی %":x.cb,"قیمت اسنپ‌پی پس از کش‌بک":x.eff,
+"قیمت اسنپ‌پی (تومان)":x.sp,"قیمت الان در صفحه‌ی فروشنده":x.sn,"تغییر قیمت صفحه نسبت به لندینگ %":x.snd,"وضعیت صفحه‌ی فروشنده":SNS[x.sns]||"","اختلاف دیجی‌کالا با قیمت الان %":x.dvn,"قیمت قبل اسنپ‌پی":x.sb,"کش‌بک اسنپ‌پی %":x.cb,"قیمت اسنپ‌پی پس از کش‌بک":x.eff,
 "محصول دیجی‌کالا":x.dt,"قیمت دیجی‌کالا (تومان)":x.dp,"قیمت قبل دیجی‌کالا":x.dr,"تخفیف دیجی‌کالا %":x.dd,"شگفت‌انگیز":x.inc?"بله":"",
 "اختلاف (تومان)":x.dt2,"اختلاف %":x.d,"اختلاف % پس از کش‌بک":x.de,"نتیجه":VL[x.v]||"","قیمت چک شود":x.o?"بله":"",
 "وضعیت پخش":LS[x.ls]||"","زمان":x.lt,"لینک اسنپ‌پی":x.su,"لینک دیجی‌کالا (کالا یا جستجو)":x.dl});
-function sheet(rows){const ws=XLSX.utils.json_to_sheet(rows.map(toRow));ws["!cols"]=[18,40,40,16,16,16,14,14,10,14,40,14,14,10,8,14,9,12,16,10,12,14,40,40].map(w=>({wch:w}));
-rows.forEach((x,i)=>{const R=i+1;[[22,x.su],[23,x.dl]].forEach(([C,u])=>{const a=XLSX.utils.encode_cell({r:R,c:C});if(u&&ws[a])ws[a].l={Target:u};});});return ws;}
+function sheet(rows){const ws=XLSX.utils.json_to_sheet(rows.map(toRow));const H=Object.keys(toRow(rows[0]||D[0]));ws["!cols"]=H.map(h=>({wch:/^(محصول|لینک)/.test(h)?40:15}));
+const cS=H.indexOf("لینک اسنپ‌پی"),cD=H.indexOf("لینک دیجی‌کالا (کالا یا جستجو)");
+rows.forEach((x,i)=>{const R=i+1;[[cS,x.su],[cD,x.dl]].forEach(([C,u])=>{const a=XLSX.utils.encode_cell({r:R,c:C});if(u&&ws[a])ws[a].l={Target:u};});});return ws;}
 function book(sheets){const wb=XLSX.utils.book_new();wb.Workbook={Views:[{RTL:true}]};
 XLSX.utils.book_append_sheet(wb,XLSX.utils.aoa_to_sheet(SUM),"خلاصه");for(const [n,r] of sheets)XLSX.utils.book_append_sheet(wb,sheet(r),n);return wb;}
 const high=D.filter(x=>x.conf==="high");
